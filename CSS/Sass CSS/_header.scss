@@ -1,0 +1,6 @@
+.box-1{
+     background: $header-bg-color;
+     height: 100vh;
+     text-align: center;
+     @include flexcenter(rgb(34, 16, 138));
+}

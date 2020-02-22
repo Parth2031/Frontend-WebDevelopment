@@ -1,0 +1,6 @@
+.box-2{
+    background: $section-bg-color;
+    height: 100vh;
+    text-align: center;
+    @include flexcenter(rgb(255, 251, 0));
+}

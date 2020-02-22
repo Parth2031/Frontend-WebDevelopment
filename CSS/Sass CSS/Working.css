@@ -1,0 +1,81 @@
+.box-1 {
+  background: #0fbba4;
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #22108a;
+}
+
+.box-2 {
+  background: #ee1b49;
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fffb00;
+}
+
+.box-3 {
+  background: #62cf19;
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 0, 0, 0.829);
+}
+
+.container {
+  margin: 20px 2%;
+}
+
+.container .font {
+  font-family: Bahianita;
+  font-size: 2rem;
+  margin: auto;
+}
+
+.container article {
+  font-family: Dancing Script;
+  line-height: 3;
+  font-size: 1.5rem;
+}
+
+.a .click:hover {
+  background-color: yellow;
+}
+
+.b .click:hover {
+  background: #bb25bb;
+}
+
+.c .click {
+  background: #04db4c;
+  padding: 2%;
+}
+
+.c .click:hover {
+  background: lightblue;
+}
+/*# sourceMappingURL=Working.css.map */
