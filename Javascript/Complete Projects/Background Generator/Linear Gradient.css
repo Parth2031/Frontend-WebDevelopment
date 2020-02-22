@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#bodybg{
+    width: 100%;
+  /* ? In order to use Linear Gradient with CSS Positioning, we have taken height:100vh if we take height:100% , it gives us an incorrect output in this case */
+    height: 100vh;
+  /* ! Linear Gradient() is a background property that could be used to add mixture of multiple color in background */
+    background: linear-gradient(to right, red, yellow); 
+    position: relative; 
+}
+#container{
+    /* margin-top: 50px; */
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 3rem;
+    position: absolute; 
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+h1{
+    font-size: 3rem;
+    /* font-weight: bold; */
+    color: rgba(0,0,0,.9);
+    letter-spacing: 1.7rem;
+}
+h2{
+    font-size: 1.5rem;
+    color: rgba(0,0,0,.8);
+    letter-spacing: 1.1rem;
+}
+h3{
+   font-size: 1rem;
+   color: rgba(0,0,0,.8);
+   letter-spacing: .5rem;
+   width: 80%;
+   margin: auto;
+}
