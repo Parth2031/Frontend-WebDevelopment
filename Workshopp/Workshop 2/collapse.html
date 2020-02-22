@@ -1,0 +1,31 @@
+<html>
+<head>
+      <script>
+            var i=0
+            function collapse(){
+                if(i==0){
+                    i=1
+                    document.getElementById('mydiv').style.display='block'
+                }
+                else{
+                    i=0
+                    document.getElementById('mydiv').style.display='none'
+                }
+
+            }
+      </script>
+      <style>
+             #mydiv{
+                width:100px;
+                height:100px;
+                background:blue;
+                color: white;
+                display: 'none'
+                 }
+      </style>
+</head>
+<body>
+     <button onclick="collapse()">Collapse</button>
+     <div id="mydiv">Hello</div>       
+</body>
+</html>

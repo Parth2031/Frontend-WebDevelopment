@@ -1,0 +1,31 @@
+<html>
+<head>
+     <style>
+                  #mydiv{
+                   width:100px;
+                   height:100px;
+                   background:blue;
+                   }
+                   #btn{
+                       background-color: red;
+                   }
+                   #btn1{
+                       background-color: green;
+                   }
+                   #btn2{
+                       background-color: yellow;
+                   }
+     </style>
+      <script>
+            function changecolor(color){
+            document.getElementById("mydiv").style.background= color
+            }
+      </script>
+</head>
+<body>
+     <div id="mydiv"></div>   
+     <button id="btn" onclick="changecolor('red')">Red</button>
+     <button id="btn1" onclick="changecolor('green')">Green</button>
+     <button id="btn2" onclick="changecolor('yellow')">Yellow</button>
+</body>
+</html>

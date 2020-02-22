@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+            #mydiv{
+                 width:100px;
+                 height:100px;
+                 background: white;
+                  }
+                #first{
+                 width:100px;
+                 height:100px;
+                 background:blue;
+                 }
+                #second{
+                 width: 100px;
+                 height: 100px;
+                 background: yellow;
+                } 
+                #third{
+                 width:100px;
+                 height:100px;  
+                 background: green;
+                }
+        </style>         
+      <script>
+             var i=0
+             function next(){
+                  i++
+                  if(i==0){
+                  document.getElementById('first').style.display= 'block'
+                  document.getElementById('second').style.display= 'none'
+                  document.getElementById('third').style.display= 'none'
+                  }  
+                  if(i==1){
+                  document.getElementById('first').style.display= 'none'
+                  document.getElementById('second').style.display= 'block'
+                  document.getElementById('third').style.display= 'none' 
+                  }   
+                  if(i==2){
+                  document.getElementById('first').style.display= 'none'
+                  document.getElementById('second').style.display= 'none'
+                  document.getElementById('third').style.display= 'block'
+                  }
+                  if(i==3){
+                      i=-1
+                      next()
+                  }
+             }
+             function previous(){}
+      </script>
+</head>
+<body>
+    <div id="mydiv">
+     <div id="first">First image</div>
+     <div id="second">Second image</div>
+     <div id="third">Third image</div>
+    </div> 
+     <button onclick="previous()">Previous</button>
+     <button onclick="next()">Next</button>   
+</body>
+</html>

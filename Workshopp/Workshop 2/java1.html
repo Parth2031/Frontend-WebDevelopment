@@ -1,0 +1,21 @@
+<html>
+<head>
+     <style>
+                  #mydiv{
+                   width:100px;
+                   height:100px;
+                   background:blue;
+                   }                 
+     </style>
+      <script>
+            function changecolor(){
+            document.getElementById("mydiv").style.background = document.getElementById("myid").value;
+            }
+      </script>
+</head>
+<body>
+     <div id="mydiv"></div>   
+     <input type="color" id="myid"/>
+     <button onclick="changecolor()">Submit</button>
+</body>
+</html>

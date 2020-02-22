@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <style>
+                #mydiv{
+                 width:100px;
+                 height:100px;
+                 background:blue;
+                 color: aqua
+                 }                 
+     </style>
+      <script>
+            var i=1
+            function increase(){
+                 document.getElementById("mydiv").innerHTML=++i
+                 }
+      </script>
+</head>
+<body>
+     <div id="mydiv">1</div>  
+     <button onclick="increase()">Increase</button>
+</body>
+</html>
