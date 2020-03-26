@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1{
+      color: gold;
+    }
+    h2{
+      color: blue;
+    }
+    p#first{
+      color: green;
+      font-size: 20px;
+    }
+    p#second{
+      color: orange;
+      font-size: 20px;
+    }
+    p#third{
+      color: darkmagenta;
+      font-size: 20px;
+    }
+    .size{
+      color: black;
+    }
+    .other{
+      color: darkcyan;
+    }
+    .main{
+      color:darkred;
+      font-size: 30px;
+    }
+  </style>
+  <title>Async vs Defer</title>
+  <script src="Async.js" async></script>
+  <script src="Defer.js" defer></script>
+</head>
+<body>
+  <h1>Async vs Defer:</h1>
+  <h2>Undestanding Difference between Async and Defer in Script Tag</h2>
+  <p id = "first">It helps to load the script tag quickly.</p>
+  <p id = "second"><strong class = "size">Async means:</strong> The browser loads whatever HTML, CSS, and other JavaScript are in the .html file while it is downloading the
+  external .js file with async, and loads the .js file once they finish downloading.</p>
+  <p id = "third"><strong class = "size">Defer means:</strong> The browser loads whatever HTML, CSS, and other JavaScript are in the .html file while it is downloading the external
+  .js file with defer. But it only loads the .js file after the rest HTML, CSS, other JavaScripts without defer, and other
+  JavaScripts with defer that goes before the current JavaScript is loaded.</p>
+  <p class = "main"><strong class = "other">Syntax of Script Tag with async: </strong> script src = "..." async /script</p>
+  <p class = "main"><strong class = "other">Syntax of Script Tag with defer: </strong> script src = "..." defer /script</p>
+</body>
+</html>

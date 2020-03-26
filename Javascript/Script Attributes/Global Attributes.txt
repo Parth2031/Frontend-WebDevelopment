@@ -1,0 +1,1 @@
+These attributes: Async & Defer are Script Global Attributes that help script load early.
