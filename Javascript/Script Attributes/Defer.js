@@ -21,3 +21,4 @@
 // ! Performance and then Recording Developer Tools helps to understand the graph that shows, we pause the script when html and css are loading.
 // ! It is only loaded only when they are loaded so to avoid this delay, we use Defer in Script tag. 
 // ? Defer is different from Async as it only load's early so that DOM Events load early.
+// * It is only used for external JS and it does load in order of derfined script tags.

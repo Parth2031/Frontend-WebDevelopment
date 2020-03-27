@@ -21,3 +21,4 @@
 // ! It is only loaded only when they are loaded so to avoid this delay, we use Async in Script tag. 
 // ? Async is different from Defer as it not only load's early but executes early as soon as external JS file gets downloaded.
 // ? It will not wait for html file to be loaded.
+// * It is only used for external JS and it does not load in order.
