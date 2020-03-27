@@ -19,4 +19,5 @@
 // TODO:: Note :-
 // ! Performance and then Recording Developer Tools helps to understand the graph that shows, we pause the script when html and css are loading.
 // ! It is only loaded only when they are loaded so to avoid this delay, we use Async in Script tag. 
-// ? Async is different from Defer as it not only load's early but executes early.
+// ? Async is different from Defer as it not only load's early but executes early as soon as external JS file gets downloaded.
+// ? It will not wait for html file to be loaded.
