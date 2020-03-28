@@ -43,7 +43,7 @@ function createPost(post, callback)
   setTimeout(function ()
   {
     posts.push(post);
-    callback();
+    callback();       // ? It can also send the arguments of function createPost to getPost function by sending parameter in callback(post).
   }, 2000);
 }
 

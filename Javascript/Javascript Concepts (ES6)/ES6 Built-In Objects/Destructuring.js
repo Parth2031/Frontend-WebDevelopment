@@ -7,18 +7,18 @@ let a, b;
 
 // console.log(a);
 
-// TODO:: Rest pattern allows us to represent an indefinite number of arguments as an array.
+// TODO:: Rest Pattern/Parameter allows us to represent an indefinite number of arguments as an array.
 
-// ! Rest Pattern Syntax :-
+// ! Rest Parameter/Pattern Syntax :-
 
-// ? (...) - These dots are decribed as the remaining arguments in an array,object,etc.
+// * (...) - Spread Operators: These dots are decribed as the remaining arguments in an array,object,etc.
 // ? function(a,b,...manyMoreArguments)
 // ?              OR
 // ? array_name[a,b,...rest];
 // ?           OR
 // ? object_name{ a, b, ...rest};
 
-// ! Rest Pattern Example :-
+// ! Rest Parameter/Pattern Example :-
 
 [a, b, ...rest] = [100, 200, 300, 400, 500];
 // console.log(rest);
