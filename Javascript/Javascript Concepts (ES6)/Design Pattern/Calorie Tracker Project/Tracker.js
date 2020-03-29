@@ -308,6 +308,7 @@ const UICtrl = (function ()
     {
       let listItems = document.querySelectorAll(UISelectors.listItems);
 
+      // ! Array.from() is an Built-in Array Object Method which takes array-like objects as arguments and converts them to array.
       // ! Turn Node list into array :
       listItems = Array.from(listItems);
 
@@ -350,6 +351,7 @@ const UICtrl = (function ()
     {
       let listItems = document.querySelectorAll(UISelectors.listItems);
 
+      // ! Array.from() is an Built-in Array Object Method which takes array-like objects as arguments and converts them to array. 
       // ! Turn Node list into array :
       listItems = Array.from(listItems);
 

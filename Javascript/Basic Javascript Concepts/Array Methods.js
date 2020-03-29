@@ -1,4 +1,6 @@
-                       // TODO:: Performing Built-in Array Methods by showing its effect and same effect by for loop for some case
+                       // TODO:: Performing Built-in Array Methods by showing its effect and same effect by for loop for some case.
+
+// ! Companies is an Object-like Array.
 
 const companies= [
     {name: "Company One", category: "Finance", start: 1981, end: 2004},
@@ -26,8 +28,8 @@ const companies= [
   companies.forEach(function(company) {
     // console.log(company.name);
   });
-  
-                                                    // ! filter() example: Get 21 and older
+
+                                                   // ! filter() example: Get 21 and older
     
   // let canDrink = [];
   // for(let i = 0; i < ages.length; i++) {
@@ -157,7 +159,7 @@ const companies= [
                                        // ! toString() example: Converting ages[] to a string
 
   var string = ages.toString();
-  console.log(string);
+  // console.log(string);
 
                                                       // TODO:: Combine Methods
   
@@ -168,4 +170,33 @@ const companies= [
     .reduce((a, b) => a + b, 0);
   
   // console.log(combined);
+
+
+  // TODO:: Bulit-in Array Objects Methods used only in "Array" keyword and the above methods are also applicable her:-
   
+                                  // ! Array.from() : Creating Array from Array-Like Objects
+                                                      // ? Example 
+
+const objValues =
+{
+  name: "Parth",
+  number: function () {
+    return "987";
+  }
+};
+
+const name = Array.from(objValues.name); 
+// console.log(name);
+
+const numbers = Array.from(objValues.number());
+// console.log(numbers);
+
+  // ! Array.of() : method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
+                                                  // ? Example
+                                                  
+console.log(Array.of(7));               // * Outputs: [7] 
+console.log(Array.of(1, 2, 3));         // * Outputs: [1, 2, 3]
+
+console.log(Array(7));          // * Outputs: Array of 7 Empty Slots meaning with Empty Slots are the fixed size of Array.
+console.log(Array(1, 2, 3));    // * Outputs: [1, 2, 3]
+
