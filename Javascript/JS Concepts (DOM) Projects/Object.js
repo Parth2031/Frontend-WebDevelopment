@@ -30,12 +30,29 @@ const renderMovies = (filter = "") =>
   filteredMovies.forEach ( (movie) =>
   {
     const movieElement = document.createElement("li");
-    let text = movie.info.title + " - ";
+   
+    // let text = movie.info.title + " - ";
     
-    for (const key in movie.info)
+    // for (const key in movie.info)
+    // {
+    //   if (key !== "title") 
+    //     text = text + `${key}: ${movie.info[key]}`;    // TODO:: <-- In this, movie.info[key] is using Dynamic Properties of Built-In Object.
+    // }
+
+    // ! Using Object Destructuring and Spread Operator to implement theabove code -
+    
+    const { info, ...remainingProperties } = movie;
+    console.log(remainingProperties);
+    
+    const { title: movieTitle } = info;
+
+    let text = movieTitle + ' - ';
+    console.log(movieTitle);
+    
+    for (const key in info)
     {
-      if (key !== "title") 
-        text = text + `${key}: ${movie.info[key]}`;
+      if (key !== 'title') 
+        text = text + `${key}: ${info[key]}`;      // TODO:: <-- In this, info[key] is using Dynamic Properties of Built-In Object.
     }
 
     movieElement.textContent = text;
