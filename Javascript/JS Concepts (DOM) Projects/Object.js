@@ -44,14 +44,17 @@ const renderMovies = (filter = "") =>
     const { info, ...remainingProperties } = movie;
     console.log(remainingProperties);
     
-    const { title: movieTitle } = info;
+    // const { title: movieTitle } = info;
+    // let text = movieTitle + ' - ';
+    // console.log(movieTitle);
 
-    let text = movieTitle + ' - ';
-    console.log(movieTitle);
-    
+    let { getFormattedTitle } = movie;                    // ? Whereas, this function is called like this as by second method.
+    // getFormattedTitle = getFormattedTitle.bind(movie);     // ! <-- In this, bind prepares the function for future call.
+    let text = getFormattedTitle.call(movie) + ' - ';        // ! <-- Whereas, in this, apply/call immediately calls the function to work. 
+
     for (const key in info)
     {
-      if (key !== 'title') 
+      if (key !== 'title' && key !== '_title') 
         text = text + `${key}: ${info[key]}`;      // TODO:: <-- In this, info[key] is using Dynamic Properties of Built-In Object.
     }
 
@@ -68,19 +71,61 @@ const addMovieHandler = () =>
   const extraName = document.getElementById("extra-name").value;
   const extraValue = document.getElementById("extra-value").value;
 
-  if (title.trim() === "" || extraName.trim() === "" || extraValue.trim() === "") 
+  // if (title.trim() === "" || extraName.trim() === "" || extraValue.trim() === "") 
+  //   return;
+
+  // const newMovie =
+  // {
+  //   info: {
+  //     title,
+  // ! In this, the extraName becomes the key and extraValue becomes the value using the Dynamic Property of an object.
+  //     [extraName]: extraValue  
+  //   },
+  //   id: Math.floor(Math.random() * 100)
+  // };
+
+  // console.log(newMovie);
+
+  if (extraName.trim() === '' ||  extraValue.trim() === '') 
     return;
 
   const newMovie =
   {
-    info: {
-      title,
-      [extraName]: extraValue  // ! In this, the extraName becomes the key and extraValue becomes the value using the Dynamic Property of an object.
+    info:
+    {
+      // ! We are Understanding here, Getter and Setter Properties of Object which are used together only.
+
+      set title(val)
+      {
+        if (val.trim() === '')
+        {
+          this._title = 'DEFAULT';
+          return;
+        }
+        this._title = val;
+      },
+      get title() {
+        return this._title;
+      },
+
+      [extraName]: extraValue
     },
-    id: Math.floor(Math.random() * 100)
+    
+    id: Math.random().toString(),
+    
+    // ! This function could be write down in two ways in an Object - 
+    // ? key_name: function () { }  - It is accessed using object_name.key_name()
+    // ? function_name() { } - It is accessed using directly without the reference of object.
+
+    getFormattedTitle()
+    {
+      console.log(this);
+      return this.info.title.toUpperCase();
+    }
   };
 
-  console.log(newMovie);
+  newMovie.info.title = title;
+  console.log(newMovie.info.title);
   
   movies.push(newMovie);
   renderMovies();
@@ -88,6 +133,7 @@ const addMovieHandler = () =>
 
 const searchMovieHandler = () =>
 {
+  console.log(this);
   const filterTitle = document.getElementById("filter-title").value;
   renderMovies(filterTitle);
 };
