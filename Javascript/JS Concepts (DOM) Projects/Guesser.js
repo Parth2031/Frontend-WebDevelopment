@@ -1,3 +1,5 @@
+// * Event Listener Based Project
+
 const minNum = document.querySelector(".min-num");
 const maxNum = document.querySelector(".max-num");
 const input = document.querySelector(".guess-input");
@@ -6,7 +8,7 @@ const p = document.querySelector(".message");
 
 let min = 0, max = 10;
 var check = Math.floor(Math.random() * (max - min + 1) + min);
-console.log(check);
+// console.log(check);
 var guessesLeft = 3;
 
 minNum.textContent = min;

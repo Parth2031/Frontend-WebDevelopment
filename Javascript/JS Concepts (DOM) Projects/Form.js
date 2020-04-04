@@ -1,3 +1,7 @@
+// * Event Listener Based Project
+// ? NOTE :- Event Listener's can have function as ananoymous or whole new function which is called by function name.
+// ! Anonymous Function should be used if there are called  multiple times and New Function will be better option.
+
 // TODO:: Applying Various Event Functionalities on Form & Card.
 
 const form = document.querySelector("#task-form");

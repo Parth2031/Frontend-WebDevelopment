@@ -1,3 +1,9 @@
+// TODO:: Understanding DOM Event Properties, Function's,etc.
+// ? NOTE :- Event Listener's can have function as ananoymous or whole new function which is called by function name.
+// ! Anonymous Function should be used if there are called  multiple times and New Function will be better option.
+
+console.log("Understanding DOM Event Listener Properties, Function's and Many More...");
+
 // ! Applying Background effect using event -->
 
 // var container = document.querySelector(".container");

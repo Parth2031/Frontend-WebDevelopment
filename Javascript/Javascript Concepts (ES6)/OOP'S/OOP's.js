@@ -1,5 +1,12 @@
+// * Understanding OOP'S Concepts. 
+// ? NOTE :- When we create Global Variables for input boxes, it refers only to first inputed value and not the next input value's by user.
+// ! So, this problem could be solved using two ways -
+// TODO:: First, we can make the class in which we could use "this" keyword to resolve the issue.
+// TODO:: Second, we can make the variable in the local scope and keep updating them.
+
 // ? -> This is ES6 Syntax:
 // ! Employees Constructor with "this" keyword Implementation and it's functionality :->
+// * In this, we created Global Variables and used class with "this" keyword to update values.
 
 class Employees
 {

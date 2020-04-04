@@ -1,3 +1,5 @@
+// * Basic Javscript Element Based Project
+
 const body = document.querySelector("body");
 
 const h1 = document.createElement("h1");

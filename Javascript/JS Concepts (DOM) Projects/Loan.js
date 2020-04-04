@@ -1,3 +1,5 @@
+// * Event Listener Based Project
+
 const form = document.querySelector("#loan-form");
 const button = document.querySelector(".btn");
 const results = document.querySelector("#results");
