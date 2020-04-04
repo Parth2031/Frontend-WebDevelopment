@@ -161,6 +161,23 @@
   var string = ages.toString();
   // console.log(string);
 
+                                  // ! join() Explanation : It joins the array value into a string.
+
+  var joiningString = arr1.join(",");
+  console.log(joiningString);
+
+                                    // ! find() Explanation : It is used to find values in array.
+                              // ? Syntax :- arrayname.find(callback(element[, index[, array]])[, thisArg])
+
+  var find = ages.find(element => element > 10);
+  // console.log(find);                                  
+
+      // ! findIndex() Explanation : It returns the index of the first element in the array that satisfies the provided testing function. 
+                         // ! Otherwise, it returns - 1, indicating that no element passed the test.
+
+  var findIndexs = ages.findIndex((element) => element > 13);
+  // console.log(findIndexs);                       
+
                                                       // TODO:: Combine Methods
   
   const combined = ages

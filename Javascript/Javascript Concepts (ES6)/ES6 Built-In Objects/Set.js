@@ -15,7 +15,7 @@
 // ? .add(value) - It appends value to the Set object. It returns the Set object.
 // ? .clear() - It removes all elements from the Set object.
 // ? .delete(value) - It removes the element associated to the value and returns the value that .has(value) would have previously returned .has(value) will return false afterwards.
-// ? .entries() - It returns a new Iterator object that contains an array of[value, value] for each element in the Set object, in insertion order.
+// ? .entries() - It returns a new Iterator object that contains an array of[same value,same value] for each element in the Set object, in insertion order.
 // * { This is similar to the Map object, so that each entry's key is the same as its value for a Set. }
 // ? .keys() - It returns a new Iterator object that yields the values for each element in the Set object in insertion order. (For Sets, this is the same as the values() method.)
 // ? .values() - It returns a new Iterator object that yields the values for each element in the Set object in insertion order.
