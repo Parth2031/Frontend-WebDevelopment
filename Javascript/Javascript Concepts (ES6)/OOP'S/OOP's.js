@@ -10,8 +10,17 @@
 
 class Employees
 {
+  // ! Category = "Default"; is an public class field.
+  // ? A field defines property for classes.
+  // * Field's are fixed values in class.
+
+  Category = "Default"; 
+
   constructor(name, age, dob)
   {
+    // ! Whereas, this.name = name; is an public class property. 
+    // * Whereas, Class Property are dynamic values in class.
+
     this.name = name;
     this.age = age;
     this.birthday = new Date(dob);
@@ -79,11 +88,34 @@ class Person
 
   // ! static is used in classes as they can be directly accessed using Class_name.function_name().
   // ? They are not part of constructors and so they don't need "new" operator to call the construtor.
+  // * Only accessible on class itself and cannot be instantiated by constructor.
 
   static addNumbers(x, y)
   {
     return x + y;
   }
+}
+
+// TODO:: The extends keyword is used in class declarations or class expressions to create a class which is a child of another class.
+// ? Syntax of using extends keyword :- class ChildClass extends ParentClass { ... }
+// ! Example of extends keyword -
+
+class NewPerson extends Person
+{
+  constructor(firstName, lastName,dob,gender)
+  {
+    // * NOTE: In derived classes, super() must be called before you can use 'this'. 
+    // ! Leaving this out will cause a reference error.
+    // ? The super keyword is used to access and call functions on an object's parent.
+    // TODO:: Syntax of super keyword :-
+    // TODO: super([arguments]);                           // <-- Calls the parent constructor as to use "this" keyword.
+    // TODO: super.functionOnParent([arguments]);
+
+    super(firstName, lastName, dob);
+    super.getFullName(firstName,lastName);
+
+    this.gender = gender;
+  }  
 }
 
 const john = new Person('John', 'Doe', '8-12-90');
@@ -105,6 +137,12 @@ mary.getsMaried('Smith');
 // ! Calling the static function from class :
 
 // console.log(Person.addNumbers(1,1));
+
+// ! Showing the working of extends keyword with super() method:
+
+const shyam = new NewPerson("Shyam", "Taparia", "May 24 2000","Male");
+console.log(shyam);
+console.log(shyam.getFullName());
 
 // ? =====================================================================================================================================
 
