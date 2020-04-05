@@ -39,6 +39,25 @@ const parth = new Employees('Parth', 20, '10-01-2000');
 // console.log(mrinal.age);
 // console.log(parth.calculateAge());
 
+// TODO:: "#variable_name" is a private member of the class and cannot be accessed directly in the global scope.
+// ! Example of private members in the class -
+
+class Rectangle
+{
+  #height = 0;
+  #width;
+
+  constructor(height, width)
+  {
+    this.#height = height;
+    this.#width = width;
+  }
+}
+
+const shape = new Rectangle(20, 30); 
+console.log(shape);
+console.log(shape.#height);
+
 // TODO =====================================================================================================================================
 
 // ! Prototype Explanation :->
