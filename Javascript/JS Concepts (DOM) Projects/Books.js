@@ -72,7 +72,10 @@ class UI
   }
 }
 
-// ! Class UI Prototype's method :-
+const checkUIPrototype = new UI;
+console.dir(checkUIPrototype);
+
+// ! Alternative to Class UI Prototype's method :-
 
 // UI.prototype.addBooksToList = (books) =>
 // {

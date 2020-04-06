@@ -5,7 +5,7 @@
 // TODO:: Second, we can make the variable in the local scope and keep updating them.
 
 // ? -> This is ES6 Syntax:
-// ! Employees Constructor with "this" keyword Implementation and it's functionality :->
+// ! Employees Class Constructor with "this" keyword Implementation and it's functionality :->
 // * In this, we created Global Variables and used class with "this" keyword to update values.
 
 class Employees
@@ -62,10 +62,14 @@ console.log(shape.#height);
 
 // ! Prototype Explanation :->
 
-// ? Object.prototype                                {Main Prototype & Part of Constuctor.prototype}
-// ? Function_name/Constructor_name.prototype      {Constructor prototype and it's accesed in _proto_}
+// * Prototype Object is the Fallback Object in which every property/method not found in main class/object is been fing in the Prototype.
+// * Prototype is a chain of Objects. 
+// ? Object.prototype                        {Main Prototype & Part of Constuctor.prototype and end to the chain of Prototypes}
+// ? Function_name/Constructor_name.prototype           {Constructor prototype and it's accesed in _proto_}
+// TODO:: hasOwnProperty() is part of Object.prototype built-in method.
+// TODO:: Similarly, there are more built-in properties and methods in Object.prototype.
 
-// ! Person constructor :-
+// ! Person class constructor :-
 
 class Person
 {
@@ -187,7 +191,7 @@ rohan.age = 30;
 
 // TODO:: Alternative to above method for Object.create() :-
 
-const shrey = Object.create (personPrototypes,
+const shrey = Object.create ( personPrototypes,
 {
   firstName: { value: 'Shrey' },
   lastName: { value: 'Trehan' },
@@ -200,7 +204,9 @@ const shrey = Object.create (personPrototypes,
 // TODO ==================================================================================================================================
 
 // ? Understanding the Prototypes Inheritance :-
-// ! Children constructor :->
+// * Constructor Function is different from class constructor.
+
+// ! Children constructor function :->
 
 function Children(firstName, lastName)
 {
@@ -218,7 +224,7 @@ Children.prototype.greeting = function ()
 const child = new Children('Utkarsh', 'Srivastava');
 // console.log(child.greeting());
 
-// ! Customer constructor :->
+// ! Customer constructor function :->
 
 function Customer (firstName, lastName, phone, membership)
 {
@@ -254,9 +260,9 @@ Customer.prototype.greeting = function () {
 
 // ? Alternative to above Code :->
 // * Note:--> This should be ignored.
-// ! People constructor in ES5 Syntax:
+// ! Constructor Function is in ES5 Syntax:
 
-// ! Person constructor :->
+// ! Person constructor function :->
 
 function People(firstName, lastName, dob)
 {
