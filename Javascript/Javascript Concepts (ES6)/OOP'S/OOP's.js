@@ -55,8 +55,8 @@ class Rectangle
 }
 
 const shape = new Rectangle(20, 30); 
-console.log(shape);
-console.log(shape.#height);
+// console.log(shape);
+// console.log(shape.#height);
 
 // TODO =====================================================================================================================================
 
@@ -86,7 +86,14 @@ class Person
     // }
   }
   
-  // ! Calculate age :
+  // ! Opposite Name is a Class Function/Method and not a Prototype Object Function :- 
+
+  oppositeName = () =>
+  {
+    return `${this.lastName} ${this.firstName}`;
+  }  
+
+  // ! Calculate age is a Prototype Object Function :
   
   calculateAge()
   {
@@ -95,14 +102,14 @@ class Person
     return Math.abs(ageDate.getUTCFullYear() - 1970);
   }
   
-  // ! Get full name :
+  // ! Get full name is a Prototype Object Function :
   
   getFullName()
   {
     return `${this.firstName} ${this.lastName}`;
   }
   
-  // ! Gets Married :
+  // ! Gets Married is a Prototype Object Function :
   
   getsMaried(newLastName)
   {
@@ -144,12 +151,13 @@ class NewPerson extends Person
 const john = new Person('John', 'Doe', '8-12-90');
 const mary = new Person('Mary', 'Johnson', 'March 20 1978');
 
-// console.log(mary);
+console.dir(mary);
 // console.log(john.calculateAge());
 // console.log(mary.getFullName());
 
 mary.getsMaried('Smith');
 // console.log(mary.getFullName());
+// console.log(mary.oppositeName());
 
 // ! hasOwnProperty() is part of Object.prototype built-in method.
 // ? Similarly, there are more built-in properties and methods in Object.prototype.
@@ -164,20 +172,21 @@ mary.getsMaried('Smith');
 // ! Showing the working of extends keyword with super() method:
 
 const shyam = new NewPerson("Shyam", "Taparia", "May 24 2000","Male");
-console.log(shyam);
-console.log(shyam.getFullName());
+console.dir(shyam);
+// console.log(shyam.getFullName());
 
 // ? =====================================================================================================================================
 
 // TODO:: Object.create(Class_name.prototype) is used to create more variables with values outside the class (Global).  
+// * _proto_ has an alternative which is Object.getPrototypeOf(object_name); . It is a better way to access the Prototypes.
+// ! Object.setPrototypeOf(object_name,{......}); - It is basically used to add new Prototypes to a class.
 
 const personPrototypes =
 {
+  name: "Prakhar Maheshwari",
+  rating: 3,
   greeting: function () {
     return `Hello there ${this.firstName} ${this.lastName}`;
-  },
-  getsMarried: function (newLastName) {
-    this.lastName = newLastName;
   }
 }
 
@@ -200,6 +209,21 @@ const shrey = Object.create ( personPrototypes,
 
 // console.log(shrey);
 // console.log(shrey.greeting());
+
+console.log(Object.getPrototypeOf(personPrototypes));
+
+Object.setPrototypeOf(personPrototypes,
+{
+  // ! It is due to prototype chaining we are not using spread operator else if we needed to inherit any other object, we will have to use this. 
+  // ...Object.getPrototypeOf(personPrototypes),  
+  
+  printRating: function () {
+    console.log(`Rating: ${this.rating}/5`);
+  }
+});
+
+personPrototypes.printRating();
+console.log(personPrototypes);
 
 // TODO ==================================================================================================================================
 
