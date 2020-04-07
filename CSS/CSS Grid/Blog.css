@@ -1,27 +1,37 @@
-.size-1{
-    font-size: 4rem;
-    font-weight: 400; 
+.size-1
+{
+  font-size: 4rem;
+  font-weight: 400; 
 }
-.size-2{
-    font-size: 3rem;
-    font-weight: 400;
-}
-article{
-     line-height: 2;
-     font-family: Just Another Hand;
-     font-size: 1.8rem;
-     /* display: grid; */
-     /* grid-template-columns: 2fr; */
 
+.size-2
+{
+  font-size: 3rem;
+  font-weight: 400;
 }
-#gap{
-    line-height: 3;
+
+article
+{
+  line-height: 2;
+  font-family: Just Another Hand;
+  font-size: 1.8rem;
+  
+  /* display: grid; */
+  /* grid-template-columns: 2fr; */
 }
-aside{
-    font-family: Indie Flower;
-    font-size: 1.5rem;
+
+#gap {
+  line-height: 3;
 }
-.container{
-    display: grid;
-    grid-gap: 10px; 
+
+aside
+{
+  font-family: Indie Flower;
+  font-size: 1.5rem;
+}
+
+.container
+{
+  display: grid;
+  grid-gap: 10px; 
 }

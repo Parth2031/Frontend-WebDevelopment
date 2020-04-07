@@ -1,14 +1,17 @@
              /* * Define vars for the root element */
-:root {
-             /* ? Global Variables */
-    --main-bg-color: #f4f4f4;
-    --main-txt-color: #333;
-    --container-width: 90%;
-    --header-bg-color: #333;
-    --header-txt-color: #fff;
+:root 
+{
+  /* ? Global Variables */
+  
+  --main-bg-color: #f4f4f4;
+  --main-txt-color: #333;
+  --container-width: 90%;
+  --header-bg-color: #333;
+  --header-txt-color: #fff;
 }
 
-body {
+body 
+{
   margin: 0;
   padding: 0;
   line-height: 1.5;
@@ -17,26 +20,31 @@ body {
   color: var(--main-txt-color);
 }
 
-.container {
+.container 
+{
   width: var(--container-width);
   margin: 20px auto;
 }
 
-header#main-header {
+header#main-header
+ {
   background-color: var(--header-bg-color);
   color: var(--header-txt-color);
 }
 
-header#main-header h1 {
+header#main-header h1 
+{
   text-align: center;
   padding: 0;
   margin: 0;
 }
 
-.grid {
+.grid
+{
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* ! grid-gap: 20px; */
+
            /* ? Alternative by CSS Variables gor Grid-Gap */  
   --gap: 20;
   grid-gap: calc(var(--gap) * 1px);
@@ -44,8 +52,10 @@ header#main-header h1 {
 }
 
                 /* * Define box vars */
-.box {
+.box 
+{
                  /* TODO Scope Variables for Class Box & All its Child classes inside it*/
+
   --box-bg-color: #ddd;
   --box-main-color: #06c;
   --box-padding: 5px 10px;
@@ -54,7 +64,8 @@ header#main-header h1 {
   --box-shadow-blur: 5px;
 }
 
-.box {
+.box 
+{
   background-color: var(--box-bg-color);
   padding: var(--box-padding);
   border: 1px solid var(--box-main-color);
@@ -66,7 +77,8 @@ header#main-header h1 {
   color: var(--box-main-color);
 }
 
-.box p {
+.box p 
+{
   /* --box-main-color: #555;
   color: var(--box-main-color); */
                  /* ! If a variable is not defined before even as a scope variable like the upper commented code then, */

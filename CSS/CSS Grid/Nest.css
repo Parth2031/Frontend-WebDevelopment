@@ -1,25 +1,35 @@
-body{
-    background: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);
-    background-size: cover;
+
+
+body
+{
+  background: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);
+  background-size: cover;
 }
-.albums{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr)); 
-    grid-gap: 20px; 
+
+.albums
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr)); 
+  grid-gap: 20px; 
 }
-.album{
-    background: rgba(255,255,255,0.2);
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-gap: 20px;
-    align-items: center;
+
+.album
+{
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-gap: 20px;
+  align-items: center;
 }
-.album-artwork{
-    width: 100%; 
+
+.album-artwork {
+  width: 100%; 
 }
-.album-details{
-    color: yellow;
-    font-weight: 100; 
+
+.album-details 
+{
+  color: yellow;
+  font-weight: 100; 
 }
