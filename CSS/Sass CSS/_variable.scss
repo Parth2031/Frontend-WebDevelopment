@@ -11,10 +11,11 @@ $footer-bg-color: rgb(98, 207, 25);
                  // TODO:: Syntax for include property--> @include property-name(); 
                  // ! Variable used in argument of mixin property works similar to function of c++ 
 
-@mixin flexcenter($textcolor) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $textcolor;
+@mixin flexcenter($textcolor)
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $textcolor;
 }
  

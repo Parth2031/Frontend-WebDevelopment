@@ -1,23 +1,32 @@
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
-td{
-      /*Content - Height & Width*/
-       height: 100px;
-       width: 100px;
+
+td
+{
+  /*Content - Height & Width*/
+  height: 100px;
+  width: 100px;
 }
-.vertical{       
-      /*Border*/
-       border-left: 1px solid black;
-       border-right: 1px solid black;
-}       
-.horizontal{
-      /*Border*/
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+
+.vertical
+{       
+  /*Border*/
+   border-left: 1px solid black;
+   border-right: 1px solid black;
 }
-       /*Padding in not needed in this case*/
-table{       
-       /*Margin*/
-        margin:auto;
+
+.horizontal
+{
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+       /* ! Padding in not needed in this case*/
+
+table
+{       
+  /*Margin*/
+   margin:auto;
 }

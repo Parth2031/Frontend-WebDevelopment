@@ -9,42 +9,55 @@
 
                //  Extend property is not working at this moment, it's Synatax is--> @extend name-of-selector to be continued for working
 
-.container{
-           margin: 20px 2%;
-           .font{
-                  font-family: Bahianita;
-                  font-size: 2rem;
-                  margin: auto;
-           }
-           article{
-                    font-family: Dancing Script;
-                    line-height: 3;
-                    font-size: 1.5rem;
-           }
+.container
+{
+  margin: 20px 2%;
+  .font
+  {
+    font-family: Bahianita;
+    font-size: 2rem;
+    margin: auto;
+  }
+  article
+  {
+    font-family: Dancing Script;
+    line-height: 3;
+    font-size: 1.5rem;
+  }
 }
                        // ? Nesting is allowed instead of applying descendent selector 
-.a{
-    .click{
-                       // ! For applying Pseudo-class, Syntax is --> &: pseudo-class{ --- }
-                       // TODO:: Similarly for pseudo-elements, Syntax is --> &:: pseudo-element{ --- }   
-            &:hover{
-                     background-color: yellow;
-            }
+.a 
+{
+  .click
+  {
+    // ! For applying Pseudo-class, Syntax is --> &: pseudo-class{ --- }
+    // TODO:: Similarly for pseudo-elements, Syntax is --> &:: pseudo-element{ --- }   
+   
+    &:hover {
+      background-color: yellow;
     }
+  }
 }
-.b{
-    .click{
-           &:hover{
-                     background: rgb(187, 37, 187);
-           }
+
+.b
+{
+  .click
+  {
+    &:hover {
+      background: rgb(187, 37, 187);
     }
+  }
 }
-.c{
-    .click{
-            background: rgb(4, 219, 76);
-            padding: 2%;
-            &:hover{
-                     background: lightblue;
-            }
+
+.c
+{
+  .click
+  {
+    background: rgb(4, 219, 76);
+    padding: 2%;
+
+    &:hover {
+      background: lightblue;
     }
+  }
 }

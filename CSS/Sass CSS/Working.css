@@ -1,4 +1,5 @@
-.box-1 {
+.box-1 
+{
   background: #0fbba4;
   height: 100vh;
   text-align: center;
@@ -14,7 +15,8 @@
   color: #22108a;
 }
 
-.box-2 {
+.box-2 
+{
   background: #ee1b49;
   height: 100vh;
   text-align: center;
@@ -30,7 +32,8 @@
   color: #fffb00;
 }
 
-.box-3 {
+.box-3 
+{
   background: #62cf19;
   height: 100vh;
   text-align: center;
@@ -46,17 +49,20 @@
   color: rgba(255, 0, 0, 0.829);
 }
 
-.container {
+.container 
+{
   margin: 20px 2%;
 }
 
-.container .font {
+.container .font
+{
   font-family: Bahianita;
   font-size: 2rem;
   margin: auto;
 }
 
-.container article {
+.container article
+{
   font-family: Dancing Script;
   line-height: 3;
   font-size: 1.5rem;
@@ -70,7 +76,8 @@
   background: #bb25bb;
 }
 
-.c .click {
+.c .click 
+{
   background: #04db4c;
   padding: 2%;
 }
@@ -78,4 +85,5 @@
 .c .click:hover {
   background: lightblue;
 }
-/*# sourceMappingURL=Working.css.map */
+
+/* TODO:: sourceMappingURL=Working.css.map */

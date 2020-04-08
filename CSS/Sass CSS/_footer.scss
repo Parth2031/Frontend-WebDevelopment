@@ -1,7 +1,8 @@
-.box-3{
-    background: $footer-bg-color;
-    height: 100vh;
-    text-align: center;
-    @include flexcenter(rgba(255, 0, 0, 0.829));
+.box-3 
+{
+  background: $footer-bg-color;
+  height: 100vh;
+  text-align: center;
+  @include flexcenter(rgba(255, 0, 0, 0.829));
 }
 
