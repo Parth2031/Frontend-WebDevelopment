@@ -85,7 +85,8 @@ TODO:: It will redirect to itself or to that link so in order to stop that funct
 // document.querySelector(".card").addEventListener("click", () => { console.log("Main Card"); });
 // document.querySelector(".col").addEventListener("click", () => { console.log("Column"); });
 
-// TODO:: In order to stop Event Bubbling, we use event.stopPropagation()/event.stopImmediatePropagation().
+// TODO:: Event Propagation --> 
+// ? In order to stop Event Bubbling, we use event.stopPropagation() / event.stopImmediatePropagation().
 
 // document.querySelector(".row").addEventListener("click", (event) =>
 // {
