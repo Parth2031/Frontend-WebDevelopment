@@ -75,10 +75,11 @@ const setTimer = duration =>
 
 async function trackUserHandler()
 {
-  let positionData;
   let posData;
   let timerData;
   
+  // ! Error Handling ->
+
   try
   {
     posData = await getPosition();
@@ -87,12 +88,35 @@ async function trackUserHandler()
   catch (error) {
     console.log(error);
   }
-  
+
   console.log(timerData, posData);
 
-  setTimer(1000).then( () => {
-    console.log('Timer done!');
-  });
+  // ! Promise method Error Handling -> 
+
+  // getPosition()
+  //   .then( posData =>
+  //   {
+  //     positionData = posData;
+  //     return setTimer(2000);
+  //   })
+  //   .catch( err =>
+  //   {
+  //     console.log(err);
+  //     return 'on we go...';
+  //   })
+  //   .then( data => {
+  //     console.log(data, positionData);
+  //   });
+
+  // setTimer(1000).then( () => {
+  //   console.log('Timer done!');
+  // });
+  
+  // ! setTimeout() with zero millisecond doesn't mean that it will immediately execute as zero means minimum time and not exact/guaranteed time. 
+
+  setTimeout(() => {
+    console.log("Timer Done!");
+  }, 0);
   
   console.log('Getting position...');
 }

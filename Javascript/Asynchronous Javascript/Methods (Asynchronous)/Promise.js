@@ -42,8 +42,14 @@ function getPosts()
   }, 1000);
 }
 
+// * Promise Built-in Object Error Handling -> 
+
+// TODO: NOTE :- Where, .then() works like try{....} and .catch() works like catch() {....}.
+
 // ! In this .then( function () used like in callback fn ) is used to call the Promise function similar to callback function but in callback ... 
 // ! ... we don't need to any specific function while calling that function.
 // ? Whereas, .catch() is used to call inside functionality of a function using Promise function. 
 
-createPost({ title: 'Post Three', body: 'This is post three' }) .then(getPosts) .catch( (err) => { console.log(err); });
+createPost({ title: 'Post Three', body: 'This is post three' })
+  .then(getPosts)
+  .catch((err) => { console.log(err); });
