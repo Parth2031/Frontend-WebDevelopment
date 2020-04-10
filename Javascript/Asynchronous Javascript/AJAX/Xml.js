@@ -44,6 +44,10 @@ function LoadData()
   
   xhr.open('GET', 'data.txt', true);
 
+  // xhr.responseType = "xml";
+
+  xhr.setRequestHeader("Content-type", "application/xml");
+
   // console.log('READYSTATE', xhr.readyState);
 
   // ! Optional - Used for spinners/loaders :->

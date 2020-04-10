@@ -14,6 +14,10 @@ function loadCustomer(event)
 
   xhr.open('GET', 'customer.json', true);
 
+  // xhr.responseType = "json";
+
+  xhr.setRequestHeader("Content-type", "application/json");
+
   xhr.onload = function ()
   {
     if (this.status === 200)

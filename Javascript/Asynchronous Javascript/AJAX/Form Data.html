@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Data</title>
+  <link rel="stylesheet" href="Data.css">
+  <script src="Form.js" async></script>
+</head>
+<body>
+  <h1>Understanding Form Data</h1>
+  <h2>We can find Form Data in Network Section of Console where select first post</h2>
+  <template id="single-post">
+    <li class="post-item">
+      <h2></h2>
+      <p></p>
+      <button>DELETE</button>
+    </li>
+  </template>
+  <section id="new-post">
+    <form>
+      <div class="form-control">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" />
+      </div>
+      <div class="form-control">
+        <label for="content">Content</label>
+        <textarea rows="3" id="content" name="body"></textarea>
+      </div>
+      <button type="submit">ADD</button>
+    </form>
+  </section>
+  <section id="available-posts">
+    <button>FETCH POSTS</button>
+    <ul class="posts"></ul>
+  </section>
+</body>
+</html>

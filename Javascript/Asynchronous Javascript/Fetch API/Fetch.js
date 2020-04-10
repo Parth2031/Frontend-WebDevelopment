@@ -9,6 +9,8 @@ button_2.addEventListener("click", getJson);
 
 button_3.addEventListener("click", getExternal);
 
+// TODO:: Syntax of Fetch API -> fetch(url).then()....
+
 // ! Get local text file data :-
 
 function getText()
@@ -87,4 +89,21 @@ function getExternal()
     .catch( (err) => {
       console.log(err);
     });
+}
+
+// TODO:: NOTE - Fetch can also take more arguments, except of url. 
+
+// ! Example of fetch API with more arguments ->>
+// * Other arguments work similar to .open() of AJAX.
+
+function fetchCode()
+{
+ fetch( url,
+  {
+    method: method,
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
 }
