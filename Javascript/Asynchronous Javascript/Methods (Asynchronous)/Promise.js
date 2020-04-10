@@ -73,8 +73,10 @@ const promise2 = new Promise(function (resolve, reject) {
 
 // TODO:: Promise Built-In Object Method :-
 
-// ? Promise.race() - This method returns a promise that fulfills or rejects as soon as one of the promises in an iterable
-// ?                  fulfills or rejects, with the value or reason from that promise.
+/*
+? Promise.race() - This method returns a promise that fulfills or rejects as soon as one of the promises in an iterable
+?                  fulfills or rejects, with the value or reason from that promise.
+*/
 
 // ! Example of Promise.race() - 
 
@@ -104,5 +106,20 @@ Promise.all([promise1, promise2]).then(function (values)
   // ! It will print all the values of Promise result if they don't have any error's.
   // * Used to execute every promise at once for their values. 
 
+  console.log(values); 
+});
+
+/*
+? Promise.allSettled() - 
+? This method returns a promise that resolves after all of the given promises have either resolved or rejected,
+? with an array of objects that each describes the outcome of each promise.
+*/
+
+// ! Example of Promise.allSettled() - 
+
+Promise.allSettled([promise1, promise2]).then(function (values)
+{
+  // ! It tells us the status of all the Promise as an array.
+  
   console.log(values); 
 });

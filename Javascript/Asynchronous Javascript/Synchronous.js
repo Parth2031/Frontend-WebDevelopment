@@ -123,6 +123,19 @@ async function trackUserHandler()
 
 button.addEventListener('click', trackUserHandler);
 
+// TODO:: Promise Built-In Object Method Example - 
+
+// Promise.race([getPosition(), setTimer(1000)]).then(data => {
+//   console.log(data);
+// });
+
+// Promise.all([getPosition(), setTimer(1000)]).then(promiseData => {
+//   console.log(promiseData);
+// });
+
+Promise.allSettled([getPosition(), setTimer(1000)]).then(promiseData => {
+  console.log(promiseData);
+});
 
 // TODO:: Understanding Event Loop :-
 // * It is generally used for callback methods.
