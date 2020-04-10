@@ -5,7 +5,7 @@ const posts = [
   { title: 'Post Two', body: 'This is post two' }
 ];
 
-function createPost(post)
+const createPost = (post) =>
 {
   // TODO:: Syntax of Promise function: return new Promise ( function () { .. });
 
@@ -27,7 +27,7 @@ function createPost(post)
   });
 }
 
-function getPosts()
+const getPosts = () =>
 {
   setTimeout( () =>
   {
@@ -42,6 +42,10 @@ function getPosts()
   }, 1000);
 }
 
+const experiment = () => {
+  console.log("Afer catch method, so if first .then() fails, it will still work");
+}  
+
 // * Promise Built-in Object Error Handling -> 
 
 // TODO: NOTE :- Where, .then() works like try{....} and .catch() works like catch() {....}.
@@ -50,6 +54,10 @@ function getPosts()
 // ! ... we don't need to any specific function while calling that function.
 // ? Whereas, .catch() is used to call inside functionality of a function using Promise function. 
 
+// * NOTE :- Every .then() can have a .catch() or can also leave it.
+// ? Afer catch method, so if first .then() fails, it will still work other remaining .then().
+
 createPost({ title: 'Post Three', body: 'This is post three' })
   .then(getPosts)
-  .catch((err) => { console.log(err); });
+  .catch((err) => { console.log(err); })
+  .then(experiment);
