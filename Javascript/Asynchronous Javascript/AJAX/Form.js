@@ -134,11 +134,12 @@ fetchButton.addEventListener('click', fetchPosts);
 
 form.addEventListener('submit', event =>
 {
-  event.preventDefault();
   const enteredTitle = event.currentTarget.querySelector('#title').value;
   const enteredContent = event.currentTarget.querySelector('#content').value;
 
   createPost(enteredTitle, enteredContent);
+
+  event.preventDefault();
 });
 
 postList.addEventListener('click', event =>
