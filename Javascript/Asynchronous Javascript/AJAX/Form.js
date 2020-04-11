@@ -132,7 +132,7 @@ async function createPost(title, content)
 
 fetchButton.addEventListener('click', fetchPosts);
 
-form.addEventListener('submit', event =>
+form.addEventListener('submit', (event) =>
 {
   const enteredTitle = event.currentTarget.querySelector('#title').value;
   const enteredContent = event.currentTarget.querySelector('#content').value;
