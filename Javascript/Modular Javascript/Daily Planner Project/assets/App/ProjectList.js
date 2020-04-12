@@ -9,7 +9,7 @@ import {DOMHelper} from '../Utility/DOMHelper.js'
 
 // import * as DOMH from '../Utility/DOMHelper.js';
 
-
+// ! This example of ProjectItem is used to show that we cannot access this variable outside this file.
 // const ProjectItem = 'abc';
 
 // console.log(DEFAULT_VALUE);
