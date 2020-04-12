@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daily Todo List</title>
+    <link rel="stylesheet" href="List.css"/>  
+
+    <!-- TODO:: type = "module" - It allows us to import and export multiple files in orde to make program more efficient. -->
+    <script src="Daily.js" defer type="module"></script>
+  
+  </head>
+  <body>
+
+  <!-- ! "template" tag is used when we don't want some code to load as soon as we open the file 
+       !     so we use this tag as it loads only when we trigger it -->
+    <template id="infoIcon">
+      <h2>More Info</h2>
+      <p></p>
+    </template>
+  
+    <header id="main-header">
+      <h1>Daily TODO List</h1>
+    </header>
+    <section id="active-projects">
+      <header>
+        <h2>Active List</h2>
+      </header>
+      <ul>
+
+        <!-- ! There are many more Data Attribute similar to "data-extra-info" -->
+        <!-- * "data-extra-info" is a Data Attribute which holds some unique properties and implementation which is useful. -->
+        <li id="p1" data-extra-info="Got lifetime access, but would be nice to finish it soon!" class="card" draggable="true">
+          
+          <h2>Finish the Course</h2>
+          <p>Finish the course within the next two weeks.</p>
+          <button class="alt">More Info</button>
+          <button>Finish</button>
+        </li>
+
+        <!-- * "data-extra-info" is a Data Attribute which holds some unique properties and implementation which is useful. -->
+        <li id="p2" data-extra-info="Not really a business topic but still important." class="card" draggable="true">
+          
+          <h2>Buy Groceries</h2>
+          <p>Don't forget to pick up groceries today.</p>
+          <button class="alt">More Info</button>
+          <button>Finish</button>
+        </li>
+      </ul>
+    </section>
+    <section id="finished-projects">
+      <header>
+        <h2>Finished List</h2>
+      </header>
+      <ul>
+
+        <!-- * "data-extra-info" is a Data Attribute which holds some unique properties and implementation which is useful. -->
+        <li id="p3" data-extra-info="Super important conference! Fictional but still!" class="card" draggable="true">
+          
+          <h2>Book Hotel</h2>
+          <p>Company conference takes place in December, don't forget to book a hotel.</p>
+          <button class="alt">More Info</button>
+          <button>Activate</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ! This button was created for Dynamically Loading Script -->
+    <!-- <footer>
+      <button id="stop-analytics-btn">Stop Analytics</button>
+    </footer> -->
+  </body>
+</html>
