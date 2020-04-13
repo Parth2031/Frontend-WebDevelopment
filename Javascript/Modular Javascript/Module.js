@@ -1,5 +1,8 @@
 // TODO:: Understanding Modular Javascript :-
 
+// ! NOTE - While doing Modular Javascript, we need Serve JS to run simantaneously as it is needed to avoid any security issues.
+// !        So, we write serve in terminal and use  the host id and run on the browser.
+
 /*
 ? Syntax of import & export -
 * "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
