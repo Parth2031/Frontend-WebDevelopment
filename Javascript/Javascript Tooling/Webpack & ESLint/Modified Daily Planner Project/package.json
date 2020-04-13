@@ -1,0 +1,11 @@
+{
+  "name": "modified-daily-planner",
+  "version": "1.0.0",
+  "description": "Modified Project",
+  "main": "Daily.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parth Rastogi",
+  "license": "ISC"
+}
