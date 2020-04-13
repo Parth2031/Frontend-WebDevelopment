@@ -1,12 +1,11 @@
 // TODO:: Understanding Modular Javascript Project :-
 
 // ! "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
-
-import { ProjectList } from './src/App/ProjectList.js';
+import { ProjectList } from './App/ProjectList';
 
 // * NOTE - "globalThis" keyword is used instead of "const" when using modular javascript as globalThis help us to access any item from any file. 
 
-globalThis.DEFAULT_VALUE = 'MAX';
+// globalThis.DEFAULT_VALUE = 'MAX';
 
 class App
 {
@@ -24,7 +23,7 @@ class App
   static loadScript()
   {
     const loadDynamicScript = document.createElement('script');
-    loadDynamicScript.src = 'assets/Utility/Dynamic Script.js';
+    loadDynamicScript.src = 'src/Utility/Dynamic Script.js';
     loadDynamicScript.defer = true;
     document.head.append(loadDynamicScript);
   }

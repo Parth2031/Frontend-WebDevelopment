@@ -1,13 +1,13 @@
 // TODO:: "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
 
-import { ProjectItem as ProItem } from './ProjectItem.js';
-import {DOMHelper} from '../Utility/DOMHelper.js'
+import { ProjectItem as ProItem } from './ProjectItem';
+import {DOMHelper} from '../Utility/DOMHelper'
 
 // ! "*" is used when we want to select all the exports from that choosen file.
 // ? "as" is used to change the name of selected file for the current file to be worked upon so to avoid clashing of same names in .... 
 // ? .... exported and imported file
 
-// import * as DOMH from '../Utility/DOMHelper.js';
+// import * as DOMH from '../Utility/DOMHelper';
 
 // ! This example of ProjectItem is used to show that we cannot access this variable outside this file.
 // const ProjectItem = 'abc';
@@ -16,13 +16,11 @@ import {DOMHelper} from '../Utility/DOMHelper.js'
 
 export class ProjectList
 {
-  projects = [];
-
   constructor(type)
   {
     this.type = type;
     const proItems = document.querySelectorAll(`#${type}-projects li`);
-
+    this.projects = [];
     for (const proItem of proItems) {
       this.projects.push(new ProItem(proItem.id, this.switchProject.bind(this), this.type));
     }

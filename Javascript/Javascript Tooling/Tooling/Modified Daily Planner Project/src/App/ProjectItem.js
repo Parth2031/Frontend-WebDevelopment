@@ -1,19 +1,18 @@
 // TODO:: "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
 // TODO:: "export" keyword Syntax -> export "infront of item to be exported"
 
-import { DOMHelper } from '../Utility/DOMHelper.js';
-// import { InfoIcon } from './InfoIcon.js';
+import { DOMHelper } from '../Utility/DOMHelper';
+// import { InfoIcon } from './InfoIcon';
 
 console.log('Project Item created!');
 
 export class ProjectItem
 {
-  hasActiveInfoIcon = false;
-
   constructor(id, updateProjectListsFunction, type)
   {
     this.id = id;
     this.updateProjectListsHandler = updateProjectListsFunction;
+    this.hasActiveInfoIcon = false;
     this.connectMoreInfoButton();
     this.connectSwitchButton(type);
     this.connectDrag();
@@ -45,7 +44,7 @@ export class ProjectItem
      ? It helps us to save the memory space of not loading the all file rather than only needed files are loaded.
      */
 
-    import('./InfoIcon.js').then( module =>
+    import('./InfoIcon').then( module =>
     {
       const infoIcon = new module.InfoIcon( () => {
           this.hasActiveInfoIcon = false;

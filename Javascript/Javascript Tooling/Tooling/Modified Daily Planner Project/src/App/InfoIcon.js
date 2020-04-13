@@ -5,7 +5,7 @@
 // * "default" keyword "import" Syntax -> import "anyName" from 'path of file';
 // ! NOTE - No use of {} in default exports to import Syntax.
 
-import Cmp, { doSomething } from './Component.js';
+import Cmp, { doSomething } from './Component';
 
 console.log('InfoIcon running');
 
@@ -17,13 +17,11 @@ export class InfoIcon extends Cmp
     this.closeNotifier = closeNotifierFunction;
     this.text = text;
     this.create();
+    this.closeInfoIcon = () => {
+      this.detach();
+      this.closeNotifier();
+    };
   }
-
-  closeInfoIcon = () =>
-  {
-    this.detach();
-    this.closeNotifier();
-  };
 
   create()
   {

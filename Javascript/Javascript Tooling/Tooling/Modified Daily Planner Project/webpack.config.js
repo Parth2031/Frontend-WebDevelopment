@@ -1,12 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  entry: "./src/app.js",
+  entry: "./src/Daily.js",
   mode: "development",
   output: {
-    filename: 'app.js',
-    path: path.resolve(__dirname, 'assets', 'scripts'),
-    publicPath: 'assets/scripts/'
+    filename: 'Daily.js',
+    path: path.resolve(__dirname, 'bundled scripts'),
+    publicPath: 'bundled scripts/'
   },
   devtool: 'cheap-module-eval-source-map',
   // devServer: {
