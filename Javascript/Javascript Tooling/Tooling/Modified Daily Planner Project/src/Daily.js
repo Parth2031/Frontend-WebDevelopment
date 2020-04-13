@@ -4,8 +4,12 @@
 import { ProjectList } from './App/ProjectList';
 
 // * NOTE - "globalThis" keyword is used instead of "const" when using modular javascript as globalThis help us to access any item from any file. 
+globalThis.DEFAULT_VALUE = 'MAX';
 
-// globalThis.DEFAULT_VALUE = 'MAX';
+// ? Using Third Party Packages which are third party library only but are installed as packages :
+import * as _ from 'lodash';
+
+console.log(_.difference([2, 1], [2, 3]));
 
 class App
 {
