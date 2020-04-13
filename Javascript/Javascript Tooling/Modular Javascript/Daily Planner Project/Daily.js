@@ -2,7 +2,7 @@
 
 // ! "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
 
-import { ProjectList } from './assets/App/ProjectList.js';
+import { ProjectList } from './src/App/ProjectList.js';
 
 // * NOTE - "globalThis" keyword is used instead of "const" when using modular javascript as globalThis help us to access any item from any file. 
 
