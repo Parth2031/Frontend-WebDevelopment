@@ -1,0 +1,17 @@
+{
+  "name": "webpacks",
+  "version": "1.0.0",
+  "description": "Understanding Webpack",
+  "main": "Webpacks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build-prod": "webpack --config webpack.config.prod.js"
+  },
+  "author": "Parth Rastogi",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
