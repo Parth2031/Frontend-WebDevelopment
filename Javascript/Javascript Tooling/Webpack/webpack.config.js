@@ -2,11 +2,12 @@
 
 const path = require('path');
 
-module.exports = {
+module.exports =
+{
   entry: "Webpacks.js",
   mode: "development",
   output: {
-    filename: 'Webpacks.js',
+    filename: 'app.js',
     path: path.resolve(__dirname, 'src'),
     publicPath: 'src/'
   },
