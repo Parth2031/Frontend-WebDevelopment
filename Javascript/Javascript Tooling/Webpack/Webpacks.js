@@ -35,7 +35,7 @@
 ? webpack.config.prod.js : It is used to configure the main.js file at only production state of file.
 */
 
-// TODO:: package.json Part to be added are :-
+// TODO:: package.json Parts to be added are :-
 
 /*
 ! Package.json file -
