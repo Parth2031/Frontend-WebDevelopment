@@ -1,4 +1,4 @@
-// TODO:: Understanding Webpack Configuration :-
+// TODO:: Basic Webpack Configuration :-
 
 const path = require('path');
 

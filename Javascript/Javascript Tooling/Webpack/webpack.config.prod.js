@@ -1,4 +1,4 @@
-// TODO:: Understanding Webpack Production Configuration :-
+// TODO:: Basic Webpack Production Configuration :-
 
 const path = require('path');
 const CleanPlugin = require('clean-webpack-plugin');
