@@ -1,4 +1,5 @@
-// TODO:: Understanding Modular Javascript Project :-
+// TODO:: This Project is a Modified Version of Modular Javascript Project with more optimized and improved way-->
+// TODO:: Understanding Modified Modular Javascript Project {Combination of Webpack & ESLint} :-
 
 // ! "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
 import { ProjectList } from './App/ProjectList';
