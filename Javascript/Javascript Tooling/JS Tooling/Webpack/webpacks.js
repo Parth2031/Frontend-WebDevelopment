@@ -47,7 +47,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     
-  ? In order to add npm run build commands, we need to add the given lines in package.json file ->>    
+  ? In order to add npm run build commands, we need to add the given lines in package.json file -->>    
   * "build": "webpack",
   * "build-dev": "webpack-dev-server",            
   !                             In this, "build-dev" and "build-prod" name is given by me and can be changed according to user.
@@ -57,9 +57,11 @@
   "license": "ISC",
   "devDependencies": {
   
-  ? This shows the installed developer dependencies in a local file.   
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+  ? This shows the installed developer dependencies in a local file.  -->> 
+  * "clean-webpack-plugin": "^3.0.0",
+  * "webpack": "^4.42.1",
+  * "webpack-cli": "^3.3.11",
+  * "webpack-dev-server": "^3.10.3"
   }
 }
 */
