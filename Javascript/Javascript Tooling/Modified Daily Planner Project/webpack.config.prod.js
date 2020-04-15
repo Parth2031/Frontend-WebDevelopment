@@ -1,7 +1,10 @@
+// TODO:: CommonJS Syntax which is based on Node JS :-
+
 const path = require('path');
 const CleanPlugin = require('clean-webpack-plugin');
 
-module.exports = {
+module.exports =
+{
   entry: "./src/Daily.js",
   mode: "development",
   devtool: 'cheap-source-map',

@@ -1,5 +1,6 @@
 // TODO:: Understanding Modular Javascript Project :-
 
+// ? NOTE :- Modular JS is based on ES2015 which are import and export statements.
 // ! "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
 
 import { ProjectList } from './src/App/ProjectList.js';

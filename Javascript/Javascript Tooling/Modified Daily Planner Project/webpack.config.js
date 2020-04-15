@@ -1,6 +1,9 @@
+// TODO:: CommonJS Syntax which is based on Node JS :-
+
 const path = require('path');
 
-module.exports = {
+module.exports =
+{
   entry: "./src/Daily.js",
   mode: "development",
   output: {
