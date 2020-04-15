@@ -1,11 +1,13 @@
 // TODO:: Types of Browser Storages :-
 
-// TODO:: Local Storage API -->   Part of window(browser)
-// ? It is similar to session storage, except that while data stored in localStorage has no expiration time.
-// * Syntax --> localStorage.setItem(item,value);
-// //                 ""     .removeItem(item);
-// //                 ""     .clear();
-// ! It is accessed in Application of chrome dev tools.
+/*
+TODO:: Local Storage API -->   Part of window(browser)
+? It is similar to session storage, except that while data stored in localStorage has no expiration time.
+* Syntax --> localStorage.setItem(item,value);
+//                 ""     .removeItem(item);
+//                 ""     .clear();
+! It is accessed in Application of chrome dev tools.
+*/
 
 // localStorage.clear();
 // localStorage.setItem("Homework","Maths");
@@ -14,7 +16,7 @@
 // var value = localStorage.getItem("Homework");
 // console.log(value);
 
-// //------------------------------------------------------
+// ! Example of Local Storage API -
 
 // var form = document.querySelector("#task-form");
 
@@ -41,14 +43,16 @@
 // const tasks = JSON.parse(localStorage.getItem("tasks"));
 // tasks.forEach( function(task) { console.log(task); });
 
-// //------------------------------------------------------
+// //------------------------------------------------------------------------------------------------------------------------------------
 
-// TODO:: Session Storage API -->
-// ?  Data stored in sessionStorage gets cleared when the page session ends — that is, when the page is closed. 
-// * Syntax --> sessionStorage.setItem(item,value);
-// //                 ""      .removeItem(item);
-// //                 ""      .clear();
-// ! It is accessed in Application of chrome dev tools.
+/*
+TODO:: Session Storage API -->
+?  Data stored in sessionStorage gets cleared when the page session ends — that is, when the page is closed and not when the page reloads. 
+* Syntax --> sessionStorage.setItem(item,value);
+//                 ""      .removeItem(item);
+//                 ""      .clear();
+! It is accessed in Application of chrome dev tools.
+*/
 
 // sessionStorage.clear();
 // sessionStorage.setItem("Homework","English");
@@ -57,4 +61,49 @@
 // var diff_value = sessionStorage.getItem("Homework");
 // console.log(diff_value);
 
-// TODO:: Cookies API -->
+// // -----------------------------------------------------------------------------------------------------------------------------------
+
+/*
+TODO:: Cookies API -->
+? It is a storage which could be used in both client side and server side.
+! It is only available when your webpage is served with a real server. So, we can use Serve JS in terminal.
+* Syntax --> document.cookie is used to access Cookie API.
+? In Cookie, we don't have any specific methods so we have to manually store them in browser storage and then retrieve them.
+
+! Cookies have a expiration time which is by default as session and if we want to set an time then, Example ->>
+* document.cookie = `uid=${userId}; max-age=360`; . 
+?                 In this, after ";" we wrote max-age = time(in seconds) which is used to set the expiration time of a cookie.
+*/
+
+// ! Example of Cookies API -
+
+const storeBtn = document.querySelector("#store-btn");
+const retrBtn = document.querySelector("#retrieve-btn");
+
+storeBtn.addEventListener("click", () =>
+{
+  const userId = "u123";
+  const user = { name: "Parth", age: 20 };
+
+  document.cookie = `uid=${userId}; max-age=360`;
+  document.cookie = `user=${JSON.stringify(user)}`;
+});
+
+retrBtn.addEventListener("click", () =>
+{
+  console.log(document.cookie);
+
+  const cookieData = document.cookie.split(";");
+  const data = cookieData.map( i => {
+    return i.trim();
+  });
+
+  console.log(data[1].split("=")[1]);                                            // ! <-- User Value
+});
+
+// // --------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+TODO:: IndexedDB API -->
+ 
+*/
