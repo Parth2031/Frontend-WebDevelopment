@@ -1,4 +1,4 @@
-// TODO:: Iterator is an built-in object which is used to iterate the array value's.
+// TODO:: Iterator is an built-in object which is used to iterate the arrayand even object value's.
 
 // ! Iterator Syntax :-
 
@@ -50,7 +50,7 @@
 // console.log(names.next().value);
 // console.log(names.next().value);
 
-// TODO:: Generator is  also an built-in object which is also used to iterate the array value's. 
+// TODO:: Generator is  also an built-in object which is also used to iterate the array and even object value's. 
 // TODO:: It is an alternative to Iterator. 
 
 // ! Generator Syntax :-
@@ -66,6 +66,7 @@
 
 // * .next() - It is used to return the next iterated value. { Returns a value yielded by the yield expression. }
 // * .return() - It returns the given value and finishes the generator.
+// * yield behaves similar to return statement but is used as it is a Generator Function and not a normal function.
 
 // ! Generator Example :-
 
