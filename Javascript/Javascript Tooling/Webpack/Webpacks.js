@@ -67,6 +67,13 @@
   * "webpack": "^4.42.1",
   * "webpack-cli": "^3.3.11",
   * "webpack-dev-server": "^3.10.3"
-  }
+  },
+
+  ? Dependencies are majorly show the Third Party Libraries Installed like lodash,coreJs,etc.
+  "dependencies": {  
+  
+  ! lodash is the Third Party Library Installed here ->
+  * "lodash": "^4.17.15"
+  } 
 }
 */

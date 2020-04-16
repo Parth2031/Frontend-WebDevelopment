@@ -13,8 +13,6 @@ const entryTextSection = document.querySelector("#entry-text");
 
 const movies = [];
 
-
-
 const toggleBackdrop = () => {
   backdrop.classList.toggle("visible");
 };
