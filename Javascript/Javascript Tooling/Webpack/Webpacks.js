@@ -56,7 +56,7 @@
   "author": "Parth Rastogi",
   "license": "ISC",
   
-  ! Browser's List is used for Browser Support for babel loader as it wants to know the browser's version/global user's.
+  ! Browser's List is used for Browser Support for babel loader as it wants to know the browser's version/market share.
   "browserslist":"> 2%",
   
   "devDependencies": {
