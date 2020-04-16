@@ -40,6 +40,24 @@ module.exports =
     // ? Only string format is allowed for libraryname.
     library: "MyLibrary",
   },
+  
+  // TODO: Module are used for adding Third Party Packages like Babel Loader. 
+  module:
+  {
+    // ! It holds some set of rules and exclude some files in order to process it.
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  },  
 
   // TODO: Enhance debugging by adding meta info for the browser devtools source-map most detailed at the expense of build speed.
   devtool: "names are to find in documentation",
