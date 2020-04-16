@@ -16,6 +16,22 @@ module.exports =
     path: path.resolve(__dirname, 'bundled scripts'),
     publicPath: 'bundled scripts/'
   },
+  
+  // ! It is used to add the modules of Babel Loader in order to get Browser Support.
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  },
   plugins: [
     new CleanPlugin.CleanWebpackPlugin()
   ],

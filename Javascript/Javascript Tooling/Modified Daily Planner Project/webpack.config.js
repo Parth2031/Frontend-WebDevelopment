@@ -11,6 +11,20 @@ module.exports =
     path: path.resolve(__dirname, 'bundled scripts'),
     publicPath: 'bundled scripts/'
   },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  },
   devtool: 'cheap-module-eval-source-map',
   // devServer: {
   //   contentBase:'./'
