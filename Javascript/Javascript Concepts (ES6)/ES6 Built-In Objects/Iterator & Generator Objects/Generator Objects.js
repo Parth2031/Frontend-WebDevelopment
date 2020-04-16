@@ -7,7 +7,7 @@
 // ?   let nextIndex = 0;
 
 // ?   return {
-// ?     next: function ()
+// ?     next()
 // ?     {
 // ?       return nextIndex < argument_name.length ?
 // ?       { value: argument_name[nextIndex++], done: false } :
