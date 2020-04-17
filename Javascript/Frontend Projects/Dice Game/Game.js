@@ -1,11 +1,13 @@
-ludogame = () =>
+
+
+const ludogame = () =>
 { 
   const play1 = Math.floor(Math.random() * 6) + 1; 
-  const play1dice = `Dice ${play1}.png`;
+  const play1dice = `Dice Images/Dice ${play1}.png`;
   document.getElementById("check1").setAttribute("src", play1dice);
    
   const play2 = Math.floor(Math.random() * 6) + 1; 
-  const play2dice = `Dice ${play2}.png`;
+  const play2dice = `Dice Images/Dice ${play2}.png`;
   document.getElementById("check2").setAttribute("src", play2dice);
    
   if(play1 > play2)

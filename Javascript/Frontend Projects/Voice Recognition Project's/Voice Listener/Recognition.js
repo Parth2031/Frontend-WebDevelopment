@@ -11,13 +11,16 @@ const greetings =
   "I am Great!",
   "You tell?"
 ];
+
 const jokes =
 [
   "Never trust math teachers who use graph.. They're always plotting something.. Hahahaha, I used to breed rabbits.",
   "Thank you for asking"
 ];
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition; // Activating Speech Recognition
+// ! Activating Speech Recognition :
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition; 
 var recognition = new SpeechRecognition;
 
 // ! On click, what should it reply :

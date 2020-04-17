@@ -1,77 +1,103 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: "Montserrat", sans-serif;
+
+body {
+  font-family: "Montserrat", sans-serif;
 }
-.app{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;   
-    justify-content: space-between;
-    align-items: center;
+
+.app
+{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;   
+  justify-content: space-between;
+  align-items: center;
 }
-header h1{
-    margin: 50px 0px 30px 0px;
-    text-align: center;
-    font-size: 40px;
+
+header h1
+{
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
 }
-header p{
-    font-size: 20 px;
+
+header p {
+  font-size: 20 px;
 }
-.pads{
-    width: 100%;
-    display: flex;
+
+.pads
+{
+  width: 100%;
+  display: flex;
 }
                       /* TODO:: .pads > div is a Child Selector which selects all the div after the class="pads*/
                           /* ? Child Selector Syntax --> selector 1 > selector 2 { style properties } */
-.pads > div{
-    height: 100px;
-    width: 100px;
-    flex: 1;
+.pads > div
+{
+  height: 100px;
+  width: 100px;
+  flex: 1;
 }
-.pad1{
-    background: rgb(23, 95, 212);
-    /* background: rgb(15, 255, 231); */
-}
-.pad2{
-    background: rgb(64, 212, 23);
-}
-.pad3{
-    background: rgb(240, 247, 15);
-}
-.pad4{
-    background: rgb(255, 91, 15);
-}
-.pad5{
-    background: rgb(255, 15, 15);
-}
-.pad6{
-    background: rgb(255, 15, 211);
-}
-/* .visual > div{ 
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    bottom: 0%;
-    left: 20%;
-    z-index: -1;
-}   */
 
-/* @keyframes jump{ 
-    0%{
-        bottom: 0%;
-        left: 20%;  
-    }
-    50%{ 
-        bottom: 50%;
-        left: 50%;
-    }
-    100%{
-        bottom: 0%;
-        left: 80%;
-    }
-}   */
+.pad1
+{
+  background: rgb(23, 95, 212);
+  /* background: rgb(15, 255, 231); */
+}
+
+.pad2 {
+  background: rgb(64, 212, 23);
+} 
+
+.pad3 {
+  background: rgb(240, 247, 15);
+}
+
+.pad4 {
+  background: rgb(255, 91, 15);
+}
+
+.pad5 {
+  background: rgb(255, 15, 15);
+}
+
+.pad6 {
+  background: rgb(255, 15, 211);
+}
+
+/* .visual > div 
+{ 
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  bottom: 0%;
+  left: 20%;
+  z-index: -1;
+}   
+*/
+
+/* 
+@keyframes jump
+{ 
+  0% 
+  {
+    bottom: 0%;
+    left: 20%;  
+  }
+  50%
+  { 
+    bottom: 50%;
+    left: 50%;
+  }
+  100%
+  {
+    bottom: 0%;
+    left: 80%;
+  }
+}   
+*/

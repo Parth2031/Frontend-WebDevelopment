@@ -1,6 +1,5 @@
  // TODO:: This window eventListener, it uses the "load": event type which helps the window to load completely first and then only run javascript.
                           // ! load event doesn't work anywhere else than window.addEventListener
-                     // ? In this, we have used () => instead of function() in addEventListener property
 
 window.addEventListener( "load", () =>
 {
@@ -32,7 +31,7 @@ window.addEventListener( "load", () =>
   {
     // sounds[index].currentTime = 0;   
     // sounds[index].play();  
-    var sound1 = new Audio("bubbles.mp3");
+    var sound1 = new Audio("Sounds/bubbles.mp3");
     sound1.play();
     // createBubbles(index);
   });
@@ -41,49 +40,44 @@ window.addEventListener( "load", () =>
 
   pad2.addEventListener("click", function ()
   {
-    var sound2 = new Audio("clay.mp3");
+    var sound2 = new Audio("Sounds/clay.mp3");
     sound2.play();   
   });
          
   pad3.addEventListener("click", function ()
   {
-    var sound3 = new Audio("confetti.mp3");
+    var sound3 = new Audio("Sounds/confetti.mp3");
     sound3.play();
   });
          
   pad4.addEventListener("click", function ()
   {
-    var sound4 = new Audio("glimmer.mp3");
+    var sound4 = new Audio("Sounds/glimmer.mp3");
     sound4.play();
   });   
      
   pad5.addEventListener("click", function ()
   {
-    var sound5 = new Audio("moon.mp3");
+    var sound5 = new Audio("Sounds/moon.mp3");
     sound5.play();
   });   
      
   pad6.addEventListener("click", function ()
   {
-    var sound6 = new Audio("ufo.mp3");
+    var sound6 = new Audio("Sounds/ufo.mp3");
     sound6.play();
   });   
      
                                       //  * Create a function that makes a bubble
      
-   // const createBubbles = (index) => {
-      // const bubble = document.createElement("div");
-      // visual.appendChild(bubble);
-      // bubble.style.backgroundColor = colors[index];
-      // bubble.style.animation = `jump 1s ease`;
-      // bubble.addEventListener("animationend",function() {
-         // visual.removeChild(this);
-      // });
-   // };
+  // const createBubbles = (index) =>
+  // {
+  //   const bubble = document.createElement("div");
+  //   visual.appendChild(bubble);
+  //   bubble.style.backgroundColor = colors[index];
+  //   bubble.style.animation = `jump 1s ease`;
+  //   bubble.addEventListener("animationend",function() {
+  //      visual.removeChild(this);
+  //   });
+  //  };
 }); 
-
-
-
-
-// play()--> it is not working???????
-// currentTime -->????????????????
