@@ -1,3 +1,5 @@
+// TODO:: It is based on Iterator/Generator Concept :-
+
 const profileDisplay = document.querySelector("#profileDisplay");
 const imageDisplay = document.querySelector("#imageDisplay");
 
