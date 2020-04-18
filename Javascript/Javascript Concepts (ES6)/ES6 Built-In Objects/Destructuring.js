@@ -1,5 +1,12 @@
 // TODO:: ES6 Array & Object Destructuring. 
 
+/*
+! IMPORTANT NOTE-- >>
+
+? Rest Operator is worked on only Function's and not Array & Object's.
+? Whereas, Spread Operator is worked upon Array & Object's and not on Function's.
+*/
+
 // * Basic Array Working -
 
 let a, b;
@@ -11,12 +18,23 @@ let a, b;
 
 // ! Rest Parameter/Pattern Syntax :-
 
-// * (...) - Spread Operators: These dots are decribed as the remaining arguments in an array,object,etc.
-// ? function(a,b,...manyMoreArguments)
-// ?              OR
-// ? array_name[a,b,...rest];
-// ?           OR
-// ? object_name{ a, b, ...rest};
+/* 
+! NOTE ->>
+
+* (...) - Spread Operators: These dots are decribed as the remaining arguments in an array,object,etc.
+*                           It is used to split up array elements or object properties.
+
+? const newArray = [...oldArray,1,2]; 
+? const newObject = {...oldObject,newProps: 5};
+
+* Rest Operator : It is used to merge a list of function arguments into an array.
+
+? function_name(a,b,...manyMoreArguments) / function_name(...rest)
+?              OR
+? array_name[a,b,...rest]; / array_name[...rest];
+?           OR
+? object_name{ a, b, ...rest}; / object_name[...rest];
+*/
 
 // ! Rest Parameter/Pattern Example :-
 
