@@ -60,14 +60,37 @@ const shape = new Rectangle(20, 30);
 
 // TODO =====================================================================================================================================
 
+// ! Alternative Way to Classes in ES7 :-
+
+// * NOTE - In ES7, Instead of writing constructor(){...}, we can define property and value without "this" keyword 
+// *        and use arrow functions for handling "this" keyword functionalities.
+
+class Group
+{
+  name = 'Parth';
+  age = 20;
+  birthday = '31=01-2000';
+  
+  showName = () => {
+    console.log(this.name);
+  }   
+}
+
+const family = new Group();
+family.showName();
+
+// TODO =====================================================================================================================================
+
 // ! Prototype Explanation :->
 
-// * Prototype Object is the Fallback Object in which every property/method not found in main class/object is been fing in the Prototype.
-// * Prototype is a chain of Objects. 
-// ? Object.prototype                        {Main Prototype & Part of Constuctor.prototype and end to the chain of Prototypes}
-// ? Function_name/Constructor_name.prototype           {Constructor prototype and it's accesed in _proto_}
-// TODO:: hasOwnProperty() is part of Object.prototype built-in method.
-// TODO:: Similarly, there are more built-in properties and methods in Object.prototype.
+/*
+* Prototype Object is the Fallback Object in which every property/method not found in main class/object is been fing in the Prototype.
+* Prototype is a chain of Objects. 
+? Object.prototype                        {Main Prototype & Part of Constuctor.prototype and end to the chain of Prototypes}
+? Function_name/Constructor_name.prototype           {Constructor prototype and it's accesed in _proto_}
+TODO:: hasOwnProperty() is part of Object.prototype built-in method.
+TODO:: Similarly, there are more built-in properties and methods in Object.prototype.
+*/
 
 // ! Person class constructor :-
 
@@ -151,7 +174,7 @@ class NewPerson extends Person
 const john = new Person('John', 'Doe', '8-12-90');
 const mary = new Person('Mary', 'Johnson', 'March 20 1978');
 
-console.dir(mary);
+// console.dir(mary);
 // console.log(john.calculateAge());
 // console.log(mary.getFullName());
 
@@ -172,7 +195,7 @@ mary.getsMaried('Smith');
 // ! Showing the working of extends keyword with super() method:
 
 const shyam = new NewPerson("Shyam", "Taparia", "May 24 2000","Male");
-console.dir(shyam);
+// console.dir(shyam);
 // console.log(shyam.getFullName());
 
 // ? =====================================================================================================================================
@@ -210,7 +233,7 @@ const shrey = Object.create ( personPrototypes,
 // console.log(shrey);
 // console.log(shrey.greeting());
 
-console.log(Object.getPrototypeOf(personPrototypes));
+// console.log(Object.getPrototypeOf(personPrototypes));
 
 Object.setPrototypeOf(personPrototypes,
 {
@@ -218,12 +241,12 @@ Object.setPrototypeOf(personPrototypes,
   // ...Object.getPrototypeOf(personPrototypes),  
   
   printRating: function () {
-    console.log(`Rating: ${this.rating}/5`);
+    // console.log(`Rating: ${this.rating}/5`);
   }
 });
 
 personPrototypes.printRating();
-console.log(personPrototypes);
+// console.log(personPrototypes);
 
 // TODO ==================================================================================================================================
 
