@@ -282,6 +282,36 @@ Customer.prototype.greeting = function () {
 
 // TODO ==================================================================================================================================
 
+// * In this, Understanding .bind() & "this" keyword method usage in a Class -->
+
+class UserInputForm
+{
+  constructor()
+  {
+    this.form = document.getElementById('user-input');
+    this.userNameInput = document.getElementById('username');
+    this.passwordInput = document.getElementById('password');
+
+    // ! In this, we used .bind(this) as a method called from a constructor will get the event.target as "this" keyword reference
+    // ! and not the constructor/instantiated property as a reference. 
+    // ! Or, it wil starts to point global reference instead so .bind() holds to constructor property values.
+    
+    this.form.addEventListener('submit', this.signupHandler.bind(this));
+  }
+
+  signupHandler(event)
+  {  
+    // ! So, here "this" will start to point this.userNameInput and also this.enteredPasspord because of .bind(this).
+
+    const enteredUserName = this.userNameInput.value;
+    const enteredPassword = this.passwordInput.value;
+
+    event.preventDefault();
+  }
+}
+
+// TODO ==================================================================================================================================
+
 // ? Alternative to above Code :->
 // * Note:--> This should be ignored.
 // ! Constructor Function is in ES5 Syntax:
