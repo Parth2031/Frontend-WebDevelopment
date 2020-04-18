@@ -1,1 +1,3 @@
+# Excluding Node Moddules Only which are created using npm init -
+
 node_modules/
