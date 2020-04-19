@@ -6,7 +6,7 @@
 ? Webpack is a bundler that allows you to split your JS code over multiple files and ship one bundle in the end.
 ? It allows you to transform code during bundling process.
 ? It allows you to optimize code during bundling process.
-! NOTE -> Webpack works on npm modules (node_modules) which is "Node Package Manager" part of Node JS.
+* NOTE -> Webpack works on npm modules (node_modules) which is "Node Package Manager" part of Node JS.
 */
 
 // TODO:: npm Commands (Terminal Commands) in order to install webpack :-
