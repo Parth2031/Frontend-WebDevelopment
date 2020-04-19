@@ -63,20 +63,27 @@ const shape = new Rectangle(20, 30);
 // ! Alternative Way to Classes in ES7 :-
 
 // * NOTE - In ES7, Instead of writing constructor(){...}, we can define property and value without "this" keyword 
-// *        and use arrow functions for handling "this" keyword functionalities.
+// *        and use arrow functions for handling "this" keyword functionalities and can be used with constructor as well.
 
 class Group
 {
-  name = 'Parth';
-  age = 20;
-  birthday = '31=01-2000';
+  constructor(name, age, dob)
+  {
+    this.name = name;
+    this.age = age;
+    this.birthday = new Date(dob);
+  }
+  
+  // name = 'Parth';
+  // age = 20;
+  // birthday = '31-01-2000';
   
   showName = () => {
     console.log(this.name);
   }   
 }
 
-const family = new Group();
+const family = new Group("Parth",20,"31-01-2000");
 family.showName();
 
 // TODO =====================================================================================================================================
