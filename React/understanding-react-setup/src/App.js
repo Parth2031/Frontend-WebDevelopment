@@ -1,5 +1,5 @@
 // TODO:: In this, App.js is the main file where, we create our own Components{Custom HTML Elements}.
-// * NOTE :- Alternative for Creating Components is creating .jsx files.
+// * NOTE :- Alternative for Creating Components is creating .jsx files and importing it in Main File.
 
 // ? This import is used for  React Hooks Working -
 
@@ -8,6 +8,8 @@
 import React,{ Component } from 'react';
 import './App.css';
 import Person from './Components/Person';
+
+// // -------------------------------------------------------------------------------------------------------------------------------------
 
 // TODO:: Main Core Concepts Working :-
 
