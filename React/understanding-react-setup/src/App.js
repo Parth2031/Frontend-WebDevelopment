@@ -201,6 +201,7 @@ class App extends Component
     //   );
     // }  
 
+    // ! In this, using Dynamic Method & Reference Concepts to the Above Logic ->
     
     if (this.state.showPersons) 
     {
@@ -228,7 +229,12 @@ class App extends Component
      ! NOTE-> But we cannot use if else statements in return statement but only ternary opertor on some condition.
      ?  { Condition ? JSX Code : null } 
 
-     
+     TODO:: NOTES oustide for return statement -->>
+
+     ! Alternative Method to the Above Case :-> 
+     * NOTE -> It is by using If Else.. Statements outside the Return Statement but Inside render(). 
+     ? In order to access them, Syntax --> {function_name/array_name} in the Return Statement.
+     *                          Example ->> {persons}
     */
 
     return (
@@ -246,7 +252,6 @@ class App extends Component
            </div> : null
         } */}
 
-        {/* Alternative to Above Method */}
         {persons}
       </div>
     );
