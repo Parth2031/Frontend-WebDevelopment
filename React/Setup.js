@@ -112,6 +112,32 @@
   }
 */
 
+// TODO:: Understanding Types of React Stying :-
+
+/*
+! Two Types of Styling -
+
+? Inline Styling : In this, we could use Dynamic Style and use Style to particular portions of a file.
+* NOTE -->          But it has it's limitations that we cannot use pseudo classes/media queries and many dynamic functionalities.
+
+? Global (App.css) Styling : In this, we can put Dynamic Style's but a little difficult to do.
+* NOTE -->          But here, if we apply style then it put Styles Globally, so it has it's limitation like this.
+*/
+
+// TODO:: Making Inline Style without Limitations and Effective :-
+
+/*
+! There are three ways to do that -
+
+? Radium - A Third Party Library
+
+? Styled-Components - Another Third Party Library
+
+? CSS Modules - Built-In Setup (Similar to JS Modules)
+
+*/
+
+
 // TODO:: React Files :- 
 
 /*
