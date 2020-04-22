@@ -130,11 +130,11 @@
 ! There are three ways to do that -
 
 ? Radium - A Third Party Library
-
 ? Styled-Components - Another Third Party Library
 
 ? CSS Modules - Built-In Setup (Similar to JS Modules)
-
+* NOTE -> In this, we only convert the .css files into .module.css files and import them to .jsx/.js files with a name through   
+*         which we can access them like props and it gives each class a different name which makes every class to have different name.
 */
 
 

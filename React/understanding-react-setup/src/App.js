@@ -6,7 +6,8 @@
 // import React,{ useState } from 'react';
 
 import React,{ Component } from 'react';
-import './App.css';
+// import './App.css';
+import classes from './App.css';              // ! <-- This file is imported to use CSS Modules.
 import Person from './Components/Person';
 
 // // -------------------------------------------------------------------------------------------------------------------------------------
@@ -179,16 +180,10 @@ class App extends Component
 
   render()
   {
-    const inlineStyle =
-    {
-      backgroundColor: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer'
-    }
-
     let persons = null;
+    
+    // ! It is used to access the classes from CSS Modules ->
+    let buttonClass = '';
 
     // ! NOTE -->> It shows as an Alternative Way to Ternary Opertor and can use the Conditions :-
 
@@ -221,6 +216,8 @@ class App extends Component
             })
           }
         </div> 
+
+        buttonClass = classes.Red;
       );
     }  
 
@@ -243,7 +240,7 @@ class App extends Component
       <div className="App">
         <h1>Understanding Basic React</h1>
         
-        <button onClick={this.togglePersonsHandler} style={inlineStyle}>Toggle Person's</button>
+        <button onClick={this.togglePersonsHandler}>Toggle Person's</button>
          
         {/* {
           this.state.showPersons === true ?  
