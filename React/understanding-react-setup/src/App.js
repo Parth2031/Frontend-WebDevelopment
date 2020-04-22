@@ -1,13 +1,12 @@
 // TODO:: In this, App.js is the main file where, we create our own Components{Custom HTML Elements}.
 // * NOTE :- Alternative for Creating Components is creating .jsx files and importing it in Main File.
 
-// ? This import is used for  React Hooks Working -
-
+// ? This import is used for  React Hooks Working ->>
 // import React,{ useState } from 'react';
 
 import React,{ Component } from 'react';
 // import './App.css';
-import classes from './App.css';              // ! <-- This file is imported to use CSS Modules.
+import classes from './App.module.css';                   // ! <-- This file is imported to use CSS Modules.
 import Person from './Components/Person';
 
 // // -------------------------------------------------------------------------------------------------------------------------------------
@@ -216,10 +215,20 @@ class App extends Component
             })
           }
         </div> 
-
-        buttonClass = classes.Red;
       );
+
+      buttonClass = classes.Red;
     }  
+
+    const assignedClasses = [];
+
+    if (this.state.persons.length <= 2) {
+      assignedClasses.push(classes.red);
+    }
+
+    if (this.state.persons.length <= 1) {
+      assignedClasses.push(classes.bold);
+    }
 
     /*
      TODO:: Some NOTES on return statement -->>
@@ -227,6 +236,9 @@ class App extends Component
      * Below Syntax shows that it looks like HTML but it is actually in Javascript so, we use Curly Braces as we could put Conditions 
      ! NOTE-> But we cannot use if else statements in return statement but only ternary opertor on some condition.
      ?  { Condition ? JSX Code : null } 
+
+     * NOTE -> 
+     ? In CSS Modules, Instead of calling .css file like this -> "App", we call it like .jsx file with accessing their class like like props.
 
      TODO:: NOTES oustide for return statement -->>
 
@@ -237,10 +249,10 @@ class App extends Component
     */
 
     return (
-      <div className="App">
+      <div className={classes.App}>
         <h1>Understanding Basic React</h1>
-        
-        <button onClick={this.togglePersonsHandler}>Toggle Person's</button>
+        <p className={assignedClasses.join(' ')}>Understanding Dynamic classNames Working</p>
+        <button className={buttonClass} onClick={this.togglePersonsHandler}>Toggle Person's</button>
          
         {/* {
           this.state.showPersons === true ?  

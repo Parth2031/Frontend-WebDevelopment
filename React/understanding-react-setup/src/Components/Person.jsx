@@ -1,7 +1,8 @@
 // TODO:: Understanding Components (.jsx) File Working :-
+// * In this, we are using CSS Modules for Styling -->
 
 import React from 'react';
-import './Person.css'
+import classes from './Person.module.css'
 
 /*
 ! In order to do Dynamic Input, we use these brackets {Any Logic like function_name,javascript attribute properties}.
@@ -21,7 +22,7 @@ TODO:: Methods & Properties Used for Event Listenener Attributes ->
 const person = (props) =>
 {
   return (
-    <div className="Person">
+    <div className={classes.Person}>
       <p onClick={props.click}>I am {props.name} and I am {props.age} years old</p>
       <p>{props.children}</p>
       <input type="text" onChange={props.changed} value={props.name}/>

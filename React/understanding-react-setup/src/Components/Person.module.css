@@ -1,5 +1,4 @@
 /* TODO:: Style can be done by two methods: Inline Style and a Different .css file by importing & exporting */
-
 /* ? But a Inline Style File has some limitations */
 
 .Person 
@@ -10,4 +9,11 @@
   box-shadow: 0 2px 3px #ccc;
   padding: 16px;
   text-align: center;
+}
+
+@media(min-width: 500px) 
+{
+  .Person {
+    width: 450px;
+  }
 }
