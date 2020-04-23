@@ -217,8 +217,12 @@ class App extends Component
         </div> 
       );
 
+      // ! Dynamic Inline Styling ->
+
       buttonClass = classes.Red;
     }  
+
+    // ! Creating a CSS ClassList ->
 
     const assignedClasses = [];
 
