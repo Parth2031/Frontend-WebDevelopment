@@ -8,6 +8,7 @@ import React,{ Component } from 'react';
 // import './App.css';
 import classes from './App.module.css';                   // ! <-- This file is imported to use CSS Modules.
 import Person from './Components/Person';
+import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary';
 
 // // -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -221,6 +222,30 @@ class App extends Component
 
       buttonClass = classes.Red;
     }  
+
+    // TODO: Understanding ErrorBoundary Component Working -> 
+
+    // if (this.state.showPersons) 
+    // {
+    //   persons = (
+    //     <div>
+    //       {
+    //         this.state.persons.map((person, index) =>
+    //         {
+    //           // ! NOTE -> "key" property is used only at the outer Tag Only.
+
+    //           return <ErrorBoundary key={person.id}>                
+    //                     <Person
+    //                       click={() => this.deletePersonHandler(index)}
+    //                       name={person.name}
+    //                       age={person.age}
+    //                       changed={(event) => this.nameChangedHandler(event, person.id)} /> 
+    //                  </ErrorBoundary>
+    //         })
+    //       }
+    //     </div> 
+    //   );
+    // }  
 
     // ! Creating a CSS ClassList ->
 
