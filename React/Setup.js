@@ -130,9 +130,10 @@
 ! There are three ways to do that -
 
 ? Radium - A Third Party Library
-
+* Download File -> npm install --save radium
 
 ? Styled-Components - Another Third Party Library
+* Download File -> npm install --save styled-component
 
 ? CSS Modules - Built-In Setup (Similar to JS Modules)
 * NOTE -> In this, we only convert the .css files into .module.css files and import them to .jsx/.js files with a name through   
