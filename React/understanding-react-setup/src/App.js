@@ -185,6 +185,7 @@ class App extends Component
     let persons = null;
     
     // ! It is used to access the classes from CSS Modules ->
+    // ? It is now converted to a whole New Component for Dynamic Styling ->>
     // let buttonClass = '';
 
     // ! NOTE -->> It shows as an Alternative Way to Ternary Opertor and can use the Conditions :-
@@ -256,6 +257,7 @@ class App extends Component
     // }  
 
     // ! Creating a CSS ClassList ->
+    // ? It is now converted to a whole New Component for better Performance->>
 
     // const assignedClasses = [];
 
@@ -276,6 +278,10 @@ class App extends Component
 
      * NOTE -> 
      ? In CSS Modules, Instead of calling .css file like this -> "App", we call it like .jsx file with accessing their class like like props.
+
+     ! NOTE -->
+     * Cockpit Component is used to Reduce the render() function processing as it takes more time and less efficient.
+     ? this.props : It is used when we use class based components and importing from index.js as a prop name and value.  
 
      TODO:: NOTES oustide for return statement -->>
 
