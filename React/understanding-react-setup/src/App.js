@@ -7,8 +7,10 @@
 import React,{ Component } from 'react';
 // import './App.css';
 import classes from './App.module.css';                   // ! <-- This file is imported to use CSS Modules.
-import Person from './Components/Person';
+// import Person from './Components/Person';
 // import ErrorBoundary from './Components/ErrorBoundary';
+import Persons from './Components/Persons/Persons';
+import Cockpit from './Components/Cockpit/Cockpit';
 
 // // -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -183,7 +185,7 @@ class App extends Component
     let persons = null;
     
     // ! It is used to access the classes from CSS Modules ->
-    let buttonClass = '';
+    // let buttonClass = '';
 
     // ! NOTE -->> It shows as an Alternative Way to Ternary Opertor and can use the Conditions :-
 
@@ -198,30 +200,36 @@ class App extends Component
     //   );
     // }  
 
-    // ! In this, using Dynamic Method & Reference Concepts to the Above Logic ->
+    // ! In this, (Better Alternative to Above Working) using Dynamic Method & Reference Concepts to the Above Logic ->
     
-    if (this.state.showPersons) 
-    {
-      persons = (
-        <div>
-          {
-            this.state.persons.map((person, index) =>
-            {
-              return <Person
-                click={() => this.deletePersonHandler(index)}
-                name={person.name}
-                age={person.age}
-                key={person.id}            // ! <-- Key Property is used to Uniquely Identify Objects Value by using some sort of ID.
-                changed={(event) => this.nameChangedHandler(event,person.id)} />   
-            })
-          }
-        </div> 
-      );
+    // if (this.state.showPersons) 
+    // {
+    //   persons = (
+    //     <div>
+    //       {
+    //         this.state.persons.map((person, index) =>
+    //         {
+    //           return <Person
+    //             click={() => this.deletePersonHandler(index)}
+    //             name={person.name}
+    //             age={person.age}
+    //             key={person.id}            // ! <-- Key Property is used to Uniquely Identify Objects Value by using some sort of ID.
+    //             changed={(event) => this.nameChangedHandler(event,person.id)} />   
+    //         })
+    //       }
+    //     </div> 
+    //   );
 
-      // ! Dynamic Inline Styling ->
+    //   // ! Dynamic Inline Styling ->
 
-      buttonClass = classes.Red;
-    }  
+    //   buttonClass = classes.Red;
+    // }  
+
+    // ! (Better Alternative to Above Working) Optimizing and Creating Components to Increase Extra Functionalities -->
+
+    if (this.state.showPersons) {
+      persons = (<Persons persons={this.state.persons} clicked={this.deletePersonHandler} changed={this.nameChangedHandler} />);
+    }
 
     // TODO: Understanding ErrorBoundary Component Working -> 
 
@@ -249,15 +257,15 @@ class App extends Component
 
     // ! Creating a CSS ClassList ->
 
-    const assignedClasses = [];
+    // const assignedClasses = [];
 
-    if (this.state.persons.length <= 2) {
-      assignedClasses.push(classes.red);
-    }
+    // if (this.state.persons.length <= 2) {
+    //   assignedClasses.push(classes.red);
+    // }
 
-    if (this.state.persons.length <= 1) {
-      assignedClasses.push(classes.bold);
-    }
+    // if (this.state.persons.length <= 1) {
+    //   assignedClasses.push(classes.bold);
+    // }
 
     /*
      TODO:: Some NOTES on return statement -->>
@@ -279,10 +287,12 @@ class App extends Component
 
     return (
       <div className={classes.App}>
-        <h1>Understanding Basic React</h1>
+        
+        {/* <h1>Understanding Basic React</h1>
         <p className={assignedClasses.join(' ')}>Understanding Dynamic classNames Working</p>
         <button className={buttonClass} onClick={this.togglePersonsHandler}>Toggle Person's</button>
-         
+          */}
+        
         {/* {
           this.state.showPersons === true ?  
            <div>
@@ -292,6 +302,11 @@ class App extends Component
            </div> : null
         } */}
 
+        <Cockpit
+          title={this.props.appTitle}
+          showPersons={this.state.showPersons}
+          persons={this.state.persons}
+          clicked={this.togglePersonsHandler} />         
         {persons}
       </div>
     );
