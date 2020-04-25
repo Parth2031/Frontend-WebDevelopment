@@ -8,7 +8,7 @@ import React,{ Component } from 'react';
 // import './App.css';
 import classes from './App.module.css';                   // ! <-- This file is imported to use CSS Modules.
 import Person from './Components/Person';
-import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary';
+// import ErrorBoundary from './Components/ErrorBoundary';
 
 // // -------------------------------------------------------------------------------------------------------------------------------------
 
