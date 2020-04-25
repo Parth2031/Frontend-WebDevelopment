@@ -112,6 +112,32 @@
   }
 */
 
+// TODO:: Understanding LifeCycle Hooks :-
+
+/*
+! NOTE - It is based on Class Based Components and not Supported by Funtional Components.
+
+* Type of LifeCycle Hooks -->
+
+! Mounting Methods ->
+                     A component mounts when it is created and first inserted into the DOM i.e when it is rendered for the first time.
+
+? constructor(props) : It is used to set the default configuration for a component.
+? render() : It is DOM Working of the Javascript which works on JSX.
+? componentDidMount() : It is the best place to make API calls since, at this point, the component has been mounted and is available to the DOM.
+?                       Generally, componentDidMount is a good place to do all the setup you couldn’t have done without the DOM.
+
+! Updating Methods ->
+                      Components do not always remain in the same state after mounting.
+                      Sometimes the underlying props could change and the component has to be re-rendered.
+ 
+? componentWillReceiveProps()
+? shouldComponentUpdate(nextProps,nextState)
+? componentWillUpdate()
+? render()
+? componentDidUpdate()
+*/
+
 // TODO:: Understanding Types of React Stying :-
 
 /*
@@ -139,7 +165,6 @@
 * NOTE -> In this, we only convert the .css files into .module.css files and import them to .jsx/.js files with a name through   
 *         which we can access them like props and it gives each class a different name which makes every class to have different name.
 */
-
 
 // TODO:: React Files :- 
 
