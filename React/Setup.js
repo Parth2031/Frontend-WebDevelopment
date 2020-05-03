@@ -117,7 +117,7 @@
 /*
 ! NOTE - It is based on Class Based Components and not Supported by Funtional Components.
 
-* Type of LifeCycle Hooks -->
+* Types of LifeCycle Hooks Methods -->
 
 ! Mounting Methods ->
                      A component mounts when it is created and first inserted into the DOM i.e when it is rendered for the first time.
@@ -131,13 +131,25 @@
                       Components do not always remain in the same state after mounting.
                       Sometimes the underlying props could change and the component has to be re-rendered.
  
-? getDerivedStateFromProps(props,state) :
-? shouldComponentUpdate(nextProps,nextState) :
+? shouldComponentUpdate(nextProps,nextState) : If it returns false, then componentDidUpdate will not be invoked.
 ? render() 
-? getSnapshotBeforUpdate(prevProps,prevState) : 
 ? componentDidUpdate(prevProps, prevState) : It is invoked immediately after updating occurs. This method is not called for the initial render.
 ?                                            It as an opportunity to operate on the DOM when the component has been updated. 
 ?                                    This is also a good place to do network requests as long as you compare the current props to previous props.
+
+! Unmounting Methods ->
+
+? componentWillUnmount() : It is invoked immediately before a component is unmounted and destroyed. 
+?                          It is used to perform any necessary cleanup in this method such as invalidating timers, canceling network requests,etc.
+
+! There are many Rarely used Lifecycle Hooks ->
+
+? shouldComponentUpdate(nextProps, nextState)
+? static getDerivedStateFromProps(props, state)
+? getSnapshotBeforeUpdate(prevProps, prevState)
+? static getDerivedStateFromError(error)
+? componentDidCatch(error, info)
+                                  .... and many more
 */
 
 // TODO:: Understanding Types of React Stying :-
