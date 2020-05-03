@@ -131,11 +131,13 @@
                       Components do not always remain in the same state after mounting.
                       Sometimes the underlying props could change and the component has to be re-rendered.
  
-? componentWillReceiveProps()
-? shouldComponentUpdate(nextProps,nextState)
-? componentWillUpdate()
-? render()
-? componentDidUpdate()
+? getDerivedStateFromProps(props,state) :
+? shouldComponentUpdate(nextProps,nextState) :
+? render() 
+? getSnapshotBeforUpdate(prevProps,prevState) : 
+? componentDidUpdate(prevProps, prevState) : It is invoked immediately after updating occurs. This method is not called for the initial render.
+?                                            It as an opportunity to operate on the DOM when the component has been updated. 
+?                                    This is also a good place to do network requests as long as you compare the current props to previous props.
 */
 
 // TODO:: Understanding Types of React Stying :-
