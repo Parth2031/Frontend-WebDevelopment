@@ -167,8 +167,8 @@ class App extends Component
     console.log('[App.js] componentDidUpdate');
   }
 
-  componentDidUnmount() {
-    console.log('[App.js] componentDidUnmount');
+  componentWillUnmount() {
+    console.log('[App.js] componentWillUnmount');
   }
 
   // //            -                                                                                              
