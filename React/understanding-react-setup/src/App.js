@@ -139,7 +139,11 @@ class App extends Component
       { id: 3, name: "Christina", age: 19 }
     ],
     showPersons: false
-  }
+    }
+
+  // //            -                                                                                             
+  
+  // ! Understanding Lifecycle Hooks -
 
   static getDerivedStateFromProps(props, state)
   {
@@ -150,6 +154,24 @@ class App extends Component
   componentDidMount() {
     console.log('[App.js] componentDidMount');
   }
+
+  // * Note -> By default, shouldUpdateComponent() returns true.
+   
+  shouldComponentUpdate(nextProps, nextState)
+  {
+    console.log('[App.js] shouldComponentUpdate');
+    return true;
+  }
+
+  componentDidUpdate() {
+    console.log('[App.js] componentDidUpdate');
+  }
+
+  componentDidUnmount() {
+    console.log('[App.js] componentDidUnmount');
+  }
+
+  // //            -                                                                                              
 
   switchNameHandler = (newName) =>
   {

@@ -133,9 +133,10 @@
  
 ? shouldComponentUpdate(nextProps,nextState) : If it returns false, then componentDidUpdate will not be invoked.
 ? render() 
-? componentDidUpdate(prevProps, prevState) : It is invoked immediately after updating occurs. This method is not called for the initial render.
-?                                            It as an opportunity to operate on the DOM when the component has been updated. 
-?                                    This is also a good place to do network requests as long as you compare the current props to previous props.
+? componentDidUpdate(prevProps, prevState,snpashot) : 
+?                            It is invoked immediately after updating occurs. This method is not called for the initial render.
+?                            It as an opportunity to operate on the DOM when the component has been updated. 
+?                            This is also a good place to do network requests as long as you compare the current props to previous props.
 
 ! Unmounting Methods ->
 
