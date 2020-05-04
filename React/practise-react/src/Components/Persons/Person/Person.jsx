@@ -1,7 +1,9 @@
 // TODO:: Understanding LifeCycle Hooks Working for React Setup/Working.
+// ? Understanding React Adjacent JSX -
 
 import React, { Component } from 'react';
-import classes from './Person.module.css';
+// import classes from './Person.module.css';
+import Auxiliary from '../../../HigerOrderComponents/Auxiliary';
 
 class Person extends Component
 {
@@ -9,8 +11,22 @@ class Person extends Component
   {
     console.log('[Person.js] rendering...');
   
+    // return (
+    //   <div className={classes.Person}>
+    //     <p onClick={this.props.click}>I'm {this.props.name} and I am {this.props.age} years old!</p>
+    //     <p>{this.props.children}</p>
+    //     <input
+    //       type="text"
+    //       onChange={this.props.changed}
+    //       value={this.props.name}
+    //     />
+    //   </div>
+    // );
+
+    // ! Understanding React Adjacent JSX Working -
+
     return (
-      <div className={classes.Person}>
+      <Auxiliary>
         <p onClick={this.props.click}>I'm {this.props.name} and I am {this.props.age} years old!</p>
         <p>{this.props.children}</p>
         <input
@@ -18,7 +34,7 @@ class Person extends Component
           onChange={this.props.changed}
           value={this.props.name}
         />
-      </div>
+      </Auxiliary>
     );
   }
 }
