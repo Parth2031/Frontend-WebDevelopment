@@ -6,6 +6,11 @@ import classes from './Person.module.css';
 import Auxiliary from '../../../HigerOrderComponents/Auxiliary';
 import withClass from '../../../HigerOrderComponents/withClass';
 
+// ! It is a Thord Party Library which is used to set the Prop Types by Developer - 
+// ? In order to install it : npm install -save prop-types
+
+import PropTypes from 'prop-types';
+
 class Person extends Component
 {
   render()
@@ -40,6 +45,16 @@ class Person extends Component
     );
   }
 }
+
+// ! Working of PropTypes Library - 
+
+Person.propTypes =
+{
+  click: PropTypes.func,
+  name: PropTypes.string,
+  age: PropTypes.number,
+  changed: PropTypes.func
+};
 
 // ! Implementing withClass Higher Order Component -
 

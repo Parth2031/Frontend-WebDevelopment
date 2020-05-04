@@ -181,7 +181,8 @@ class App extends Component
         { name: newName, age: 20 },
         { name: "Harshit", age: 20 },
         { name: "Mrinal", age: 20 }        
-      ]
+      ],
+      changeCounter: 0
     }); 
   }
 
@@ -197,7 +198,18 @@ class App extends Component
     const people = [...this.state.persons];
     people[personIndex] = person;
 
-    this.setState({ persons: people }); 
+    // this.setState({ persons: people }); 
+
+    // ! Using this method, when setting a state based on previous state and rather depending on this.state as it sometimes work unexpectedly.
+
+    this.setState((prevState, props) =>
+    {
+      return {
+        persons: people,
+        changeCounter: prevState.changeCounter + 1
+      };
+    });
+  };
   }
   
   togglePersonsHandler = () =>
