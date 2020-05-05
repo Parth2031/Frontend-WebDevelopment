@@ -1,4 +1,6 @@
 Two Topics are covered in Practise React :-
 
+Folders Names are -> Persons, HigherOrderComponents & Context.
+
 1st : LifeCycle Hooks Working in Persons Components 
 2nd : Understanding React Adjacent JSX Working { Higer Order Components }.
