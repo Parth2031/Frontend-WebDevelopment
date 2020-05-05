@@ -62,6 +62,24 @@
   }
 */
 
+// TODO:: Some of the Buit-In React.methods() :-
+
+/*
+! Blue is for Class Based React & Green is for React Hooks ->
+
+? React.createElement() : It means creating Elements in React but it's alternative is JSX Code which is wrapped in a single container.
+?                         As only a single React.createElement is possible in a Component return statement. 
+
+? React.createContext() : It is used to avoid the extra redundancy of sending some props from file A to C by avoiding passing from file C.
+
+? React.createRefs() : It is used for using Special Properties(prop) like key is "ref" property which is used to pass reference of any
+?                      element in JSX Code to point towards it.
+
+* React.memo() : It is used only in React Hook as it is basically used for optimization aswith every changes in useEffect()
+*                works but when we use this, it limits it down to not render everything. 
+?     Syntax =>  export default React.memo(name of functional component)
+*/
+
 // TODO:: Types of Components :-
 
 /*
@@ -112,7 +130,20 @@
   }
 */
 
-// TODO:: Understanding LifeCycle Hooks :-
+// TODO:: React Hook Built-In Methods :-
+
+/*
+! These are all Required to imported similar to {Component} -
+
+? useState() : It is used for both defining and setting the state.
+? useEffect() : It is majorly used for http request as it works all the even at mounting & also at updating state.
+*     Syntax => useEffect ( () => { used for http request ... }, [])   
+                Array is needed to implenent dependencies as if it is present/remains, then it will work only one time. 
+
+? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
+*/
+
+// TODO:: Understanding Class Based React LifeCycle Hooks :-
 
 /*
 ! NOTE - It is based on Class Based Components and not Supported by Funtional Components {React Hooks}.
