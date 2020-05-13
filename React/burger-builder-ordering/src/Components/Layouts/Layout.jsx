@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Auxiliary from '../../HigerOrderComponents/Auxiliary';
 import classes from './Layout.module.css';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
 
-const layout = (props) =>
+class Layout extends Component
 {
-  return (
-    <Auxiliary>
-      <div>Toolbar,SideDrawer</div>
-      <main className={classes.Content}> {props.children} </main>
-    </Auxiliary>
-  ); 
+  state = {
+    showSideDrawer: false
+  }
+
+  sideDrawerClosedHandler = () => {
+    this.setState({ showSideDrawer: false });
+  }
+
+  sideDrawerToggleHandler = () =>
+  {
+    this.setState((prevState) => {
+      return { showSideDrawer: !prevState.showSideDrawer };
+    });
+  }
+
+  render()
+  {
+    return (
+      <Auxiliary>
+        <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
+        {/* <SideDrawer
+          open={this.state.showSideDrawer}
+          closed={this.sideDrawerClosedHandler} /> */}
+        <main className={classes.Content}>
+          {this.props.children}
+        </main>
+      </Auxiliary>
+    )
+  }
 }
 
-export default layout;
-
+export default Layout;
