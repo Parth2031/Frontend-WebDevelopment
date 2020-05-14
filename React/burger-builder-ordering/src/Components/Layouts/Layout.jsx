@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Auxiliary from '../Auxiliary/Auxiliary';
+import Auxiliary from '../../HigerOrderComponents/Auxiliary';
 import classes from './Layout.module.css';
-import Toolbar from '../../Components/Navigation/Toolbar/Toolbar';
-import SideDrawer from '../../Components/Navigation/Side Drawer/SideDrawer';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
 
 class Layout extends Component
 {
@@ -26,9 +25,9 @@ class Layout extends Component
     return (
       <Auxiliary>
         <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
-        <SideDrawer
+        {/* <SideDrawer
           open={this.state.showSideDrawer}
-          closed={this.sideDrawerClosedHandler} />
+          closed={this.sideDrawerClosedHandler} /> */}
         <main className={classes.Content}>
           {this.props.children}
         </main>
