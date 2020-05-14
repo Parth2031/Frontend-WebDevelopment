@@ -2,9 +2,9 @@
 
 import React, { Component } from 'react';
 // import './App.module.css';
-import Auxiliary from '../src/HigerOrderComponents/Auxiliary';
-import Layout from '../src/Components/Layouts/Layout';
-import BurgerBuilder from './Containers/BurgerBuilder/BurgerBuilder';
+import Auxiliary from '../src/HigerOrderComponents/Auxiliary/Auxiliary';
+import Layout from '../src/HigerOrderComponents/Layouts/Layout';
+import BurgerBuilder from './Containers/Burger Builder/BurgerBuilder';
 
 class App extends Component
 {

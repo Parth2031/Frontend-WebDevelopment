@@ -1,5 +1,5 @@
 import React from 'react';
-import Auxiliary from '../../../HigerOrderComponents/Auxiliary';
+import Auxiliary from '../../../HigerOrderComponents/Auxiliary/Auxiliary';
 import Button from '../../UI/Button/Button';
 
 const orderSummary = (props) =>

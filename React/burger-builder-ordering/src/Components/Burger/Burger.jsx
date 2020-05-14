@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Burger.module.css';
 import Ingredients from '../Burger/Ingredients/Ingredients';
-// import Auxiliary from '../../HigerOrderComponents/Auxiliary';
+// import Auxiliary from '../../HigerOrderComponents/Auxiliary/Auxiliary';
 
 const burger = (props) =>
 {

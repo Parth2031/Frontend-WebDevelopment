@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Auxiliary from '../../HigerOrderComponents/Auxiliary';
+import Auxiliary from '../../HigerOrderComponents/Auxiliary/Auxiliary';
 import Burger from '../../Components/Burger/Burger';
 import BuildControls from '../../Components/Burger/Build Controls/BuildControls';
 import Modal from '../../Components/UI/Modal/Modal';
