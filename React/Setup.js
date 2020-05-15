@@ -164,6 +164,9 @@
                       Sometimes the underlying props could change and the component has to be re-rendered.
  
 ? shouldComponentUpdate(nextProps,nextState) : If it returns false, then componentDidUpdate will not be invoked.
+* NOTE -->                                 It is also used for Optimization and it restricts Update when not needed used for checking conditions.
+* It has an Alternative where instead of importing and extending { Component }, we can simply Import & Extend {PureComponents} works Similaryly.
+
 ? render() 
 ? componentDidUpdate(prevProps, prevState,snpashot) : 
 ?                            It is invoked immediately after updating occurs. This method is not called for the initial render.
@@ -176,10 +179,6 @@
 ?                          It is used to perform any necessary cleanup in this method such as invalidating timers, canceling network requests,etc.
 
 ! There are many Rarely used Lifecycle Hooks ->
-
-? shouldComponentUpdate(nextProps, nextState) - It is used for Optimization and it restricts Update when not needed used for checking conditions. 
-* NOTE -->
-* It has an Alternative where instead of importing and extending { Component }, we can simply Import & Extend {PureComponents} works Similaryly.                                              
 
 ? static getDerivedStateFromProps(props, state)
 ? getSnapshotBeforeUpdate(prevProps, prevState)

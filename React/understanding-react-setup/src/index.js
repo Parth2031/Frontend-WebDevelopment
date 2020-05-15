@@ -1,3 +1,5 @@
+// TODO:: It is the Global File which makes any changes to this file getting impact to every other file in src Folder.
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
