@@ -1,0 +1,2 @@
+In  this, we are also understanding React Routing meaning Multi Pages feeling in a Single Page Application(SPA) 
+where Multi Pages are rendered through Routing by Javascript and not Multiple HTML Files.
