@@ -187,6 +187,17 @@
                                   .... and many more
 */
 
+// TODO:: React Routing Setup :-
+
+/*
+! Understanding React Routing -
+
+? React Routing means Multi Pages feeling in a Single Page Application(SPA) where Multi Pages are rendered
+?  through Routing by Javascript and not Multiple HTML Files.
+
+* NOTE : To install React Router, we Third Party Library -> npm install --save react-router react-router-dom 
+*/
+
 // TODO:: Understanding Types of React Stying :-
 
 /*
