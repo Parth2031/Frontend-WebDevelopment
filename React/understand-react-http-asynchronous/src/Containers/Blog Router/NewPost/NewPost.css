@@ -31,14 +31,14 @@
   margin: 5px 0;
   padding: 10px;
   font: inherit;
-  border: 1px solid #fa923f;
+  border: 1px solid #f0730c;
   background-color: transparent;
-  color: #fa923f;
+  color: #ec6d05;
   cursor: pointer;
 }
 
 .NewPost button:hover, .NewPost button:active 
 {
   color: white;
-  background-color: #fa923f;
+  background-color: #ee6f06;
 }

@@ -1,7 +1,8 @@
 // TODO:: Understanding React Routing :-
 
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { Route, NavLink, Switch } from 'react-router-dom';
 import './BlogRouter.css';
 import Posts from './Posts/Posts';
 import NewPost from './NewPost/NewPost';
@@ -23,16 +24,30 @@ class BlogRouter extends Component
   ?  <Route path="/" render={() => <h1>Home 2</h1>} /> 
   */
 
-  // TODO:: Link is another Component which simply creates a anchor tag in it's simplest form.
+  // TODO:: NavLink is another Component which simply creates a anchor tag in it's simplest form with extra functionalaties over Link Component.
   
   /*
-  ! Link Component Properties are -
+  ! Link/NavLink Component Properties are -
 
   ? to = "/" : In it's simplest from is an anchor tag: <a href="/"></a>.
   * NOTE -> But it has it' sown functionalaties where using object, we can add Some More Properties to avoid unnecessary
   *         rendering of Multiple Page to jump from one link to another but only a Single Page. 
   *         It also avoids the state loss as re-render tends to loose state meaning all data on that page.
+  *         It always works as Absolute Path and not Relative Path.
+  
+  ! Absolute Path means that it's always appended right after your domain.
+  ? Example : By default, if you just enter to="/some-path"  or to="some-path".
+
+  ! Relative Path means if your component is already loaded given a specific path (e.g. posts ) and you then want to append 
+  !                                             something to that existing path (so that you, for example, get /posts/new ).
+  ? Example : If you're on a component loaded via /posts , to="new"  would lead to example.com/new , NOT example.com/posts/new .
+
+  * Note : So in order to convert "to" property as Relative Path Based, we use this format : pathname: this.props.match.url + '/new-post'.
+  
+  ? exact keyword : It just specifies the only needed path mentioned and not the starting.
   */
+  
+  // TODO:: Switch Component is used to only load a Single Route at a time but in a specific order only.
 
   render()
   {
@@ -41,19 +56,23 @@ class BlogRouter extends Component
         <header>
           <nav>
             <ul>
-              <li><Link to = "/">Home</Link></li>
-              <li><Link to = {
+              <li> <NavLink to="/posts/" exact activeClassName="active" activeStyle={{ color: '#f1730c', textDecoration: 'underline' 
+              }}> Posts</NavLink></li>
+              <li><NavLink to = {
               {
                 pathname: '/new-post',
+                // pathname: this.props.match.url + '/new-post',
                 hash: '#submit',
                 search: '?quick-submit=true'
-                }}>New Post</Link>
+                }}>New Post</NavLink>
               </li>
             </ul>
           </nav>
         </header>
-        <Route path="/" exact component={Posts} />
-        <Route path="/new-post" component={NewPost} />
+        <Switch>
+          <Route path="/new-post" component={NewPost} />
+          <Route path="/posts/" component={Posts} />
+        </Switch>
       </div>
     );
   }
