@@ -1,2 +1,4 @@
-In  this, we are also understanding React Routing meaning Multi Pages feeling in a Single Page Application(SPA) 
+In  this, 
+We are understanding React HTTP Aynchronous with 
+React Routing meaning Multi Pages feeling in a Single Page Application(SPA) 
 where Multi Pages are rendered through Routing by Javascript and not Multiple HTML Files.
