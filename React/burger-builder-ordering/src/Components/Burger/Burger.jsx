@@ -5,11 +5,10 @@ import Ingredients from '../Burger/Ingredients/Ingredients';
 
 const burger = (props) =>
 {
-  let transformedIngredients =
-    Object.keys(props.burgerIngredients)
+  let transformedIngredients = Object.keys(props.ingredients)
     .map(ingredientKey =>
     {
-      return [...Array(props.burgerIngredients[ingredientKey])].map( (_, index) => {
+      return [...Array(props.ingredients[ingredientKey])].map( (_, index) => {
         return <Ingredients key={ingredientKey + index} type={ingredientKey} />;
       });
     })

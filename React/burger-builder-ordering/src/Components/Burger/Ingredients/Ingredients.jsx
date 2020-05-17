@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Ingredients.module.css';
 import PropTypes from 'prop-types';
 
-const ingredients = (props) =>
+const Ingredients = (props) =>
 {
   let ingredient = null;
 
@@ -31,8 +31,8 @@ const ingredients = (props) =>
   return ingredient;
 }
 
-ingredients.propTypes = {
+Ingredients.propTypes = {
   type: PropTypes.string.isRequired
 };
 
-export default ingredients;
+export default Ingredients;

@@ -18,12 +18,16 @@ class App extends Component
   ?     <Blog />                       <--- Where, all it's files are in Components Folder and not Container Folder 
   ?   </div >
   ? );
+
+  ! NOTE :- basename is used to set the base directory from where we want to start loading.
+  * By default, It is set as basename="/" in BrowserRouter
   */
 
   render()
   {
     return (
-      <BrowserRouter>
+      // <BrowserRouter basename="/my-app">        
+      <BrowserRouter> 
         <div className="App">
           <BlogRouter/> 
         </div>

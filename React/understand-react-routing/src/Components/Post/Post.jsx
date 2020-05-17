@@ -1,6 +1,7 @@
 import React from 'react';
 import './Post.css';
 
+// TODO:: As BrowserRouter gives access to Router only to the direct access by Route Component and not all Components. So, we use withRouter.
 // ! withRouter is a Higher Order Component which makes any Child Components Router aware as it now can use Router Properties and Functionalaties.
 // import { withRouter } from 'react-router-dom';
 
