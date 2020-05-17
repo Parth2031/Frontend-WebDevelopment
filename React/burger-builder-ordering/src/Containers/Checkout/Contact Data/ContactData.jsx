@@ -26,8 +26,8 @@ class ContactData extends Component
 
     const order =
     {
-      ingredients: this.state.ingredients,
-      price: this.state.price,             // ! <-- This should be updated at the Database to get Total Price as it is not the correct way.
+      ingredients: this.props.ingredients,
+      price: this.props.price,             // ! <-- This should be updated at the Database to get Total Price as it is not the correct way.
       customer:
       {
         name: 'Parth',
@@ -48,13 +48,15 @@ class ContactData extends Component
       .then((response) =>
       {
         console.log(response);
+
         this.setState({ loading: false });
         this.props.history.push('/');
       })
       .catch((error) =>
       {
         console.log(error);
-        this.setState({ loading: false, purchasing: false });
+        
+        this.setState({ loading: false });
       }); 
     
     event.preventDefault();
