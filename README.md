@@ -1,3 +1,3 @@
 # Frontend-WebDevelopment
 
-It covers all HTML,CSS,Javascipt,React,Webpack and more.
+It covers all HTML,CSS,Javascipt,React,Typescript and more.
