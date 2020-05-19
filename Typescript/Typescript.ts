@@ -37,13 +37,12 @@ TODO:: Terminal Commands for executing Typescript ->>
 
 * It means if we just define a variable without giving any value to it, it set's itself type as "any" means either number,string,etc.
 * So, to define a type as explicitly.
-? Since, by default it is set as variable_name: any;
-TODO:: Syntax :- variable variable_name: type;
+! Syntax :- variable variable_name: type;
+* Since, by default it is set as variable_name: any;
 
-! Example of a variable defined with explicitly by User :
-
-? let myName: string;
-? myName = 'Parth';
+? Example of a variable defined with explicitly by User :
+?                                                          let myName: string;
+?                                                          myName = 'Parth';
 
 TODO:: ANY Data Type :->
 
@@ -80,17 +79,17 @@ TODO:: Tuples (Type of Array) Data Type :->
 
 TODO:: Enums Data Type :->
 
-! Enums allow us to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. 
-! TypeScript provides both numeric and string-based enums.
+* Enums allow us to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. 
+* TypeScript provides both numeric and string-based enums.
 
-TODO: Syntax :- enum variable_name 
-TODO:           {
-TODO:             value_1,       --> 0                  // ? We can also set values to given values and by default it starts with 0.
-TODO:             value_2 = 100,  --> 100    
-TODO:             value_3       --> 101                // ? All of the following members are auto-incremented from that point on.
-TODO:           }
+! Syntax :- enum variable_name 
+!           {
+!             value_1,       --> 0             -->>   We can also set values to given values and by default it starts with 0.
+!             value_2 = 100,  --> 100    
+!             value_3       --> 101             -->>   All of the following members are auto-incremented from that point on.
+!           }
 
-TODO::          let another_variable_name: enum_variable_name = enum_variable_name.value_1;
+!        let another_variable_name: enum_variable_name = enum_variable_name.value_1;
 
 * NOTE :-  In a string enum, each member has to be constant-initialized with a string literal, or with another string enum member.
 
@@ -103,6 +102,36 @@ TODO::          let another_variable_name: enum_variable_name = enum_variable_na
 ?           }
 
 ?           let directions: Direction = Direction.Up;
+?           console.log(directions);
+
+
+TODO:: Union Types :->
+
+* Union Types means setting up multiple types a variable and not setting "any" data type instead.
+! Syntax :- variable variable_name: type | type = value;
+
+? Example : let password: number | string = "new"; 
+?           password = 31;
+?           console.log(password);
+
+TODO:: Check Type :->
+
+* NOTE :- We check the types using "typeof" Operator where, we write data types in double quotes.
+
+? Example : let finalValue = 30;
+?           if (typeof finalValue == "number") {
+?             console.log("Final Value is a Number");
+?           }
+
+TODO:: Null Type :->
+
+* NOTE :- If, we enable strictNullChecks in tsconfig.json then, assigning a variable with data type cannot assign "null" value to it. 
+
+? Example : let canBeNull: number | null = 12;            // ! Now, It is possible to set it as null.
+?           canBeNull = null;                   // ! <-- It is incorrect here, due to strictNullChecks: true in tsconfig.
+?           let canAlsoBeNull;            // ! In this case, It is possible as the variable is "undefined" and it can be set to null.
+?           canAlsoBeNull = null;
+?           console.log(canBeNull,canAlsoBeNull);
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------------
@@ -137,6 +166,15 @@ TODO:: Function Types ->>
 
 ?           myMultiply = warnUser;                                 // ! <-- So, It is incorrect due to Function Declaration
 ?           myMultiply(); 
+
+TODO:: Never Type :-
+
+* The never type represents the type of values that never occur.
+! It is usually used for throwing error's only.
+
+? Example : function neverReturn(): never {
+?             throw new Error("An Error!");
+?           }
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------------
