@@ -5,8 +5,8 @@
 // console.log("Days you've been alive: " + aliveDays);
 // alert("Days you've been alive: " + aliveDays);
 
-// TODO:: Instead of using this syntax of string, We can use template string -
-//  ? Syntax of Template String --> `TEXT.... ${variablename}`;
+// TODO:: Instead of using this syntax of string, We can use template string/literals -
+//  ? Syntax of Template String/Literals --> `TEXT.... ${variablename}`;
 
 // console.log(`Days you've been alive: ${aliveDays}`);
 // alert(`Days you've been alive ${aliveDays}`);

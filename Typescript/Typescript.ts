@@ -217,3 +217,14 @@ TODO:: Understanding Type Alias :-
 ?           }
 ?           console.log(complex.output(true));
 */
+
+// // ----------------------------------------------------------------------------------------------------------------------------------
+
+// * NOTE :- Typescript has almost all ES6 Javascript functionalities in it and 
+// *         the non-available features are mentioned in ES6 Compatible table. But in majority, all main features are compatible.
+
+// // ----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+

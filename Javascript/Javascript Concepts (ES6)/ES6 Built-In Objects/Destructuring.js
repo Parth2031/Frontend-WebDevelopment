@@ -24,8 +24,8 @@ let a, b;
 * (...) - Spread Operators: These dots are decribed as the remaining arguments in an array,object,etc.
 *                           It is used to split up array elements or object properties.
 
-? const newArray = [...oldArray,1,2]; 
-? const newObject = {...oldObject,newProps: 5};
+? const newArray = [...oldArray,1,2];  OR  ...oldArray ;
+? const newObject = {...oldObject,newProps: 5};   OR ...oldObject;
 
 * Rest Operator : It is used to merge a list of function arguments into an array.
 
@@ -70,7 +70,7 @@ const person =
   age: 32,
   city: 'Miami',
   gender: 'Male',
-  sayHello: function(){
+  sayHello: function() {
     console.log('Hi');
   }
 }
@@ -88,6 +88,17 @@ const { name, age, city, sayHello } = person;
 // console.log(name, age, city);
 // sayHello();
 
+// ! In New ES6 Destructuring, we can also new Key Names to the Specified Object Key Names :
+
+const employee =
+{
+  userName: "Parth",
+  age: 20
+}
+
+const { userName: Name, age: Current_Age } = employee;              // ! <-- Here, we did it.
+console.log(Name, Current_Age);
+
 // ! Making a new Object with the properties of previous defined object :
 
 const anotherObjectAvoidedMethod =
@@ -102,5 +113,4 @@ const anotherObjectAvoidedMethod =
 // ! Better Way of making a new Object from previous defined object;
 
 const anotherObject = { name, age, city };
-
 console.log(anotherObject);
