@@ -1,10 +1,12 @@
-// TODO:: Understanding React Setup,Terms,Components & Working :-
+// TODO:: Understanding React Setup,Terms,Components,Routing,Redux & Working :-
 
 /*
 ! Explanation of React -
 ? React is a Javascript Library for building user interface. User Interface are Components which are Custom HTML Elements.
 * It contains almost all the Third Party Libraries which coulod make the program more optimized and efficient.
 */
+
+// // ----------------------------------------------------------------------------------------------------------------------------
 
 // TODO:: Types of React Working :-
 
@@ -62,6 +64,8 @@
   }
 */
 
+// // ----------------------------------------------------------------------------------------------------------------------------
+
 // TODO:: Some of the Buit-In React.methods() :-
 
 /*
@@ -79,6 +83,8 @@
 *                works but when we use this, it limits it down to not render everything. 
 ?     Syntax =>  export default React.memo(name of functional component)
 */
+
+// // ----------------------------------------------------------------------------------------------------------------------------
 
 // TODO:: Types of Components :-
 
@@ -130,6 +136,8 @@
   }
 */
 
+// // ----------------------------------------------------------------------------------------------------------------------------
+
 // TODO:: React Hook Built-In Methods :-
 
 /*
@@ -143,6 +151,8 @@
 ? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
 ? useContext() : It is used as similarly to React.createContext(). 
 */
+
+// // ----------------------------------------------------------------------------------------------------------------------------
 
 // TODO:: Understanding Class Based React LifeCycle Hooks :-
 
@@ -187,16 +197,37 @@
                                   .... and many more
 */
 
+// // ----------------------------------------------------------------------------------------------------------------------------
+
 // TODO:: React Routing Setup :-
 
 /*
 ! Understanding React Routing -
 
 ? React Routing means Multi Pages feeling in a Single Page Application(SPA) where Multi Pages are rendered
-?  through Routing by Javascript and not Multiple HTML Files.
+?               through Routing by Javascript and not Multiple HTML Files.
 
-* NOTE : To install React Router, we Third Party Library -> npm install --save react-router react-router-dom 
+* NOTE : To install React Router, we use Third Party Library -> npm install --save react-router react-router-dom 
+*           where, "react-router-dom" Library is more important as most of the Components are part of it and not react-router.                      
 */
+
+// // ----------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: SetupReact Redux Setup :-
+
+/*
+? State Management is usually Complex. So, we use React Redux to solve this problem.
+
+! Understanding React Redux -
+
+? React Redux is used for Complex State Management as passing a State Value to linked Component is still easy but passing a State Value
+? to a whole other non-linked Component tends to be difficult as is dony by "Query Paramenters" but it is not a good way.
+? So, we use React Redux which is a Third Party Library for setting a Global State Management which can be easy to manange.
+
+* NOTE :- To install React Redux, we use Third Party Library -> npm install --save react-redux
+*/
+
+// // ----------------------------------------------------------------------------------------------------------------------------
 
 // TODO:: Understanding Types of React Stying :-
 
@@ -226,6 +257,8 @@
 *         which we can access them like props and it gives each class a different name which makes every class to have different name.
 */
 
+// // ----------------------------------------------------------------------------------------------------------------------------
+
 // TODO:: React Files :- 
 
 /*
@@ -245,6 +278,8 @@
 * It is that props are passed from a parent component, but state is managed by the component itself.
 * A component cannot change its props, but it can change its state.
 */
+
+// // ----------------------------------------------------------------------------------------------------------------------------
 
 // TODO:: npm Commands (Terminal Commands) in order to install React App :-
 
