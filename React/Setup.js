@@ -217,6 +217,7 @@
 
 /*
 ? State Management is usually Complex. So, we use React Redux to solve this problem.
+* We have two Libraries :->> Redux (It is the library which is used for any Framework) & React Redux Library (Only for React).
 
 ! Understanding React Redux -
 
@@ -224,7 +225,8 @@
 ? to a whole other non-linked Component tends to be difficult as is dony by "Query Paramenters" but it is not a good way.
 ? So, we use React Redux which is a Third Party Library for setting a Global State Management which can be easy to manange.
 
-* NOTE :- To install React Redux, we use Third Party Library -> npm install --save redux
+* NOTE :- To install Redux & React Redux, we use Third Party Library's -> npm install --save redux
+*                                                                         npm install --save react-redux 
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
