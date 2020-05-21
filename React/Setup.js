@@ -213,7 +213,7 @@
 
 // // ----------------------------------------------------------------------------------------------------------------------------
 
-// TODO:: SetupReact Redux Setup :-
+// TODO:: React Redux Setup :-
 
 /*
 ? State Management is usually Complex. So, we use React Redux to solve this problem.
@@ -224,7 +224,7 @@
 ? to a whole other non-linked Component tends to be difficult as is dony by "Query Paramenters" but it is not a good way.
 ? So, we use React Redux which is a Third Party Library for setting a Global State Management which can be easy to manange.
 
-* NOTE :- To install React Redux, we use Third Party Library -> npm install --save react-redux
+* NOTE :- To install React Redux, we use Third Party Library -> npm install --save redux
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
