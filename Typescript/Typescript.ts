@@ -16,6 +16,13 @@ TODO:: Terminal Commands for executing Typescript ->>
 
 ? tsc : It compiles all Typescript files to Javascript files.
 ? tsc --init : It is used to set the congiguration of Typescript by getting tsconfig.json.
+
+// ---------------------------------------------------------------------------------------------------------------------------
+
+? tsc --outFile name_of_file_to_get_bundled_in.js  all_other_files_that_are_to_be_in_single_file_in a_set_order.ts : ......
+* .... It is used to combine multiple files in a single file using any Method: Namspace OR Modules but in a specific order.
+! tsc --outFile app.js ( ALL FILES THAT ARE GETTING BUNDLED WITH NO IMPORT: ) file_one.ts  file_two.ts  app.ts
+TODO:  ALTERTERNATIVE -->>  tsc outFile app.js ( AFTER GETTING IMPORTS ) 
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------------
@@ -226,7 +233,7 @@ TODO:: Understanding Type Alias :->
 
 // // ----------------------------------------------------------------------------------------------------------------------------------
 
-// TODO:: Typescript Classes ->
+// TODO:: Understanding Typescript Classes ->
 
 /*
 * NOTE :- Classes in Typescript almost works similar to C++,Java,etc. 
@@ -301,45 +308,6 @@ TODO:: Inheritance Working :->
 ?           console.log(2 * Circle.PI);
 ?           console.log(Circle.calculateCircumference(8));
 
-TODO:: Understanding Getters & Setters :->
-
-! Syntax :- class Class_Name 
-!            {
-!              private data_member: data_type = value;
-!            
-!              get property_name() {
-!                 Returning anything that you have "set" in Setter.
-!              }  
-!              
-!              set property_name( argument_name: data_type ) {
-!                Putting Conditions on private data_member which can be accessible by user .....
-!              }
-!            }; 
-
-? Example : class Plant
-?           {
-?             private _species: string = "Default";
-?           
-?             get species() {
-?               return this._species;
-?             }
-?           
-?             set species(value: string)
-?             {
-?               if (value.length > 4)
-?                 this._species = value;
-?               else
-?                 this._species = "No Change";
-?             }
-?           }
-?           
-?           const plant = new Plant();
-?           console.log(plant.species);
-?           plant.species = "Herb";
-?           console.log(plant.species);
-?           plant.species = "Parasite";
-?           console.log(plant.species);
-
 TODO:: Understanding Abstract Classes :->
 
 * NOTE :- Abstract Classes are basically Classes which can only be set as Base Class which could only be called by a Child Class.
@@ -376,6 +344,7 @@ TODO:: Understanding Abstract Classes :->
 TODO:: Understanding Singleton Classes :->
 
 * NOTE :- Singleton Classes is basically making constructor's private in order to create only a single instance (One time Constructor Only).
+! Syntax : The Below Example can be set as the basis for Singleton Classes Syntax. 
 
 ? Example: class OnlyOne
 ?          {
@@ -385,7 +354,7 @@ TODO:: Understanding Singleton Classes :->
 ?            static getInstance()
 ?            {
 ?              if (!OnlyOne.instance)
-?                OnlyOne.instance = new OnlyOne('Only One Time Creation of Class is Possible');
+?                OnlyOne.instance = new OnlyOne('Only One Time Creation of Class Constructor is Possible');
 ?          
 ?              return OnlyOne.instance;
 ?            }
@@ -393,7 +362,101 @@ TODO:: Understanding Singleton Classes :->
 ?          
 //          const wrong = new OnlyOne('Only One');  
 ?          const right = OnlyOne.getInstance();
+?          console.log(right.name);
+?          right.name = "But We can still Update the One time created Constructor Value";
+?          console.log(right.name);
+
+TODO:: Understanding Getters & Setters Properies :->
+
+! Syntax :- class Class_Name
+!            {
+!              private data_member: data_type = value;
+!
+!              get property_name() {
+!                 Returning anything that you have "set" in Setter.
+!              }
+!
+!              set property_name( argument_name: data_type ) {
+!                Putting Conditions on private data_member which can be accessible by user .....
+!              }
+!            };
+
+? Example : class Plant
+?           {
+?             private _species: string = "Default";
+?
+?             get species() {
+?               return this._species;
+?             }
+?
+?             set species(value: string)
+?             {
+?               if (value.length > 4)
+?                 this._species = value;
+?               else
+?                 this._species = "No Change";
+?             }
+?           }
+?
+?           const plant = new Plant();
+?           console.log(plant.species);
+?           plant.species = "Herb";
+?           console.log(plant.species);
+?           plant.species = "Parasite";
+?           console.log(plant.species);
+
+TODO:: Understanding ReadOnly Property :-> 
+
+? We can make a data_member readonly by two ways -> Only using Getter & By Readonly Property.
+* NOTE :- Readonly properties must be initialized at their declaration or in the constructor. Where, we use "readonly" keyword.
+! Syntax :- readonly data_member: data_type;
+
+? Example : class ReadOnly
+?           {
+?             private static instance: ReadOnly;
+?             public readonly name: string
+?           
+?             private constructor(name: string, public readonly age: number) {
+?               this.name = name;
+?             }
+?           
+?             static getInstance()
+?             {
+?               if (!ReadOnly.instance)
+?                 ReadOnly.instance = new ReadOnly('Working on Readonly Property:',1);
+?           
+?               return ReadOnly.instance;
+?             }
+?           }
+?           
+?           const correct = ReadOnly.getInstance();
+?           console.log(correct.name,correct.age);
+//          correct.name = "But We can still Update the One time created Constructor Value";
+//          console.log(correct.name);
 */
 
-
 // // ----------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: Understanding Typescript Module ->
+
+/*
+* NOTE :- There are two ways, we can create Typescript Module: 1) Namespace & 2) Modules. 
+
+TODO: Understanding Namespace :->
+
+* NOTE :- Namespace is a keyword that lets you make a object type file which can be only be accessed by 
+*                   it's specified name and if it is exported.
+
+? It is for a Single File Namespace Syntax  -->>
+
+! Syntax :-  /// <reference path="Name of files to be Imported.ts" /> 
+!            namespace name_of _file 
+!            {
+!              Any Property Declaration without export means here, that is only accessible in this File Only.
+!              export function,object,etc { .... }
+!            }
+!
+!            name_of_file.exported_functionName/objectName,etc;
+
+
+*/
