@@ -440,7 +440,7 @@ TODO:: Understanding ReadOnly Property :->
 // TODO:: Understanding Typescript Module ->
 
 /*
-* NOTE :- There are two ways, we can create Typescript Module: 1) Namespace & 2) Modules. 
+* NOTE :- There are two ways, we can create Typescript Module: 1) Namespace & 2) ES6 Modules. 
 
 TODO: Understanding Namespace :->
 
@@ -457,4 +457,10 @@ TODO: Understanding Namespace :->
 !            }
 !
 !            name_of_file.exported_functionName/objectName,etc;
+
+* NOTE :- Limitation of Namespace : It is used only for Small Projects as it makes Global Scope Polluted in Bigger Projects.
+
+TODO:: Understanding ES6 Modules :->
+
+
 */
