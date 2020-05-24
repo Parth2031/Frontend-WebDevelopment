@@ -1,0 +1,39 @@
+<!-- TODO:: Setting Up Typescript ES Modules -->
+<!-- * NOTE :- It needs a Module Loader like SystemJS -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      color: red;
+    }
+    h2 {
+      color: blue;
+    }
+  </style>
+  <title>TypeScript ES6 Modules</title>
+  <script src="node_modules/systemjs/dist/system.js"></script>
+</head>
+<body>
+  <h1>Understanding Typescript ES6 Modules</h1>
+  <h2>Syntax & Working</h2>
+  
+  <!-- ! Configuration of SystemJS -->
+  <script>
+    // Set our baseURL reference path
+    SystemJS.config(
+    {
+      baseURL: '/',
+      packages: 
+      {
+        '/': {
+          defaultJSExtensions: true
+        }
+      }
+    });
+    SystemJS.import('Modules.js');
+  </script>
+</body>
+</html>
+
