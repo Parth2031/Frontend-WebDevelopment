@@ -850,7 +850,7 @@ TODO:: Parameter Decorators :->
 !      {
 *        map: {
 !          "jquery": "node_modules/jquery/dist/jquery.min.js",
-*          "library_name": "node_modules/library_name/main_library_name.js"          // ! <<-- Syntax  
+*          "library_name": "node_modules/library_name/main_library_name.js"            // ? <<-- Syntax  
 *        },
 !        baseURL: '/',
 !        packages:

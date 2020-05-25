@@ -32,8 +32,9 @@ console.log(Rectangles_1.default(20, 50));
 // // --------------------------------------------------------------------------------------------------------------------------------
 // TODO:: Working of a Third Party Library :-
 require("lodash");
+const lodash_1 = __importDefault(require("lodash"));
 const customers = ['Max', 'Manuel', 'Anna'];
 const activeCustomers = ['Max', 'Manuel'];
-const inactiveCustomers = _.difference(customers, activeCustomers);
+const inactiveCustomers = lodash_1.default.difference(customers, activeCustomers);
 console.log("Difference of Array: ");
 console.log(inactiveCustomers);
