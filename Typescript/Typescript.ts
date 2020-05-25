@@ -15,6 +15,7 @@
 TODO:: Terminal Commands for executing Typescript ->>
 
 ? tsc : It compiles all Typescript files to Javascript files.
+? tsc -w : It automatically compiles all Typescript files to Javascript files everytime, I do some changes.
 ? tsc --init : It is used to set the congiguration of Typescript by getting tsconfig.json.
 
 // ---------------------------------------------------------------------------------------------------------------------------
@@ -248,13 +249,13 @@ TODO:: Understanding Type Alias :->
 !           };
 
 * NOTE :- When, we use Access Specifiers on Data Members, we need to intialize them with some value or call from constructor is necessary. 
-*               Access Specifier like private & protected only needs this.
+*               Access Specifier like private & protected only needs this, under "STRICT Rule of tsconfig.json".
 
 ? Example : class Person
 ?           {
 ?             name: string;
 ?             protected age: number = 20;
-?             private gender: string = "Male";                 // ! <-- Intialized Default value and not used Contructor() here.
+?             private gender: string = "Male";      // ! <-- Intialized Default value and not used Contructor() only under "STRICT Rule".
 ?           
 ! In this, "userName" argument is defined as "public" means that it becomes a Data Member of Class so it can also be accessed by Other Class.
 ?             constructor(name: string, public userName: string) {   
@@ -310,8 +311,8 @@ TODO:: Inheritance Working :->
 
 TODO:: Understanding Abstract Classes :->
 
-* NOTE :- Abstract Classes are basically Classes which can only be set as Base Class which could only be called by a Child Class.
-*         Where, we could set or change some values. 
+* Abstract Classes are basically Classes which can only be set as Base Class which could only be called by a Child Class.
+* Where, we could set or change some values. 
 
 ! Syntax :- abstract Class_Name { ..... };
 !           class New_Class_Name extends Class_Name { ..... };
@@ -370,7 +371,7 @@ TODO:: Understanding Getters & Setters Properies :->
 
 ! Syntax :- class Class_Name
 !            {
-!              private data_member: data_type = value;
+!              private data_member: data_type;
 !
 !              get property_name() {
 !                 Returning anything that you have "set" in Setter.
@@ -444,8 +445,7 @@ TODO:: Understanding ReadOnly Property :->
 
 TODO: Understanding Namespace :->
 
-* NOTE :- Namespace is a keyword that lets you make a object type file which can be only be accessed by 
-*                   it's specified name and if it is exported.
+* Namespace is a keyword that lets you make a object type file which can be only be accessed by it's specified name and if it is exported.
 
 ? It is for a Single File Namespace Syntax  -->>
 
@@ -465,3 +465,378 @@ TODO:: Understanding ES6 Modules in Typescript :->
 * NOTE :- It is similar to ES6 Javascript Modules but in order to load them, we need to use SystemJS ( Third Party Library ).
 ? Command to Install SystemJS : npm install -save systemjs@0.21.5 version and then configure it.
 */
+
+// // ---------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: Understanding Typescript Interfaces ->
+
+/*
+* Interface is basically defining property(key) of an Object in advance so as to, they could be accessed anytime/anywhere.
+* NOTE :- In this basically, we could also set data_types to the Object Key_names. 
+
+! Syntax :- interface interface_name 
+!           {
+!             key_name: data_type;
+!             key_name?: data_type;            ( It means that is an Optional Argument and not used everytime. )
+!             [Unknown_key_name: string]: data_type;
+!             method_name(argument: data_type): data_type;  
+!           }
+!           
+!           function function_name(object_name: interface_object_name / {key_name: data_type}) {
+!             Now, we can access the specified key_names in Interface like a normal Object key name accessing.
+!           }
+
+? Example : interface namedPerson
+?           {
+?             firstName: string;
+?             age?: number;                  
+?             [notKnownKeyName: string]: any; 
+?             greeting(lastName: string): void;
+?           };
+?           
+?           const person: namedPerson =
+?           {
+?             firstName: "Parth",
+?             age: 20,
+?             hobbies: ["Cooking", "Sports"],
+?             greeting(lastName: string) {
+?               console.log(`Hi, I am ${this.firstName} ${lastName}`);
+?             }
+?           };
+?           
+?           function greet(person: namedPerson)
+?           {
+?             console.log(`Hello ${person.firstName}`);
+?             console.log(person.hobbies[0]);
+?           }
+?           
+?           function changeName(person: namedPerson) {
+?             person.firstName = "Mrinal";
+?           }
+?           
+?           greet({ firstName: "Parth"});         // ! <-- It is the correct way as it checks the interface and compares it.
+//          greet({ firstName: "Parth", age: 25});         // ! <-- Age is not defined in interface so not part of Object Literal.
+?           greet(person);
+?           changeName(person);
+?           greet(person);
+
+* NOTE :- Object Literal is more strictly checked rather than a Object Definition in Interface.
+
+TODO:: Interfaces in Typescript Classes :->
+
+* NOTE :- Interface main example is used here too.
+
+! Syntax :- class Class_Name implements interface_Name 
+!           {
+!             We also need to define the old property name once again in Class Body. 
+!             We could also add more Data members to the class which are not part of Interface.
+!           }
+
+? Example : class Person implements namedPerson
+?           {
+?             firstName: string = "Parth";
+?             middleName: string = "Amit";
+?             greeting(lastName: string) {
+?               console.log(`Hi, I am ${this.firstName} ${lastName}`);
+?             }
+?           }
+?           
+?           const newPerson = new Person();
+?           newPerson.firstName = "Mrinal";
+?           newPerson.greeting("Kothari");
+
+TODO:: Interface Inheritance :->
+
+* NOTE :- Interface main example is used here too.
+
+! Syntax :- interface child_interface_name extends parent_interface_name
+!           {
+!             All old property_names in the Parent Interface are present here.
+!             Now, we also add new property_names to the Child Interface.
+!           }
+
+? Example : interface agedPerson extends namedPerson {
+?             age: number;
+?           }
+?
+?           const oldPerson: agedPerson =
+?           {
+?             age: 20,
+?             firstName: "Shrey",
+?             greeting(lastName: string) {
+?               console.log("Hello World");
+?             }
+?           }
+?
+?           console.log(oldPerson);
+
+TODO:: Interface for Function Types :->
+
+! Syntax :- interface interface_name {
+!             (aruments: data_type): data_type;
+!           }
+!
+!           let function_name = interface_name;
+
+? Example : interface doubleValueFunction {
+?             (number_1: number, number_2: number): number;
+?           }
+?           
+?           let calculateDoubleFunction: doubleValueFunction;
+?           
+?           calculateDoubleFunction = (value_1: number, value_2: number) => {
+?             return (value_1 + value_2) * 2;
+?           }
+?           
+?           console.log(calculateDoubleFunction(10, 20));
+*/
+
+// // --------------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: Understanding Typescript Generics ->
+
+/*
+* Generic Type & Function is basically being able to create a data type that can work over a variety of types rather than a single one.
+* It is an Major Alternative to "ANY" Data Type as it gives better support to the Built-In properties to a Data Type. 
+
+TODO:: Generic Functions :->
+
+! Syntax :- function function_name <T> (argument: T) {
+!             .....
+!           }
+!
+!           function_name(argument_value);
+!                           OR 
+!           function_name <data_type> (argument_value);
+
+* NOTE :- Generic Type as "ANY" Data Type : <T>
+
+? Example: function betterGeneric <T> (data: T) {
+?            return data;
+?          }
+?          
+?          console.log(betterGeneric("Parth"));
+?          console.log(betterGeneric <number> (20));
+?          console.log(betterGeneric({ name: "Parth", age: 20 }));
+
+TODO:: Array Type Generic Functions :->
+
+* NOTE :- It is part of Generic Functions.
+
+! Syntax :- function function_name <T> (argument: T[]) {
+!             .....
+!           }
+
+? Example : function printAll <T> (print: T[]) {
+?             print.forEach(element => console.log(element));
+?           }
+?
+?           printAll<string>(["Apple", "Banana"]);
+
+TODO:: Built-In Generics like Array :->
+
+* NOTE :- It is part of Generic Functions.
+
+! Syntax :- variable variable_name: Array <data_type> = value;
+
+? Example : const testResults: Array<number> = [1, 2, 3, 4];
+?           testResults.push(5);
+//          testResults.push("6");
+?
+?           console.log(testResults);
+
+TODO:: Generic Types :->
+
+! Syntax :- variable variable_name: <T> (data: T) => T = function_name;
+
+? Example : const generic: <T> (data: T) => T = betterGeneric;
+?           console.log(generic<string>("Generic Types"));
+
+TODO:: Generic Classes :->
+
+* NOTE :- <T , U extends constraints>        where, constraints = data_types like number | string,etc.
+*         Convention : T - Stands for Single Type & U - Stands for Mutiple Types.
+
+! Syntax :- class Class_Name <T , U extends data_type | data_type>
+!           {
+!             data_members: T;
+!             data_members: U;
+!             methods(): data_type { .... }
+!           }
+!           
+!           const variable_name = new Class_Name<data_type_choosen_from_extends>();
+
+? Example : class SimpleMaths <T extends number | string, U extends number | string>
+?           {
+?             baseValue: T;
+?             multiplyValue: U;
+?             calculate(): number {
+?               return +this.baseValue * +this.multiplyValue;
+?             }
+?           }
+?           
+?           const simpleMaths = new SimpleMaths<number,string>();
+?           simpleMaths.baseValue = 10;
+?           simpleMaths.multiplyValue = "20";
+?           console.log(simpleMaths.calculate());
+*/
+
+// // --------------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: Understanding Typescript Decorators ->
+
+/*
+* Decorators are part of the Meta-Programming which means it is used mosly by developers for easy coding.
+
+! Syntax :- functionn decorator_name( constructorFn: Function ) {
+!             ...... 
+!           }
+!           
+!           @decorator_name
+!           class Class_name {
+!             constructor() { ...... }
+!           }
+
+? Example: function printable(constructorFn: Function)
+?          {
+?            constructorFn.prototype.print = function () {
+?              console.log(this);
+?            }
+?          }
+?          
+?          @decorating(false)
+?          @printable
+?          class Plant {
+?            name: string = "Green Plants";
+?          }
+?
+?          const plant = new Plant();
+?          (<any>plant).print();
+
+TODO:: Decorator Factory :->
+
+* NOTE :- It is basically making a decorator conditional using a normal function with a defined Decorator.
+
+? Example : function decorate(constructorFn: Function) {
+?             console.log(constructorFn);
+?           }
+?           
+?           @decorate
+?           class Person
+?           {
+?             constructor() {
+?               console.log("Hi");
+?             }
+?           }
+?           
+?           function decorating (value: boolean): any {
+?             return value ? decorate : null;
+?           }
+
+TODO:: Method Decorator :->
+
+* NOTE :- Example of Property & Method Decorator's are combined. 
+
+! Syntax :- function decorator_name (argument: boolean) 
+!           {
+!             return function( target: any, propName: string, descriptor: PropertyDescriptor) {
+!                ...... 
+!             }
+!           }
+
+TODO:: Property Decorator :->
+
+! Syntax :-  function decorator_name (argument: boolean) 
+!           {
+!             return function( target: any, propName: string) : any
+!             {
+!                const newDescriptor: PropertyDescriptor = {
+!                  writable: argument
+!                }
+!                return newDescriptor;
+!             }
+!           }
+
+? Example : function editable(value: boolean)
+?           {
+?             return function (target: any, propNmae: string, descriptor: PropertyDescriptor) {
+?               descriptor.writable = value;
+?             }
+?           }
+?           
+?           function overWritable(value: boolean)
+?           {
+?             return function (target: any, propName: string): any
+?             {
+?               const newDescriptor: PropertyDescriptor = {
+?                 writable: value
+?               };
+?               return newDescriptor;
+?             }
+?           }
+?           
+?           class Project
+?           {
+?             @overWritable(false)                   // ! <-- This decorator makes it like a ReadOnly property.
+?             projectname: string;
+?           
+?             constructor(name: string) {
+?               this.projectname = name;
+?             }
+?           
+?             @editable(false)                       // ! <-- This decorator makes it like a ReadOnly Method.
+?             calcBudget() {
+?               console.log(1000);
+?             }
+?           }
+?         
+?           const project = new Project("Super Project");
+?           project.calcBudget();
+?           console.log(project); 
+//           project.calcBudget = function () {
+//             console.log(2000);
+//           }
+//           project.calcBudget();
+
+TODO:: Parameter Decorators :->
+
+! Syntax :- function decorator_name(target: any, methodName: string, paramIndex: number) {
+!             ....... 
+!           }
+!
+!           class Class_Name {
+!             method_name( @decorator_name parameters: data_type) { ..... }
+!           }
+
+? Example : function printInfo(target: any, methodName: string, paramIndex: number)
+?           {
+?             console.log("Target: ", target);
+?             console.log("Method Name: ", methodName);
+?             console.log("Parameter Index: ", paramIndex);
+?           }
+?           
+?           class Course
+?           {
+?             name: string;
+?           
+?             constructor(name: string) {
+?               this.name = name;
+?             }
+?           
+?             printStudentNumbers(mode: string, @printInfo printAll: boolean)
+?             {
+?               if (printAll)
+?                 console.log(100);
+?               else
+?                 console.log(200);
+?             }
+?           }
+?           
+?           const course = new Course("Maths");
+?           course.printStudentNumbers("Anything", true);
+?           course.printStudentNumbers("Anything", false);
+*/
+
+// // --------------------------------------------------------------------------------------------------------------------------------
+
+
