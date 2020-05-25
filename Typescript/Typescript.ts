@@ -839,4 +839,35 @@ TODO:: Parameter Decorators :->
 
 // // --------------------------------------------------------------------------------------------------------------------------------
 
+// TODO:: Understanding Typescript Third Party Libraries :-
 
+/*
+* NOTE :- First, we need to configure our SystemJS Library for importing Particular Third Party Library.
+
+? Congiruration of SystemJS:->>
+!  <script>
+!    SystemJS.config(
+!      {
+*        map: {
+!          "jquery": "node_modules/jquery/dist/jquery.min.js",
+*          "library_name": "node_modules/library_name/main_library_name.js"          // ! <<-- Syntax  
+*        },
+!        baseURL: '/',
+!        packages:
+!        {
+!          '/': {
+!            defaultJSExtensions: true
+!          }
+!        }
+!      });
+!    SystemJS.import('app.js');
+!  </script>
+
+TODO:: Terminal Command to install Typescript Definition fror Libraries :->
+
+! NOTE :- npm install --save-dev library_name
+? NOTE:-  npm install -D @types/library_name
+* NOTE :- import 'library-name' ( Import it in the File to get the Library Functionalties ).
+*/
+
+// // --------------------------------------------------------------------------------------------------------------------------------
