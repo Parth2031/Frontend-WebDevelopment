@@ -17,6 +17,7 @@ TODO:: Terminal Commands for executing Typescript ->>
 ? tsc : It compiles all Typescript files to Javascript files.
 ? tsc -w : It automatically compiles all Typescript files to Javascript files everytime, I do some changes.
 ? tsc --init : It is used to set the congiguration of Typescript by getting tsconfig.json.
+? tsc -p folder_name/file_name.ts : It lets you compile the typescript files by specifying path of .ts file is present.
 
 // ---------------------------------------------------------------------------------------------------------------------------
 
@@ -865,9 +866,7 @@ TODO:: Parameter Decorators :->
 
 TODO:: Terminal Command to install Typescript Definition fror Libraries :->
 
-! NOTE :- npm install --save-dev library_name
-? NOTE:-  npm install -D @types/library_name
+! NOTE :- npm install (i) --save-dev (-D) library_name
+? NOTE:-  npm install (i) --save-dev (-D) @types/library_name
 * NOTE :- import 'library-name' ( Import it in the File to get the Library Functionalties ).
 */
-
-// // --------------------------------------------------------------------------------------------------------------------------------
