@@ -1,4 +1,8 @@
+// TODO:: Managing Global State using React Redux :-
+
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import axios from '../../../axios-order';
 import Button from '../../../Components/UI/Button/Button';
 import Spinner from '../../../Components/UI/Spinner/Spinner';
@@ -122,7 +126,7 @@ class ContactData extends Component
 
     const order =
     {
-      ingredients: this.props.ingredients,
+      ingredients: this.props.ings,
       price: this.props.price,             
       orderData: formData
     }
@@ -242,4 +246,14 @@ class ContactData extends Component
   }
 }
 
-export default ContactData;
+// TODO:: Setting Up React Redux Linking -->>
+
+const mapStateToProps = (state) =>
+{
+  return {
+    ings: state.ingredients,
+    price: state.totalPrice
+  }
+} 
+
+export default connect(mapStateToProps)(ContactData);
