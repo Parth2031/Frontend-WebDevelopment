@@ -227,6 +227,7 @@
 
 * NOTE :- To install Redux & React Redux, we use Third Party Library's -> npm install --save redux
 *                                                                         npm install --save react-redux 
+*         To get Asynchronous Functionality in React Redux, "" ""      -> npm install --save redux-thunk                    
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
