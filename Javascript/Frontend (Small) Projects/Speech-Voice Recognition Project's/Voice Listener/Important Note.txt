@@ -1,0 +1,2 @@
+Voice Recognition Project is a Sort of Combination of the above two projects in combining Speech Recognition 
+  & Speech Syntesis Project Based.
