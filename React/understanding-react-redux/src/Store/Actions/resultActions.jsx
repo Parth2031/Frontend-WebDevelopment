@@ -12,6 +12,7 @@ export const saveResult = (res) =>
 
 export const storeResult = (res) =>
 {
+  // ? return (dispatch) => { .... } : Syntax is provided by Redux Thunk Library :-> 
   // ! getState() is used for accessing old State but it should be avoided most of the times :
 
   return (dispatch, getState) =>
