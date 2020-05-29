@@ -25,7 +25,7 @@ const purchaseBurgerStart = () =>
   }
 };  
 
-export const purchaseBurger = (orderData) =>
+export const purchaseBurger = (orderData, token) =>
 {
   // ! /orders.json is the Format needed for Firebase Database as it stores in this format only.
 
@@ -33,7 +33,7 @@ export const purchaseBurger = (orderData) =>
   {
     dispatch(purchaseBurgerStart());
 
-    axios.post('/orders.json', orderData)
+    axios.post('/orders.json?auth=' + token, orderData)
       .then((response) =>
       {
         console.log(response.data.name);
@@ -80,13 +80,13 @@ const fetchOrdersStart = () =>
   };
 };
 
-export const fetchOrders = () =>
+export const fetchOrders = (token) =>
 {
   return (dispatch) => 
   {
     dispatch(fetchOrdersStart());
 
-    axios.get('/orders.json')
+    axios.get('/orders.json?auth=' + token)
       .then( res =>
       {
         const fetchedOrders = [];
@@ -103,8 +103,8 @@ export const fetchOrders = () =>
         dispatch(fetchOrdersSuccess(fetchedOrders));
       })
 
-      .catch( (error) => {
-        dispatch(fetchOrdersFail(error));
+      .catch( (err) => {
+        dispatch(fetchOrdersFail(err));
       });
   };
 };
