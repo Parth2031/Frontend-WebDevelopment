@@ -7,6 +7,7 @@ import Layout from '../src/HigerOrderComponents/Layouts/Layout';
 import BurgerBuilder from './Containers/Burger Builder/BurgerBuilder';
 import Checkout from '../src/Containers/Checkout/Checkout';
 import Orders from '../src/Containers/Orders/Orders';
+import Authentication from './Containers/Authentication/Authentication';
 
 class App extends Component
 {
@@ -17,6 +18,7 @@ class App extends Component
         <Switch>
           <Route path="/checkout" component={Checkout} />
           <Route path="/orders" component={Orders} />
+          <Route path="/authentication" component={Authentication} />
           <Route path="/" exact component={BurgerBuilder} />
         </Switch>
       </Layout>
