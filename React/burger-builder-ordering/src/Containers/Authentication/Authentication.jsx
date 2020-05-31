@@ -1,6 +1,7 @@
 // TODO:: Adding Authentication to Webpages :-
 
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Input from '../../Components/UI/Input/Input';
@@ -49,6 +50,13 @@ class Authentication extends Component
       },
     },
     isSignUp: true 
+  }
+
+  componentDidMount()
+  {
+    if (!this.props.buildingBurger && this.props.authRedirectPath !== '/') {
+      this.props.onSetAuthRedirectPath();
+    } 
   }
 
   checkValidity(value, rules)
@@ -148,8 +156,15 @@ class Authentication extends Component
       errorMessage = ( <p>{this.props.error.message}</p> )
     }
     
+    let authRedirect = null;
+
+    if (this.props.isAuthenticated) {
+      authRedirect = <Redirect to={this.props.authRedirectPath}/>
+    }
+
     return (
       <div className={classes.Authentication}>
+        {authRedirect}
         {errorMessage}
         <form onSubmit={this.submitHandler}>
           {form}
@@ -165,14 +180,18 @@ const mapStateToProps = (state) =>
 {
   return {
     loading: state.auth.loading,
-    error: state.auth.error
+    error: state.auth.error,
+    isAuthenticated: state.auth.token !== null,
+    buildingBurger: state.burgerBuilder.building,
+    authRedirectPath: state.auth.authRedirectPath
   };
 }
 
 const mapDispatchToProps = (dispatch) =>
 {
   return {
-    onAuth: (email, password, isSignUp) => dispatch(actionCreators.auth(email, password, isSignUp))
+    onAuth: (email, password, isSignUp) => dispatch(actionCreators.auth(email, password, isSignUp)),
+    onSetAuthRedirectPath: () => dispatch(actionCreators.setAuthRedirectPath('/'))  
   };
 }
 
