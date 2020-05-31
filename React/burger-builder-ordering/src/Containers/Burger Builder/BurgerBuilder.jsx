@@ -46,10 +46,7 @@ export class BurgerBuilder extends Component
     // error: false
   }
   
-  componentDidMount()
-  {
-    console.log(this.props);
-  
+  componentDidMount() {
     this.props.onIntializeIngredients();
   }
 
