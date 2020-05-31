@@ -3,15 +3,28 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom'; 
 import { connect } from 'react-redux';
+import asyncComponent from './HigerOrderComponents/asyncComponent/asyncComponent';
 
 // import './App.module.css';
 import Layout from '../src/HigerOrderComponents/Layouts/Layout';
 import BurgerBuilder from './Containers/Burger Builder/BurgerBuilder';
-import Checkout from '../src/Containers/Checkout/Checkout';
-import Orders from '../src/Containers/Orders/Orders';
-import Authentication from './Containers/Authentication/Authentication';
+// import Checkout from '../src/Containers/Checkout/Checkout';
+// import Orders from '../src/Containers/Orders/Orders';
+// import Authentication from './Containers/Authentication/Authentication';
 import Logout from './Containers/Authentication/Logout/Logout';
 import * as actionCreators from './Store/Actions/actionIndex';
+
+const asyncCheckout = asyncComponent( () => {
+  return import('../src/Containers/Checkout/Checkout');
+});  
+
+const asyncOrders = asyncComponent( () => {
+  return import('../src/Containers/Orders/Orders');
+});  
+
+const asyncAuthentication = asyncComponent( () => {
+  return import('./Containers/Authentication/Authentication');
+});  
 
 class App extends Component
 {
@@ -23,7 +36,7 @@ class App extends Component
   {
     let routes = (
       <Switch>
-        <Route path="/authentication" component={Authentication} />
+        <Route path="/authentication" component={asyncAuthentication} />
         <Route path="/" exact component={BurgerBuilder} />
         <Redirect to="/"/>
       </Switch>  
@@ -33,9 +46,10 @@ class App extends Component
       routes =
       (
         <Switch>
-          <Route path="/checkout" component={Checkout} />
-          <Route path="/orders" component={Orders} />
+          <Route path="/checkout" component={asyncCheckout} />
+          <Route path="/orders" component={asyncOrders} />
           <Route path="/logout" component={Logout} />
+          <Route path="/authentication" component={asyncAuthentication} />
           <Route path="/" exact component={BurgerBuilder} />
           <Redirect to="/" />
         </Switch>

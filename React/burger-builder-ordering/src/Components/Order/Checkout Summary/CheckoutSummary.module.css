@@ -5,6 +5,7 @@
   margin: auto;
 }
 
+/* 
 @media (min-height: 401px) and (min-width: 500px)
 {
   .CheckoutSummary {
@@ -18,4 +19,5 @@
   .CheckoutSummary {
     width: 100%;
   }
-}
+} 
+*/
