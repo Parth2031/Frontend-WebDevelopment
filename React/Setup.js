@@ -296,3 +296,9 @@
 ? npm run start : It is to run the Development Server.
 ? npm run build : It is a create a production build.
 */
+
+// // -------------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: Testing Automatically React :->>
+
+// ? npm install --save enzyme react-test-renderer enzyme-adapter-react-16

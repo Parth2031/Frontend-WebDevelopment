@@ -13,7 +13,7 @@ import Spinner from '../../Components/UI/Spinner/Spinner';
 import axios from '../../axios-order';
 import * as actionCreators from '../../Store/Actions/actionIndex';
 
-class BurgerBuilder extends Component 
+export class BurgerBuilder extends Component 
 {
   // constructor(props)
   // {
