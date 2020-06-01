@@ -86,26 +86,77 @@
 
 // // ----------------------------------------------------------------------------------------------------------------------------
 
+// TODO:: React Hook Built-In Methods :-
+
+/*
+! These are all Required to imported similar to {Component} -
+
+? useState(current_State, updated_Current_State) : It is used for both defining and setting the state.
+* NOTE :- useState() can be a object,array,etc whereas Class Based State was always "object".
+
+? useEffect() : It is majorly used for http request as it works all the even at mounting & also at updating state.
+*     Syntax => useEffect ( () => { used for http request ... }, [])   
+                Array is needed to implenent dependencies as if it is present/remains, then it will work only one time. 
+
+? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
+? useContext() : It is used as similarly to React.createContext(). 
+*/
+
+// // ----------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: React Routing Setup :-
+
+/*
+! Understanding React Routing -
+
+? React Routing means Multi Pages feeling in a Single Page Application(SPA) where Multi Pages are rendered
+?               through Routing by Javascript and not Multiple HTML Files.
+
+* NOTE : To install React Router, we use Third Party Library -> npm install --save react-router react-router-dom
+*           where, "react-router-dom" Library is more important as most of the Components are part of it and not react-router.
+*/
+
+// // ----------------------------------------------------------------------------------------------------------------------------
+
+// TODO:: React Redux Setup :-
+
+/*
+? State Management is usually Complex. So, we use React Redux to solve this problem.
+* We have two Libraries :->> Redux (It is the library which is used for any Framework) & React Redux Library (Only for React).
+
+! Understanding React Redux -
+
+? React Redux is used for Complex State Management as passing a State Value to linked Component is still easy but passing a State Value
+? to a whole other non-linked Component tends to be difficult as is dony by "Query Paramenters" but it is not a good way.
+? So, we use React Redux which is a Third Party Library for setting a Global State Management which can be easy to manange.
+
+* NOTE :- To install Redux & React Redux, we use Third Party Library's -> npm install --save redux
+*                                                                         npm install --save react-redux
+*         To get Asynchronous Functionality in React Redux, "" ""      -> npm install --save redux-thunk
+*/
+
+// // ----------------------------------------------------------------------------------------------------------------------------
+
 // TODO:: Types of Components :-
 
 /*
 ! Two types of Components -
 
-? Stateless/Presentational/Dumb Components : It should be preferred so that different components can be reused like Lego pieces, 
+? Stateless/Presentational/Dumb Components : It should be preferred so that different components can be reused like Lego pieces,
 ?                                             even if you don’t have immediate plans to reuse a component.
 
 ? Stateful/Container/Smart Components : They can be reusable also but need the logic to be same for reusable place.
 
 * Difference between Types of Components ->>
 
-? The literal difference is that one has state, and the other doesn’t. That means the stateful components are keeping track of changing data, 
+? The literal difference is that one has state, and the other doesn’t. That means the stateful components are keeping track of changing data,
 ? while stateless components print out what is given to them via props, or they always render the same thing.
 */
 
 // ! Stateless Components Example -
 
 /*
-  const BooksList = ({books}) => 
+  const BooksList = ({books}) =>
   {
    return (
     <ul>
@@ -120,9 +171,9 @@
 // ! Stateful Components Example -
 
 /*
-  class App extends Component 
+  class App extends Component
   {
-   constructor() 
+   constructor()
    {
      super()
      this.state = {
@@ -134,22 +185,6 @@
      <BooksList books={this.state.books} />
    }
   }
-*/
-
-// // ----------------------------------------------------------------------------------------------------------------------------
-
-// TODO:: React Hook Built-In Methods :-
-
-/*
-! These are all Required to imported similar to {Component} -
-
-? useState() : It is used for both defining and setting the state.
-? useEffect() : It is majorly used for http request as it works all the even at mounting & also at updating state.
-*     Syntax => useEffect ( () => { used for http request ... }, [])   
-                Array is needed to implenent dependencies as if it is present/remains, then it will work only one time. 
-
-? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
-? useContext() : It is used as similarly to React.createContext(). 
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
@@ -195,39 +230,6 @@
 ? static getDerivedStateFromError(error)
 ? componentDidCatch(error, info)
                                   .... and many more
-*/
-
-// // ----------------------------------------------------------------------------------------------------------------------------
-
-// TODO:: React Routing Setup :-
-
-/*
-! Understanding React Routing -
-
-? React Routing means Multi Pages feeling in a Single Page Application(SPA) where Multi Pages are rendered
-?               through Routing by Javascript and not Multiple HTML Files.
-
-* NOTE : To install React Router, we use Third Party Library -> npm install --save react-router react-router-dom 
-*           where, "react-router-dom" Library is more important as most of the Components are part of it and not react-router.                      
-*/
-
-// // ----------------------------------------------------------------------------------------------------------------------------
-
-// TODO:: React Redux Setup :-
-
-/*
-? State Management is usually Complex. So, we use React Redux to solve this problem.
-* We have two Libraries :->> Redux (It is the library which is used for any Framework) & React Redux Library (Only for React).
-
-! Understanding React Redux -
-
-? React Redux is used for Complex State Management as passing a State Value to linked Component is still easy but passing a State Value
-? to a whole other non-linked Component tends to be difficult as is dony by "Query Paramenters" but it is not a good way.
-? So, we use React Redux which is a Third Party Library for setting a Global State Management which can be easy to manange.
-
-* NOTE :- To install Redux & React Redux, we use Third Party Library's -> npm install --save redux
-*                                                                         npm install --save react-redux 
-*         To get Asynchronous Functionality in React Redux, "" ""      -> npm install --save redux-thunk                    
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
