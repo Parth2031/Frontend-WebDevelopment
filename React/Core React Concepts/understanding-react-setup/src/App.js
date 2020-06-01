@@ -139,7 +139,7 @@ class App extends Component
       { id: 3, name: "Christina", age: 19 }
     ],
     showPersons: false
-    }
+  }
 
   // //            -                                                                                             
   
@@ -210,7 +210,6 @@ class App extends Component
       };
     });
   };
-  }
   
   togglePersonsHandler = () =>
   {

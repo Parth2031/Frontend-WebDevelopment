@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 // import Blog from './Containers/Blog/Blog';
-import BlogRouter from '../src/Containers/Blog Router/BlogRouter';
+import BlogRouter from './Containers/Blog Router/BlogRouter';
 
 class App extends Component
 {
