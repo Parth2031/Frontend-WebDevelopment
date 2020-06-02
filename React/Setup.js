@@ -18,9 +18,12 @@
 
 * NOTE on React Hooks -->>
 
-? It doesn't support "state" keyword and so React Hook Methods are it's alternative.
-? In React Hooks, Non-Selected State Part is not merged as it only replaces the old State whereas, .....
+? It doesn't support "state" keyword and so React Hook Methods like useState() are it's alternative.
+? In React Hooks, Non-Selected State Part is not merged as it only replaces/rewrites the old State whereas, .....
 ? ..... in Class Based React, it is merged and not replaced.
+? React Hooks cannot be used in nested functions but only in root level (main body).
+? We can use Multiple useState() instead of creating an Object for useState() as it makes easy for handling Multiple State.
+? Array Destructing Concept is used for defining Multiple States.
 */
 
 // ! Basic React Syntax :-
@@ -51,9 +54,9 @@
 /*
   function App()
   {
-    useState() is a React Hook Method ->
+    useState(current_State, updated_Current_State) is a React Hook Method ->
 
-    const [arraynames] = useState({.... any string,object,array,etc});
+    const [current_State_Name, updated_Current_State_Name] = useState({.... any string,object,array,etc});
   
     return (
       <div className="App">
@@ -89,17 +92,27 @@
 // TODO:: React Hook Built-In Methods :-
 
 /*
-! These are all Required to imported similar to {Component} -
+! These are all Required to imported similar to { Component } -
 
 ? useState(current_State, updated_Current_State) : It is used for both defining and setting the state.
 * NOTE :- useState() can be a object,array,etc whereas Class Based State was always "object".
 
-? useEffect() : It is majorly used for http request as it works all the even at mounting & also at updating state.
-*     Syntax => useEffect ( () => { used for http request ... }, [])   
-                Array is needed to implenent dependencies as if it is present/remains, then it will work only one time. 
+? useEffect(function, [dependencies]) : It is majorly used for http request as it works for both mounting & also at updating state.
+*     Syntax => useEffect ( () => { used for http request ... }, []);   
+                Array is needed to implement dependencies as if it is present/remains, then it will work only one time .....
+                ..... like componentDidMount() else it will run like a componentDidUpdate(). 
+
+* NOTE:- It can also return a function which you have [] as dependencies, the effect only runs once, the cleanup function ....
+*        .... runs when the component gets unmounted. 
+! It can be an alternative to componentDidMount() & componentDidUpdate() Lifecycle Hook Method of Class Based React ....                
+! .... as it works only when the entire Component is Re-Rendered and then it runs so the Http Request is not lost after refreshing.
 
 ? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
 ? useContext() : It is used as similarly to React.createContext(). 
+
+? useCallback(function, [dependencies]) : It works similar to shouldComponentUpdate() Lifecycle Hook of Class Based React.
+*            Syntax => useCallback( () => { .... } , []);
+! It will return a memoized version of the callback that only changes if one of the dependencies has changed.
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------

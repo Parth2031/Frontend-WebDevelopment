@@ -1,4 +1,6 @@
-// TODO:: useState(current_State, updated_Current_State), So, now we need to access the Current State & Updated State by :->
+// TODO:: Some Important Notes Regarding useState() functionality :-
+
+// ! useState(current_State, updated_Current_State), So, now we need to access the Current State & Updated State by ->
 // ? Array Destructuring Concept.
 // * NOTE :- We can use Multiple useState() instead of creating an Object for useState() as it makes easy for handling Multiple State.
 // ! Since, like Class Based State which merges the Old State, it rewrites the Old State with Updated State. so, above method is better.
@@ -15,7 +17,7 @@ const IngredientForm = React.memo( (props) =>
 
   const submitHandler = event =>
   {
-    // ...
+    props.onAddIngredient({ title: enteredTitle, amount: enteredAmount });
 
     event.preventDefault();
   };
