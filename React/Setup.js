@@ -115,9 +115,13 @@
 ? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
 ? useContext() : It is used as similarly to React.createContext(). 
 
+? useMemo() : It is used as similarly to React.memo().
+*   Syntax => useMemo( () => { .... }, []);
+
 ? useCallback(function, [dependencies]) : It works similar to shouldComponentUpdate() Lifecycle Hook of Class Based React.
 *            Syntax => useCallback( () => { .... } , []);
-! It will return a memoized version of the callback that only changes if one of the dependencies has changed.
+! It will return a memorized version of the callback that only changes if one of the dependencies has changed.
+! So, basically it prevents the creation of extra functions.
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------

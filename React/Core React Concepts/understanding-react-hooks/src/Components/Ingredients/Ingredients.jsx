@@ -8,12 +8,13 @@
 // ! useCallback(function, [dependencies]) : It works like shouldComponetWillUpdate() So, when we use it not gets re-created everytime
 // * but gets updated only when the Specified Component is updated. 
 
-import React, { useReducer, useEffect, useCallback } from 'react';
+import React, { useReducer, useEffect, useCallback, useMemo } from 'react';
 
 import IngredientForm from './IngredientForm';
 import Search from './Search';
 import IngredientList from './IngredientList';
 import ErrorModal from '../UI/ErrorModal';
+import useHttp from '../../Custom Hooks/Http';
 
 const ingredientReducer = (state, action) =>
 {
@@ -29,26 +30,11 @@ const ingredientReducer = (state, action) =>
   }
 }
 
-const httpReducer = (state, action) =>
-{
-  switch (action.type)
-  {
-    case 'SEND': return { loading: true, error: null };
-
-    case 'RESPONSE': return { ...state, loading: false };
-      
-    case 'ERROR': return { loading: false, error: action.errorMessage };
-    
-    case 'CLEAR': return { ...state, error: null };
-    
-    default: throw new Error("Should Not Get There");    
-  }
-}
-
 const Ingredients = () =>
 {
   const [userIngredients, dispatch] = useReducer(ingredientReducer, []);
-  const [httpState, dispatchHttp] = useReducer(httpReducer, { loading: false, error: null });
+
+  const {isLoading, data, error, sendRequest, requestExtra, requestIdentifier, clear} = useHttp();
 
   // const [userIngredients, setUserIngredients] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
@@ -56,30 +42,18 @@ const Ingredients = () =>
 
   // ! In this case, useEffect() is working like a componentDidMount() :->
 
-  // useEffect( () => 
-  // {
-  //   fetch('https://understanding-react-hooks.firebaseio.com/ingredients.json')
-  //     .then( (response) => {
-  //       return response.json();
-  //     })
-  //     .then( (responseData) =>
-  //     {
-  //       const loadedIngredients = [];
-  //       for (const key in responseData)
-  //       {
-  //         loadedIngredients.push(
-  //         {
-  //           id: key,
-  //           title: responseData[key].title,
-  //           amount: responseData[key].amount
-  //         });
-  //       }  
-
-  //       setUserIngredients(loadedIngredients);
-  //     });
-  // }, []); 
-
   useEffect(() => { console.log("Rendering Ingredients Mounting") }, []);
+
+  useEffect( () => 
+  { 
+    if (!isLoading && !error && requestIdentifier === 'REMOVE_INGREDIENT') {
+      dispatch({ type: 'DELETE', id: requestExtra });
+    }  
+    else if (!isLoading && !error && requestIdentifier === 'ADD_INGREDIENT') {
+      dispatch({ type: 'ADD', ingredient: { id: data.name, ...requestExtra } });
+    }
+
+  }, [data, requestExtra, requestIdentifier, isLoading, error]);
 
   // ! In this case, useEffect() is working like a componentDidUpdate() :->
   
@@ -94,72 +68,67 @@ const Ingredients = () =>
   
   }, []);
   
-  const addIngredientHandler = (ingredient) =>
+  const addIngredientHandler = useCallback( (ingredient) =>
   {
-    dispatchHttp({ type: 'SEND' });
+    // dispatchHttp({ type: 'SEND' });
 
-    fetch('https://understanding-react-hooks.firebaseio.com/ingredients.json',
-    {
-      method: 'POST',
-      body: JSON.stringify(ingredient),
-      headers: { 'Content-Type': 'application/json' }
-    })
-      .then( (response) => 
-      {
-        dispatchHttp({ type: 'RESPONSE' });
-        return response.json();
-      })
-      .then( (responseData) =>
-      {
-        // setUserIngredients( (prevIngredients) => 
-        // [
-        //   ...prevIngredients,
-        //   { id: responseData.name, ...ingredient }
-        // ]);
+    // fetch('https://understanding-react-hooks.firebaseio.com/ingredients.json',
+    //   {
+    //     method: 'POST',
+    //     body: JSON.stringify(ingredient),
+    //     headers: { 'Content-Type': 'application/json' }
+    //   })
+    //   .then((response) => {
+    //     dispatchHttp({ type: 'RESPONSE' });
+    //     return response.json();
+    //   })
+    //   .then((responseData) => {
+    //     // setUserIngredients( (prevIngredients) => 
+    //     // [
+    //     //   ...prevIngredients,
+    //     //   { id: responseData.name, ...ingredient }
+    //     // ]);
    
-        dispatch({ type: 'ADD', ingredient: { id: responseData.name, ...ingredient } });
-      });
-  }
+    //     dispatch({ type: 'ADD', ingredient: { id: responseData.name, ...ingredient } });
+    //   });
 
-  const removeIngredientHandler = (ingredientId) =>
+    sendRequest('https://understanding-react-hooks.firebaseio.com/ingredients.json',
+      'POST',
+      JSON.stringify(ingredient),
+      ingredient,
+      'ADD_INGREDIENT');
+    
+  }, [sendRequest]);
+
+  const removeIngredientHandler = useCallback((ingredientId) =>
   {
-    dispatchHttp({ type: 'SEND' });
-
-    fetch(`https://understanding-react-hooks.firebaseio.com/ingredients/${ingredientId}.json`, {
-      method: 'DELETE'
-    })
-      .then( (response) =>
-      {
-        dispatchHttp({ type: 'RESPONSE' });
-        // setUserIngredients((prevIngredients) =>
-        //   prevIngredients.filter(ingredient => ingredient.id !== ingredientId)
-        // );
-        dispatch({ type: 'DELETE', id: ingredientId });
-      })
-      .catch( (error) => 
-      {
-        // setError("Something went wrong");
-        // setIsLoading(false);
-        dispatchHttp({ type: 'ERROR', errorMessage: "Something went wrong"});
-      });
-  };
+    sendRequest(`https://understanding-react-hooks.firebaseio.com/ingredients/${ingredientId}.json`,
+      'DELETE',
+      null,
+      ingredientId,
+      'REMOVE_INGREDIENT');
+  
+  }, [sendRequest]);
 
   // ! React batches State Updates :  Multiple set State are executed as one time together if called within a same function -->
 
-  const clearError = () =>
-  {
-    // setError(null);
-    // setIsLoading(false);
-    dispatchHttp({ type: 'CLEAR' });
-  }
+  // const clearError = useCallback( () =>
+  // {
+  //   setError(null);
+  //   setIsLoading(false);
+  // }, []);
+
+  const ingredientList = useMemo( () => { 
+    return <IngredientList ingredients={userIngredients} onRemoveItem={removeIngredientHandler} />  
+  }, [userIngredients, removeIngredientHandler]);
 
   return (
     <div className="App">
-      {httpState.error && <ErrorModal onClose={clearError}>{httpState.error}</ErrorModal>}
-      <IngredientForm onAddIngredient={addIngredientHandler} loading={httpState.loading}/>
+      {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
+      <IngredientForm onAddIngredient={addIngredientHandler} loading={isLoading}/>
       <section>
         <Search onLoadIngredients={filteredIngredientsHandler}/>
-        <IngredientList ingredients={userIngredients} onRemoveItem={removeIngredientHandler}/>  
+        {ingredientList} 
       </section>
     </div>
   );
