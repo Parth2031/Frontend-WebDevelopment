@@ -107,6 +107,11 @@
 ! It can be an alternative to componentDidMount() & componentDidUpdate() Lifecycle Hook Method of Class Based React ....                
 ! .... as it works only when the entire Component is Re-Rendered and then it runs so the Http Request is not lost after refreshing.
 
+? useReducer : It is  an Alternative to React Redux & useState() for handling Multiple Interconnected/Global State's. 
+*    Syntax => const reducer = () => { ..... };
+*              const[state, dispatch] = useReducer(reducer, intialState);
+! When using useReducer(), React will re-render the components whenever your reducer returns a new state.
+
 ? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
 ? useContext() : It is used as similarly to React.createContext(). 
 

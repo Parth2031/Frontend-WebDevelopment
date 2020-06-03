@@ -2,12 +2,13 @@
 
 import React from 'react';
 
-// import classes from './App.module.css';
 import Ingredients from './Components/Ingredients/Ingredients';
+import Auth from './Components/Authentication/Auth';
+// import classes from './App.module.css';
 
 const App = (props) =>
 {
-  return <Ingredients />;
+  return <Auth />;
 }
 
 export default App;
