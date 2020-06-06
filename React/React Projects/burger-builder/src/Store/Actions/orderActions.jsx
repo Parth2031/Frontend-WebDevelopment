@@ -34,10 +34,17 @@ export const purchaseBurger = (orderData, token) =>
     dispatch(purchaseBurgerStart());
 
     axios.post('/orders.json?auth=' + token, orderData)
-      .then((response) => {
+      .then((response) =>
+      {
+        // console.log(response.data.name);
+
         dispatch(purchaseBurgerSuccess(response.data.name, orderData));     
+       
       })
-      .catch((error) => {
+      .catch((error) =>
+      {
+        // console.log(error);
+
         dispatch(purchaseBurgerFail(error));
       });
   };
