@@ -9,7 +9,7 @@
 
 # Javascript Projects -
 
-1. Frontend (Small) Projects [Folder contains around 13 projects]
+1. Frontend (Small) Projects [Folder contains around 13 small projects]
 2. Calorie Tracker Project [Based on Design Patterns]
 3. Profile Scroller Project [Based on Meta Programming]
 4. Modified Daily Planner Project [Based on Javscript Tooling(Bundled Project)]
