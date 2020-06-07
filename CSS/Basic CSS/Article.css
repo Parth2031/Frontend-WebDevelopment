@@ -1,4 +1,54 @@
-body
+* 
+{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+#main-header 
+{
+  background-color: rgb(45,67,89);
+  width: 100%;
+  padding: 0 16px;
+}
+
+#main-header > div , .main-nav 
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav 
+{
+  text-align: right;
+  width: calc(100% - 54px);
+}
+
+.main-nav__item 
+{
+  display: inline-block;
+  padding: 10px;
+}
+
+.main-nav > ul > li {
+  list-style: none;
+}
+
+#main-header a
+{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+#main-header a:hover, a:active {
+  color: rgb(0, 126, 252);
+}
+
+section
 {
   border: 15px solid #bdc3c7;
   margin: 20px auto;
