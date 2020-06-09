@@ -79,7 +79,7 @@ body
   position: fixed;
   top: 0;
   left: 0;
-  background: #2ddf5c;
+  background: #0d1bdf;
   padding: 0.5rem 1rem;
   z-index: 1;
 }
@@ -116,7 +116,7 @@ body
 
 .main-header__brand 
 {
-  color: #0e4f1f;
+  color: #ccbf0a;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
@@ -150,7 +150,7 @@ body
 .main-nav__item a, .mobile-nav__item a 
 {
   text-decoration: none;
-  color: #0e4f1f;
+  color: rgb(176, 206, 10);
   font-weight: bold;
   padding: 0.2rem 0;
 }
@@ -164,7 +164,7 @@ body
 .main-nav__item--cta a, .mobile-nav__item--cta a 
 {
   color: white;
-  background: #ff1b68;
+  background: #e9ec04;
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
@@ -181,6 +181,10 @@ body
   background: black;
   padding: 2rem;
   margin-top: 3rem;  
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .main-footer__links 
@@ -203,8 +207,7 @@ body
   text-decoration: none;
 }
 
-.main-footer__link a:hover,
-.main-footer__link a:active {
+.main-footer__link a:hover, .main-footer__link a:active {
   color: #ccc;
 }
 
