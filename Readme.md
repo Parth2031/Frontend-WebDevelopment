@@ -6,7 +6,6 @@
 
 1. Grid Website [Mostly based on CSS Grid Working]
 2. Video Background
-3. E-commerce Website [Under Development but not yet uploaded]
 
 ## Javascript Projects -
 
