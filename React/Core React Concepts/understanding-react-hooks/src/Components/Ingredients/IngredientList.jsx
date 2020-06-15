@@ -1,3 +1,6 @@
+// TODO:: Inorder to perform _tempcomponentWillMount, we just need to do nothing as rendering the part ....
+// TODO::  ....   before return statement is possible then.
+
 import React from 'react';
 import './IngredientList.css';
 
