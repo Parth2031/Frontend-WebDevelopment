@@ -1,3 +1,8 @@
+// TODO:: Some Important Notes Regarding useSelector() & useDispatch() functionality :-
+
+// ! useDispatch() is an alternative to Redux Store Dispatch function.
+// ? useSelector() is an alternative used to convert mapStateToProps() of Redux Store to Dispatch method without using connect Component.    
+
 import React, { useState, useEffect, useRef } from 'react';
 
 import Card from '../UI/Card';
