@@ -78,6 +78,12 @@
 ?                         As only a single React.createElement is possible in a Component return statement. 
 
 ? React.createContext() : It is used to avoid the extra redundancy of sending some props from file A to C by avoiding passing from file C.
+* It is also a Global State Manager but has a limitation that it can only be used for low frequencies means that a part of web page that 
+* .... is not used for quite often. So, it is avoided for Global State Manangement of bigger projects.  
+! It has its own two components ->> Provider and Consumer where,
+* Provider is must as it is used to put the value to State of that component. <variable_name.Provider> 
+* Consumer is used to have a Child Component as a value where if Provider doesn't set a value then .createContext Default value 
+*     .... will be considered.   
 
 ? React.createRefs() : It is used for using Special Properties(prop) like key is "ref" property which is used to pass reference of any
 ?                      element in JSX Code to point towards it.
