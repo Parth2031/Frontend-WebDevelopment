@@ -2,8 +2,6 @@
 
 ## It includes various Frontend Web Develpoment Projects :-
 
-### HTML Folder is just an example of how HTML works.
-
 ## CSS Projects -
 
 1. Grid Website [Mostly based on CSS Grid Working]
