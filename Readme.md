@@ -2,6 +2,8 @@
 
 ## It includes various Frontend Web Develpoment Projects :-
 
+### HTML Folder is just an example of how HTML works.
+
 ## CSS Projects -
 
 1. Grid Website [Mostly based on CSS Grid Working]
@@ -18,4 +20,3 @@
 ## React Projects -
 
 1. React Burger Builder [Demo Link - https://react-burger-31d43.web.app/]
-
