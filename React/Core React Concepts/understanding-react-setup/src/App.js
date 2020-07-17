@@ -200,9 +200,11 @@ class App extends Component
 
     // this.setState({ persons: people }); 
 
-    // ! Using this method, when setting a state based on previous state and rather depending on this.state as it sometimes work unexpectedly.
+    // ! Using this method, when setting a state based on previous state and rather depending on this.state as it sometimes .....
+    // ! .... work unexpectedly. Majorly for numeric values as setState merges multiple setState into one so to avoid it, we use this.
+    // * setState works on asynchronous code so it shows the unexpected behaviour so using this method, it converts into synchronous code.
 
-    this.setState((prevState, props) =>
+    this.setState((prevState, prevProps) =>
     {
       return {
         persons: people,
