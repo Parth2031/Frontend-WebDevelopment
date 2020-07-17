@@ -204,7 +204,7 @@ class App extends Component
     // ! .... work unexpectedly. Majorly for numeric values as setState merges multiple setState into one so to avoid it, we use this.
     // * setState works on asynchronous code so it shows the unexpected behaviour so using this method, it converts into synchronous code.
 
-    this.setState((prevState, prevProps) =>
+    this.setState( (prevState, prevProps) =>
     {
       return {
         persons: people,
