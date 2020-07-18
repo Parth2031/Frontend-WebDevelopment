@@ -1,12 +1,13 @@
 import React from 'react';
 
-import classes from './App.module.css';
+import './App.css';
+import Homepage from './Container/Homepage/Homepage';
 
 function App()
 {
   return (
-    <div className={classes.App}>
-
+    <div className="App">
+      <Homepage />
     </div>
   );
 }
