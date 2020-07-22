@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
-import { auth } from './Firebase/Firebase';
+import { auth, createUserProfileDocument } from './Firebase/Firebase';
 import Header from './Components/Header/Header';
 import HomePage from './Components/Home Page/HomePage';
 import ShopPage from './Container/Shop Page/ShopPage';
@@ -18,10 +18,26 @@ class App extends Component
 
   componentDidMount()
   {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged( user => 
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => 
     {
-      this.setState({ currentUser: user });
+      if (userAuth)
+      {
+        const userRef = await createUserProfileDocument(userAuth);
 
+        userRef.onSnapshot( snapShot =>
+        {
+          this.setState(
+          {
+            currentUser: 
+            {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          }, () => console.log(this.state));
+        });
+      }
+      else
+        this.setState({ currentUser: userAuth });
     });
   }
 
