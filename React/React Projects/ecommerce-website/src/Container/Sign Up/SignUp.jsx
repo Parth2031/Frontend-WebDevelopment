@@ -27,6 +27,8 @@ class SignUp extends Component
 
     try
     {
+      event.preventDefault();
+      
       const { user } = await auth.createUserWithEmailAndPassword(email, password);
 
       await createUserProfileDocument(user, { displayName });
@@ -42,8 +44,6 @@ class SignUp extends Component
     catch (error) {
       console.error(error);
     }
-
-    event.preventDefault();
   };
 
   changeHandler = event =>
@@ -65,7 +65,7 @@ class SignUp extends Component
             type='text'
             name='displayName'
             value={displayName}
-            onChange={this.changeHandler}
+            handleChange={this.changeHandler}
             label='Display Name'
             required
           />
@@ -73,7 +73,7 @@ class SignUp extends Component
             type='email'
             name='email'
             value={email}
-            onChange={this.changeHandler}
+            handleChange={this.changeHandler}
             label='Email'
             required
           />
@@ -81,7 +81,7 @@ class SignUp extends Component
             type='password'
             name='password'
             value={password}
-            onChange={this.changeHandler}
+            handleChange={this.changeHandler}
             label='Password'
             required
           />
@@ -89,7 +89,7 @@ class SignUp extends Component
             type='password'
             name='confirmPassword'
             value={confirmPassword}
-            onChange={this.changeHandler}
+            handleChange={this.changeHandler}
             label='Confirm Password'
             required
           />

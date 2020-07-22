@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './SignIn.scss';
 import FormInput from '../../Components/Form Input/FormInput';
 import CustomButton from '../../Components/Custom Button/CustomButton';
-import { signInWithGoogle } from '../../Firebase/Firebase';
+import { auth, signInWithGoogle } from '../../Firebase/Firebase';
 
 class SignIn extends Component
 {
@@ -13,10 +13,20 @@ class SignIn extends Component
     password: ''
   }
 
-  submitHandler = (event) =>
+  submitHandler = async event =>
   {
-    this.setState({ email: '', password: '' });
     event.preventDefault();
+   
+    const { email, password } = this.state;
+
+    try
+    {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: '', password: '' });
+    }
+    catch (error) {
+      console.log(error);
+    }
   };
 
   changeHandler = (event) =>
@@ -29,7 +39,7 @@ class SignIn extends Component
   {
     return (
       <div className='sign-in'>
-        <h2>I already have an account</h2>
+        <h2>I already have an Account</h2>
         <span>Sign in with your Email and Password</span>
 
         <form onSubmit={this.submitHandler}>
