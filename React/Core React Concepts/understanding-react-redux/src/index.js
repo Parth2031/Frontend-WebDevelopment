@@ -4,7 +4,7 @@
 // * combineReducers Component is used for combining multiple Reducers in a single Reducer.
 // * applyMiddleware Component is used for working with Asynchronous Programming in Redux.
 // ! compose Component is used as a Fallback for composeEnhancer which is basically a Setup for Redux Dev Tools.
-// ? Provider is a helper Component in React Redux Library that helps to inject Store in React Components.
+// ? Provider is a helper Component in React Redux Library that helps to inject Store in React Components and it is Parent to everything.
 // * thunk is Part of Redux Thunk (Third Party Library for Asynchronous Code as itself in Middleware).
 
 import React from 'react';
