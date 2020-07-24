@@ -28,12 +28,9 @@ class App extends Component
         {
           setCurrentUser(
           {
-            currentUser: 
-            {
               id: snapShot.id,
               ...snapShot.data()
-            }
-            }, () => console.log(this.props));
+          }, () => console.log(this.props));
         });
       }
       else
