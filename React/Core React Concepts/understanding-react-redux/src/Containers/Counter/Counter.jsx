@@ -36,6 +36,10 @@ class Counter extends Component
   // ? So, Now changing from "() => this.counterChangedHandler('inc')" to, we are accessing "this.props.property_functionname".
   // ? Similarly, for all other functions.
 
+  // TODO:: Note on mapStateToProps & mapDispatchToProps ->
+  // * When, we don't pass mapDispatchToProps then mapStateToProps returns dispatch property to itself component as a prop.
+  // ? Which can be used similar to mapDispatchToProp style in that Component.
+
   render()
   {
     return (
