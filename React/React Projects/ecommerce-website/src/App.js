@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 import { auth, createUserProfileDocument } from './Firebase/Firebase';
@@ -8,7 +9,9 @@ import Header from './Components/Header/Header';
 import HomePage from './Components/Home Page/HomePage';
 import ShopPage from './Container/Shop Page/ShopPage';
 import SignInAndSignUpPage from './Components/SignIn and SignUp Page/SignIn-SignUp-Page';
+import CheckoutPage from './Components/Checkout Page/CheckoutPage';
 import { setCurrentUser } from './Store/Actions/userAction';
+import { selectCurrentUser } from './Store/Selectors/userSelectors';
 
 class App extends Component
 {
@@ -50,6 +53,7 @@ class App extends Component
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
+          <Route path='/checkout' component={CheckoutPage} />
           <Route exact path='/signin' render={ () => this.props.currentUser ? ( <Redirect to='/' />) : (<SignInAndSignUpPage />) }/> 
         </Switch>
       </div>
@@ -58,12 +62,9 @@ class App extends Component
 }
 
 
-const mapStateToProps = (state) =>
-{
-  return {
-    currentUser: state.user.currentUser
-  }
-};
+const mapStateToProps = createStructuredSelector ({
+  currentUser: selectCurrentUser
+});
 
 
 const mapDispatchToProps = (dispatch) =>
