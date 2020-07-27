@@ -71,6 +71,12 @@
 // ? 405: "Method Not Allowed"
 // ? 409: "Conflict"
 
+// * 100-199: Information
+// * 200-299: Success
+// * 300-399: Redirection
+// * 400-499: Client Error
+// * 500-599: Server Error
+
 // ! Other Types of Request - 
 
 // * AJAX (Asynchronous Javascript and XML)
@@ -82,4 +88,3 @@
 ! It is a set of routines,protocols & tools for building software applications.
 ? It specifies how software components should interact. 
 */
-
