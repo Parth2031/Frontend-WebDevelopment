@@ -63,19 +63,28 @@
 
 // ! HTTP Statuses :-
 
-// ? 200: "OK"
-// ? 201-300: "OK and Resource  is created"
-// ? 401: "Unauthorized"
-// ? 403: "Forbidden"
-// ? 404: "Not Found"
-// ? 405: "Method Not Allowed"
-// ? 409: "Conflict"
-
 // * 100-199: Information
 // * 200-299: Success
 // * 300-399: Redirection
 // * 400-499: Client Error
 // * 500-599: Server Error
+
+// ? 200: "OK"
+// ? 201: "OK and Resource  is created"
+// ? 204: "No Content"
+// ? 301: "Moved Permanentely"
+// ? 302/303: "Found at this URL"
+// ? 307: "Temporary Redirect"
+// ? 308: "Resume Incomplete"
+// ? 400: "Bad Request"
+// ? 401: "Unauthorized"
+// ? 403: "Forbidden"
+// ? 404: "Not Found"
+// ? 405: "Method Not Allowed"
+// ? 409: "Conflict"
+// ? 500: "Internal Server Error"
+// ? 502: "Bad Gateway"
+// ? 503: "Service Unavailable"
 
 // ! Other Types of Request - 
 
