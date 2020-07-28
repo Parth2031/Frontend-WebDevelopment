@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import './SignUp.scss';
-import FormInput from '../../Components/Form Input/FormInput';
-import CustomButton from '../../Components/Custom Button/CustomButton';
+import FormInput from '../Form Input/FormInput';
+import CustomButton from '../Custom Button/CustomButton';
 import { auth, createUserProfileDocument } from '../../Firebase/Firebase';
 
 class SignUp extends Component

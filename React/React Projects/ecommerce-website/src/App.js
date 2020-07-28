@@ -6,10 +6,10 @@ import { createStructuredSelector } from 'reselect';
 import './App.css';
 import { auth, createUserProfileDocument } from './Firebase/Firebase';
 import Header from './Components/Header/Header';
-import HomePage from './Components/Home Page/HomePage';
-import ShopPage from './Container/Shop Page/ShopPage';
-import SignInAndSignUpPage from './Components/SignIn and SignUp Page/SignIn-SignUp-Page';
-import CheckoutPage from './Components/Checkout Page/CheckoutPage';
+import HomePage from './Pages/Home Page/HomePage';
+import ShopPage from './Pages/Shop Page/ShopPage';
+import SignInAndSignUpPage from './Pages/SignIn and SignUp Page/SignIn-SignUp-Page';
+import CheckoutPage from './Pages/Checkout Page/CheckoutPage';
 import { setCurrentUser } from './Store/Actions/userAction';
 import { selectCurrentUser } from './Store/Selectors/userSelectors';
 
