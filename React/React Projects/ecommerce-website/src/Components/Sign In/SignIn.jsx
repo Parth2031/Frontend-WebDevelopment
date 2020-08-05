@@ -46,7 +46,7 @@ class SignIn extends Component
           <FormInput
             name='email'
             type='email'
-            handleChange={this.handleChange}
+            handleChange={this.changeHandler}
             value={this.state.email}
             label='email'
             required
@@ -55,7 +55,7 @@ class SignIn extends Component
             name='password'
             type='password'
             value={this.state.password}
-            handleChange={this.handleChange}
+            handleChange={this.changeHandler}
             label='password'
             required
           />
