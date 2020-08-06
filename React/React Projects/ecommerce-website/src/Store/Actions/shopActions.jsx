@@ -24,7 +24,7 @@ export const fetchCollectionsSuccess = (collectionsMap) =>
   };
 }
 
-export const fetchCollectionsFailure = errorMessage =>
+export const fetchCollectionsFailure = (errorMessage) =>
 {
   return {
     type: actionTypes.FETCH_COLLECTIONS_FAILURE,
