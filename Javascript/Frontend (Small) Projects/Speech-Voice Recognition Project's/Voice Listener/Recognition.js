@@ -35,12 +35,12 @@ recognition.onresult = (event) =>
 {
   var current = event.resultIndex;
   
-  // TODO:: Storing our words in a variable :
+  // ^ Storing our words in a variable :
     
   var transcript = event.results[current][0].transcript; 
   content.textContent = transcript;
   
-  // TODO:: Transcript is a method in speechRecognition :
+  // & Transcript is a method in speechRecognition :
   readOutLoud(transcript);  
 };
 
@@ -54,10 +54,10 @@ button.addEventListener("click", () => {
 
 function readOutLoud(message)
 {
-  // TODO:: Built-in function which help JS to talk to us
+  // * Built-in function which help JS to talk to us
   var speech = new SpeechSynthesisUtterance(); 
   
-  // TODO:: Default speech
+  // ? Default speech
   speech.text = "Pardon"; 
   
   if (message.includes("how are you doing"))

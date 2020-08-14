@@ -110,10 +110,11 @@ function drawBricks()
 
 // ! Move Paddle on Canvas :->
 
-function movePaddle() {
+function movePaddle()
+{
   paddle.x += paddle.dx;
 
-  // ! Wall Detection :
+  // & Wall Detection :
 
   if (paddle.x + paddle.w > canvas.width) {
     paddle.x = canvas.width - paddle.w;
@@ -131,13 +132,13 @@ function moveBall()
   ball.x += ball.dx;
   ball.y += ball.dy;
 
-  // ! Wall Collision (Right/Left) :
+  // ^ Wall Collision (Right/Left) :
 
   if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
     ball.dx *= -1;                                                           // * NOTE -> ball.dx = ball.dx * -1
   }
 
-  // ! Wall Collision (Top/Bottom) :
+  // ~ Wall Collision (Top/Bottom) :
 
   if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
     ball.dy *= -1;
@@ -145,13 +146,13 @@ function moveBall()
 
   // console.log(ball.x, ball.y);
 
-  // ! Paddle collision :
+  // ? Paddle collision :
 
   if ( ball.x - ball.size > paddle.x && ball.x + ball.size < paddle.x + paddle.w && ball.y + ball.size > paddle.y) {
     ball.dy = -ball.speed;
   }
 
-  // ! Brick Collision :
+  // & Brick Collision :
   
   bricks.forEach( column =>
   {
@@ -175,7 +176,7 @@ function moveBall()
     });
   });
 
-  // ! Hit Bottom Wall -> Lose :
+  // ~ Hit Bottom Wall -> Lose :
 
   if (ball.y + ball.size > canvas.height)
   {
@@ -207,7 +208,7 @@ function showAllBricks()
 
 function draw()
 {
-  // ! Clear Canvas :
+  // ^ Clear Canvas :
   
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -224,7 +225,7 @@ function update()
   movePaddle();
   moveBall();
 
-  // ! Draw Everything :
+  // & Draw Everything :
 
   draw();
 

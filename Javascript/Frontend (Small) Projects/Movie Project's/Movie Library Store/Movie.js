@@ -62,8 +62,8 @@ const onStartDeleteMovie = movieId =>
   const cancelDeletionButton = deleteMovieModal.querySelector(".btn--passive");
   let confirmDeletionButton = deleteMovieModal.querySelector(".btn--danger");
 
-  // ! replaceWith() is used to replace the child nodes. 
-  // ! .cloneNode(true) is used to a existing node to another node to get the exact same value of the previous defined node.
+  // & replaceWith() is used to replace the child nodes. 
+  // * .cloneNode(true) is used to a existing node to another node to get the exact same value of the previous defined node.
 
   confirmDeletionButton.replaceWith(confirmDeletionButton.cloneNode(true));
 
@@ -126,8 +126,8 @@ const onAddMovie = () =>
   const imageUrlValue = userInputs[1].value;
   const ratingValue = userInputs[2].value;
 
-  // ! .trim() is an String Method.
-  // ! parseInt() can also be written as "+variable".
+  // & .trim() is an String Method.
+  // * parseInt() can also be written as "+variable".
 
   if (titleValue.trim() === ""|| imageUrlValue.trim() === ""|| ratingValue.trim() === ""|| parseInt(ratingValue) < 1 || parseInt(ratingValue) > 5)
   {

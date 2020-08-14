@@ -1,4 +1,4 @@
- // TODO:: This window eventListener, it uses the "load": event type which helps the window to load completely first and then only run javascript.
+ // ^ This window eventListener, it uses the "load": event type which helps the window to load completely first and then only run javascript.
                           // ! load event doesn't work anywhere else than window.addEventListener
 
 window.addEventListener( "load", () =>
@@ -68,7 +68,7 @@ window.addEventListener( "load", () =>
     sound6.play();
   });   
      
-                                      //  * Create a function that makes a bubble
+                                           //  & Create a function that makes a bubble
      
   // const createBubbles = (index) =>
   // {

@@ -57,7 +57,7 @@ class UI
       `;
     });
 
-    // ! Output repos -
+    // ^ Output repos -
     
     document.getElementById('repos').innerHTML = output;
   }
@@ -66,28 +66,28 @@ class UI
 
   showAlert(message, className)
   {
-    // ! Clear any remaining alerts -
+    // & Clear any remaining alerts -
     this.clearAlert();
     
-    // ! Create div -
+    // * Create div -
     const div = document.createElement('div');
     
-    // ! Add classes -
+    // ? Add classes -
     div.className = className;
     
-    // ! Add text -
+    // ~ Add text -
     div.appendChild(document.createTextNode(message));
     
-    // ! Get parent's -
+    // * Get parent's -
     const container = document.querySelector('.searchContainer');
     
-    // ! Get search box -
+    // & Get search box -
     const search = document.querySelector('.search');
     
-    // ! Insert alert -
+    // ? Insert alert -
     container.insertBefore(div, search);
 
-    // ! Timeout after 2 sec -
+    // ~ Timeout after 2 sec -
     setTimeout(() => {
       this.clearAlert();
     }, 2000);

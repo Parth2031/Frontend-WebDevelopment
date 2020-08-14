@@ -33,6 +33,7 @@ function updateSelectedCount()
 }
 
 // ! Get Data from Local Storage and Populate UI :->
+
 function populateUI()
 {
   const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));

@@ -8,7 +8,7 @@ var showdata  = document.querySelector("#showvalue");
 colorone.addEventListener('input', bgcolorchange);
 colortwo.addEventListener('input', bgcolorchange);
 
-// TODO:: Syntax for linear gradient in Js -->  
+// ^ Syntax for linear gradient in Js -->  
 // * selected - variablename.style.background = "linear-gradient(to right, " + colorone.value + "," + colortwo.value + ")";
 
 function bgcolorchange()
