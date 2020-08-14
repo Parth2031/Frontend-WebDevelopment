@@ -1,11 +1,11 @@
-// TODO:: A Factory Pattern or Factory Method Pattern says that just define an interface or abstract class ...
-// TODO:: ... for creating an object but let the subclasses decide which class to instantiate.
-// ? In other words, subclasses are responsible to create the instance of the class.
+// ^ A Factory Pattern or Factory Method Pattern says that just define an interface or abstract class ...
+// ^ ... for creating an object but let the subclasses decide which class to instantiate.
+// * In other words, subclasses are responsible to create the instance of the class.
 // ! The Factory Method Pattern is also known as Virtual Constructor.
 // ? A simple factory pattern is an object which encapsulates the creation of another object”.
-// ? In ES6, it could be the constructor being instatiated by “new ”.
+// & In ES6, it could be the constructor being instatiated by “new ”.
 
-// TODO:: Factory Pattern Example :-
+// ~ Factory Pattern Example :-
 
 class MemberFactory
 {

@@ -1,7 +1,7 @@
 // TODO:: A Module can be considered as similar to a Singleton Class in an object oriented language.
 // ? In a Module, all the variables defined are visible only in the module.
-// ? Methods in a module have scope and access to the shared private data and private methods.Thus implementing a closure.
-// ? The methods defined in a JavaScript Module are also known as Privileged methods.
+// & Methods in a module have scope and access to the shared private data and private methods.Thus implementing a closure.
+// ~ The methods defined in a JavaScript Module are also known as Privileged methods.
 
 /* 
   Essentially the module pattern is a combination of several JavaScript design patterns:
@@ -19,7 +19,7 @@
   The second part creates the immediately invoked function expression() through which the JavaScript engine will directly interpret the function.
 */
 
-// TODO:: IIFE Syntax :-
+// ^ IIFE Syntax :-
 
 // ? (function ()
 // ? {
@@ -32,7 +32,7 @@
 // ? })();
 
 
-// TODO:: STANDARD MODULE PATTERN Example :-
+// & STANDARD MODULE PATTERN Example :-
 
 const UICtrl = ( function ()
 {
@@ -54,11 +54,11 @@ const UICtrl = ( function ()
 })();
 
 UICtrl.callChangeText();
-// UICtrl.changeText();           // ! It is not valid as it is part of Private Member and cannot be directly accessible in Global Scope.
+// UICtrl.changeText();          // ! It is not valid as it is part of Private Member and cannot be directly accessible in Global Scope.
 
-// console.log(UICtrl.text);      // ! It is undefined as it is showing that Private member is not defined for Global Scope.
+// console.log(UICtrl.text);      // ~ It is undefined as it is showing that Private member is not defined for Global Scope.
 
-// TODO:: REVEALING MODULE PATTERN Example :-
+// & REVEALING MODULE PATTERN Example :-
 
 const ItemCtrl = ( function ()
 {
@@ -79,7 +79,7 @@ const ItemCtrl = ( function ()
 
   return {
     add: add,
-    // get: get       // ! If we comment this out, it becomes a Private Member which cannot be called in Global Scope else it is accessible.
+    // get: get   // * If we comment this out, it becomes a Private Member which cannot be called in Global Scope else it is accessible.
   }
 })();
 

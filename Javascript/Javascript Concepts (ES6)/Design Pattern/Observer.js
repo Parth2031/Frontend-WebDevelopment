@@ -1,5 +1,5 @@
-// TODO:: Observer Pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, ...
-// TODO:: ...called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
+// ^ Observer Pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, ...
+// ^ ...called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
 // ? The Observer Pattern defines a one-to-many relationship. When one object updates, it notifies many other objects that it has been updated.
 
 // ! Brief Explanation of Terms {Subject and Observer} :- 
@@ -35,8 +35,8 @@
 // ?     }
 // ?   }
 
-// *    Loops over this.observers and calls the update method on each observer.
-// *    The state object will call this method everytime it is updated.
+// &    Loops over this.observers and calls the update method on each observer.
+// ~    The state object will call this method everytime it is updated.
 // ?   notify(data)
 // ?   {
 // ?     if (this.observers.length > 0) {
@@ -45,7 +45,7 @@
 // ?   }
 // ? }
 
-// TODO:: Observer Pattern Example :- 
+// ! Observer Pattern Example :- 
 
 class EventObserver
 {
@@ -61,8 +61,8 @@ class EventObserver
 
   unsubscribe(fn)
   {
-    // ! Filter out from the list whatever matches the callback function. 
-    // ! If there is no match, the callback gets to stay on the list.The filter returns a new list and reassigns the list of observers.
+    // & Filter out from the list whatever matches the callback function. 
+    // ~ If there is no match, the callback gets to stay on the list.The filter returns a new list and reassigns the list of observers.
     
     this.observers = this.observers.filter(function (item)
     { 
