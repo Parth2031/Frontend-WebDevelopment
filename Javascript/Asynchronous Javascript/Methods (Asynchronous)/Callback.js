@@ -1,4 +1,4 @@
-// ! Creating a Object in Array :-
+// ^ Creating a Object in Array :-
 
 const posts = [
   { title: 'Post One', body: 'This is post one' },
@@ -35,15 +35,15 @@ const posts = [
 
 // ! Whereas, in this basically, we are asynchonously calling a function resulting that a new createPost() was able to be called.
 
-// TODO:: In order to use callback functions, we send the function to be performed as an argument to the function, 
-// TODO:: where it's functional are to be applied. By sending as argument named "callback" and then later as callback() in that function.
+// ^ In order to use callback functions, we send the function to be performed as an argument to the function, 
+// & where it's functional are to be applied. By sending as argument named "callback" and then later as callback() in that function.
 
 function createPost(post, callback)
 {
   setTimeout(function ()
   {
     posts.push(post);
-    callback();       // ? It can also send the arguments of function createPost to getPost function by sending parameter in callback(post).
+    callback();    // * It can also send the arguments of function createPost to getPost function by sending parameter in callback(post).
   }, 2000);
 }
 

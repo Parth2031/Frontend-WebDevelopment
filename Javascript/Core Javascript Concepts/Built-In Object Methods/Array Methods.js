@@ -1,6 +1,6 @@
-                       // TODO:: Performing Built-in Array Methods by showing its effect and same effect by for loop for some case.
+               // TODO:: Performing Built-in Array Methods by showing its effect and same effect by for loop for some case.
 
-  // ! Companies is an Object-like Array.
+  // ^ Companies is an Object-like Array.
 
   const companies= [
     {name: "Company One", category: "Finance", start: 1981, end: 2004},
@@ -39,7 +39,7 @@
   // }
   // console.log(canDrink);  
   
-  // ? filter() performed using longer method
+  // & filter() performed using longer method
 
   // const canDrink = ages.filter(function(age) {
   //   if(age >= 21) {
@@ -64,7 +64,7 @@
   
                               // ! map() example: Create array of company names with the company start and end year
                       
-  // ? map() performed using longer method
+  // & map() performed using longer method
 
   // const testMap = companies.map(function(company) {
   //   return `${company.name} [${company.start} - ${company.end}]`;
@@ -83,7 +83,7 @@
   // // });
   // // console.log(companyNames);
   
-  // * Another example:
+  // ~ Another example:
 
   // // const ageMap = ages
   // // .map(age => Math.sqrt(age))
@@ -91,7 +91,7 @@
   
                                                // ! sort() example: Sort Companies by Start Year
   
-  // ? sort() performed using longer method
+  // & sort() performed using longer method
 
   // const sortedCompanies  = companies.sort(function(c1, c2) {
   //   if(c1.start > c2.start) {
@@ -119,7 +119,7 @@
   //   ageSum += ages[i];
   // }
   
-  // ? reduce() performed using longer method
+  // & reduce() performed using longer method
 
   // const ageSum = ages.reduce(function(total, age) {
   //   return total + age;
@@ -167,18 +167,18 @@
   console.log(joiningString);
 
                                     // ! find() Explanation : It is used to find values in array.
-                              // ? Syntax :- arrayname.find(callback(element[, index[, array]])[, thisArg])
+                              // * Syntax :- arrayname.find(callback(element[, index[, array]])[, thisArg])
 
   var find = ages.find(element => element > 10);
   // console.log(find);                                  
 
-      // ! findIndex() Explanation : It returns the index of the first element in the array that satisfies the provided testing function. 
-                         // ! Otherwise, it returns - 1, indicating that no element passed the test.
+    // ! findIndex() Explanation : It returns the index of the first element in the array that satisfies the provided testing function. 
+                        // & Otherwise, it returns - 1, indicating that no element passed the test.
 
   var findIndexs = ages.findIndex((element) => element > 13);
   // console.log(findIndexs);                       
 
-                                                      // TODO:: Combine Methods
+                                               // ^ Combine Methods
   
   const combined = ages
     .map(age => age * 2)
@@ -189,10 +189,10 @@
   // console.log(combined);
 
 
-  // TODO:: Bulit-in Array Objects Methods used only in "Array" keyword and the above methods are also applicable her:-
+  // ^ Built-in Array Objects Methods used only in "Array" keyword and the above methods are also applicable her:-
   
                                   // ! Array.from() : Creating Array from Array-Like Objects
-                                                      // ? Example 
+                                                  // ~ Example 
 
   const objValues =
   {
@@ -209,12 +209,12 @@
   // console.log(numbers);
 
   // ! Array.of() : method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
-                                                      // ? Example
+                                                      // ~ Example
                                                   
   console.log(Array.of(7));               // * Outputs: [7] 
   console.log(Array.of(1, 2, 3));         // * Outputs: [1, 2, 3]
   
-  console.log(Array(7));          // * Outputs: Array of 7 Empty Slots meaning with Empty Slots are the fixed size of Array.
-  console.log(Array(1, 2, 3));    // * Outputs: [1, 2, 3]
+  console.log(Array(7));          // & Outputs: Array of 7 Empty Slots meaning with Empty Slots are the fixed size of Array.
+  console.log(Array(1, 2, 3));    // & Outputs: [1, 2, 3]
 
   

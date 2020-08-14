@@ -47,14 +47,14 @@ const experiment = () => {
 
 // * Promise Built-in Object Error Handling -> 
 
-// TODO: NOTE :- Where, .then() works like try{....} and .catch() works like catch() {....}.
+// ^ NOTE :- Where, .then() works like try{....} and .catch() works like catch() {....}.
 
-// ! In this .then( function () used like in callback fn ) is used to call the Promise function similar to callback function but in callback .... 
-// ! .... we don't need to any specific function while calling that function.
+// & In this .then( function () used like in callback fn ) is used to call the Promise function similar to callback function but in callback .... 
+// & .... we don't need to any specific function while calling that function.
 // ? Whereas, .catch() is used to call inside functionality of a function using Promise function. 
 
 // * NOTE :- Every .then() can have a .catch() or can also leave it.
-// ? Afer catch method, so if first .then() fails, it will still work other remaining .then().
+// ~ Afer catch method, so if first .then() fails, it will still work other remaining .then().
 
 createPost({ title: 'Post Three', body: 'This is post three' })
   .then(getPosts)
@@ -82,14 +82,14 @@ const promise2 = new Promise(function (resolve, reject) {
 
 Promise.race([promise1, promise2]).then( function (value)
 {
-  // ! It will print the Promise result which is faster to load and execute. Which is here, Promise 2.
+  // & It will print the Promise result which is faster to load and execute. Which is here, Promise 2.
   // * It is used to load only faster promises.
 
   console.log(value);
 });
 
 /*
-? Promise.all() - 
+^ Promise.all() - 
 ? This method returns a single Promise that fulfills when all of the promises passed as an iterable have been fulfilled
 ? or when the iterable contains no promises or when the iterable contains promises that have been fulfilled and
 ? non - promises that have been returned. It rejects with the reason of the first promise that rejects, or with the error caught by the
@@ -103,14 +103,14 @@ Promise.race([promise1, promise2]).then( function (value)
 
 Promise.all([promise1, promise2]).then(function (values)
 {
-  // ! It will print all the values of Promise result if they don't have any error's.
+  // & It will print all the values of Promise result if they don't have any error's.
   // * Used to execute every promise at once for their values. 
 
   console.log(values); 
 });
 
 /*
-? Promise.allSettled() - 
+^ Promise.allSettled() - 
 ? This method returns a promise that resolves after all of the given promises have either resolved or rejected,
 ? with an array of objects that each describes the outcome of each promise.
 */
@@ -119,7 +119,7 @@ Promise.all([promise1, promise2]).then(function (values)
 
 Promise.allSettled([promise1, promise2]).then(function (values)
 {
-  // ! It tells us the status of all the Promise as an array.
+  // & It tells us the status of all the Promise as an array.
   
   console.log(values); 
 });

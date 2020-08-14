@@ -1,13 +1,13 @@
                          // ? Main Sass File that is directly connected to html file is Working.scss file 
                         //  ! Syntax of creating sub sass files is-->  _name of sub file.scss 
-              // TODO:: _variable.scss, _header.scss, _section.scss, _footer.scss are all sub part of working.scss in this case.
+              // ^ _variable.scss, _header.scss, _section.scss, _footer.scss are all sub part of working.scss in this case.
                         // * To call sub sass files, we use--> @import "./name of sub file"
 @import "./variable";
 @import "./header";
 @import "./section";
 @import "./footer";
 
-               //  Extend property is not working at this moment, it's Synatax is--> @extend name-of-selector to be continued for working
+               // & Extend property is not working at this moment, it's Synatax is--> @extend name-of-selector to be continued for working
 
 .container
 {
@@ -26,13 +26,13 @@
     font-size: 1.5rem;
   }
 }
-                       // ? Nesting is allowed instead of applying descendent selector 
+                       // ~ Nesting is allowed instead of applying descendent selector 
 .a 
 {
   .click
   {
     // ! For applying Pseudo-class, Syntax is --> &: pseudo-class{ --- }
-    // TODO:: Similarly for pseudo-elements, Syntax is --> &:: pseudo-element{ --- }   
+    // ^ Similarly for pseudo-elements, Syntax is --> &:: pseudo-element{ --- }   
    
     &:hover {
       background-color: yellow;

@@ -12,13 +12,13 @@
 // ? Await keyword explanation :-
 
 /* 
-* An async function can contain an await expression that pauses the execution of the async function ....
-* .... to wait for the passed Promise's resolution, then resumes the async function's execution and evaluates as the resolved value.
-* Await works like .then() as in Promise Built-In Object working.
-* The await keyword is only valid inside async functions. If you use it outside of an async function's body, you will get a SyntaxError.
+& An async function can contain an await expression that pauses the execution of the async function ....
+& .... to wait for the passed Promise's resolution, then resumes the async function's execution and evaluates as the resolved value.
+& Await works like .then() as in Promise Built-In Object working.
+& The await keyword is only valid inside async functions. If you use it outside of an async function's body, you will get a SyntaxError.
 */
 
-// TODO -> Using Promise for Async :
+// ^ Using Promise for Async :
 
 async function myFunc() 
 {
@@ -48,7 +48,7 @@ async function myFunc()
 //   .then(res => console.log(res))
 //   .catch(err => console.log(err));
 
-// TODO -> Using Fetch instead of Promise :
+// ^ Using Fetch instead of Promise :
 
 async function getUsers()
 {
@@ -56,11 +56,11 @@ async function getUsers()
 
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
 
-  // ! Only proceed once its resolved ->
+  // & Only proceed once its resolved ->
 
   const data = await response.json();
 
-  // ! Only proceed once second promise is resolved ->
+  // ~ Only proceed once second promise is resolved ->
 
   return data;
 }

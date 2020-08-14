@@ -19,16 +19,16 @@
 /*
 ? REST API (Represential State Transfer API) depends on six constraints in order an API to be a REST API :->>
 
-  Client Server Architecture
-  Statelessness
-  Cacheability
-  Layered System
-  Code on Demand
-  Uniform Interface
-    -> Resource Identification in Request
-    -> Resource Manipulation through Representation
-    -> Self-Descriptive Message
-    -> Hypermedia as the Engine of the Application State
+^ Client Server Architecture
+^ Statelessness
+^ Cacheability
+^ Layered System
+^ Code on Demand
+^ Uniform Interface
+^   -> Resource Identification in Request
+^   -> Resource Manipulation through Representation
+^   -> Self-Descriptive Message
+^   -> Hypermedia as the Engine of the Application State
 
 ? RESTful API is Rest Services which runs on Web over http to give us access to resources.
 
@@ -37,8 +37,8 @@
 * Rest is a protocol to exchange any(XML or JSON) messages that can use HTTP to transport those messages. 
 * REST is not necessarily tied to HTTP.
 
-? Resource :-> The data contained at the end of the resource URI, Any information that can be named is called Resource. 
-? Representation :-> Representation of the data obtained on access.
+& Resource :-> The data contained at the end of the resource URI, Any information that can be named is called Resource. 
+~ Representation :-> Representation of the data obtained on access.
 */
 
 // ! Types of Http Request :-
@@ -56,9 +56,9 @@
 // * NOTE - Difference between POST & PUT Request :
 
 /*
-  The difference between PUT and POST is that PUT is idempotent: calling it once or several times successively
-  has the same effect (that is no side effect), where successive identical POST may have additional effects, 
-  like passing an order several times.
+~ The difference between PUT and POST is that PUT is idempotent: calling it once or several times successively
+~ has the same effect (that is no side effect), where successive identical POST may have additional effects, 
+~ like passing an order several times.
 */
 
 // ! HTTP Statuses :-
@@ -94,6 +94,6 @@
 // TODO:: Understanding API (Application Programming Interface) :-
 
 /*
-! It is a set of routines,protocols & tools for building software applications.
+& It is a set of routines,protocols & tools for building software applications.
 ? It specifies how software components should interact. 
 */

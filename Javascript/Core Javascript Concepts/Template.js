@@ -5,14 +5,14 @@
 // console.log("Days you've been alive: " + aliveDays);
 // alert("Days you've been alive: " + aliveDays);
 
-// TODO:: Instead of using this syntax of string, We can use template string/literals -
+// ^ Instead of using this syntax of string, We can use template string/literals -
 //  ? Syntax of Template String/Literals --> `TEXT.... ${variablename}`;
 
 // console.log(`Days you've been alive: ${aliveDays}`);
 // alert(`Days you've been alive ${aliveDays}`);
 
 
-// TODO:: We also have Tagged Template which are useful to add template strings as parameter to a function -
+// & We also have Tagged Template which are useful to add template strings as parameter to a function -
 
 function productDescription(strings, productName, productPrice)
 {
@@ -40,7 +40,7 @@ const prodPrice = 29.99;
 const productOutput = productDescription`This product (${prodName}) is ${prodPrice}.`;
 console.log(productOutput);
 
-// * ===================================================================================================================================
+// ^ ===================================================================================================================================
 
 var todos = [];
 
@@ -68,7 +68,7 @@ function listTodos()
   console.log("*****")
   todos.forEach(function (todo, i)
   {
-    // TODO:: Here, 'todo' is a placeholder, it is temporary 
+    // ~ Here, 'todo' is a placeholder, it is temporary 
     //  * i --> Shows that it is the index of todo array
     
     // console.log(i + ": " + todo);

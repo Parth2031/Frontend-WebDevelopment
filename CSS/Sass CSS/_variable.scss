@@ -5,11 +5,11 @@ $section-bg-color: rgb(238, 27, 73);
 $footer-bg-color: rgb(98, 207, 25);
 
 // ! Mixin property is used to set some fixed commands that will be used multiple times by other sub sass files or even by main sass file. 
-                 // TODO:: Syntax for mixin property--> @mixin property-name() { --- } 
+                 // ^ Syntax for mixin property--> @mixin property-name() { --- } 
   // ? Note: Mixin property could only be defined within a sub sass file and not within a main sass file and it behaves like a C++ Function
          // * To call a mixin property by any sass file, we use Include property---
-                 // TODO:: Syntax for include property--> @include property-name(); 
-                 // ! Variable used in argument of mixin property works similar to function of c++ 
+                 // ^ Syntax for include property--> @include property-name(); 
+                 // & Variable used in argument of mixin property works similar to function of c++ 
 
 @mixin flexcenter($textcolor)
 {

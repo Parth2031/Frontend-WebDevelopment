@@ -1,11 +1,12 @@
 // TODO:: Understanding DOM Event Properties, Function's,etc.
-// ? NOTE :- Event Listener's can have function as ananoymous or whole new function which is called by function name.
-// ! Anonymous Function should be used if there are called  multiple times and New Function will be better option.
+
+// ^ NOTE :- Event Listener's can have function as ananoymous or whole new function which is called by function name.
+// ? Anonymous Function should be used if there are called  multiple times and New Function will be better option.
 
 console.log("Understanding DOM Event Listener Properties, Function's and Many More...");
 
 // * Alternative to Event Listener but should be used only in small programs :-
-// ! It has many drawbacks compared to Event Listeners.
+// & It has many drawbacks compared to Event Listeners.
 // ? .onclick like there are many properties but are avoided.
 
 // const buttonHandler = () => {
@@ -23,11 +24,11 @@ console.log("Understanding DOM Event Listener Properties, Function's and Many Mo
 //   document.body.style.backgroundColor =  `rgb(${event.offsetX},${event.offsetY},200)`;
 // })
 
-// TODO:: Explaining event.preventDefault() working ->>
+// ^ Explaining event.preventDefault() working ->>
 
 /*
 ! If a href="" or href="link.." then, if applied a event. 
-TODO:: It will redirect to itself or to that link so in order to stop that functionality apply event.preventDefault(); 
+~ It will redirect to itself or to that link so in order to stop that functionality apply event.preventDefault(); 
 * Note: If href="#" then it stops the redirecting process and so no need of this function.
 ? It is also applied on a "form" as well as it also redirects itself and to stop that, we use event.preventDefault(). 
 */

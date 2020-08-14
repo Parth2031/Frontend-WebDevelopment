@@ -1,14 +1,14 @@
 // TODO:: Understanding Form Data :-
 
 /*
-TODO:: Form Data is called as Built-in Object by "new" keyword.
+^ Form Data is called as Built-in Object by "new" keyword.
 * It works on AJAX as well as Fetch API to make code easy and understandable.
 ? The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, 
 ? which can then be easily sent using the XMLHttpRequest.send() method. 
-! It uses the same format a form would use if the encoding type were set to "multipart/form-data".
+& It uses the same format a form would use if the encoding type were set to "multipart/form-data".
 */
 
-// TODO :: Form Data Methods -
+// ! Form Data Methods -
 
 /*
 ? FormData.append() - Appends a new value onto an existing key inside a FormData object, or adds the key if it does not already exist.
@@ -120,7 +120,7 @@ async function createPost(title, content)
     userId: userId
   };
 
-  // ! Working of Form Data :
+  // ~ Working of Form Data :
 
   const fd = new FormData(form);
   // fd.append('title', title);

@@ -17,9 +17,9 @@
 
 // TODO:: HTTP Statuses :-
 
-// ! 200: "OK"
-// ! 403: "Forbidden"
-// ! 404: "Not Found"
+// & 200: "OK"
+// & 403: "Forbidden"
+// & 404: "Not Found"
 
 var button = document.querySelector("#button");
 var output = document.querySelector("#output");
@@ -32,14 +32,14 @@ function LoadData()
 
   const xhr = new XMLHttpRequest();
 
-  // !  -> Open property is used to specify the request.
-  // TODO:: Syntax -> variable_name of object.open (method,url,async,user,psw);	
+  // ~ -> Open property is used to specify the request.
+  // ^ Syntax -> variable_name of object.open (method,url,async,user,psw);	
   // ? Specified request :- 
-  /*                            method: the request type: "GET" or "POST"
-                                url: the file location
-                                async: true(asynchronous) or false(synchronous)
-                                user: optional user name
-                                psw: optional password
+  /*                        method: the request type: "GET" or "POST"
+                            url: the file location
+                            async: true(asynchronous) or false(synchronous)
+                            user: optional user name
+                            psw: optional password
   */
   
   xhr.open('GET', 'data.txt', true);
@@ -56,7 +56,7 @@ function LoadData()
   //   console.log('READYSTATE', xhr.readyState);
   // }
 
-  // ! .onload method is used to run when the file loads.
+  // & .onload method is used to run when the file loads.
 
   xhr.onload = function()
   {
@@ -83,7 +83,7 @@ function LoadData()
     console.log('Request error...');
   }
 
-  // ! Used to send the fetched data to client.
+  // * Used to send the fetched data to client.
 
   xhr.send();
 }

@@ -1,4 +1,4 @@
-             /* * Define vars for the root element */
+                                        /* * Define vars for the root element */
 :root 
 {
   /* ? Global Variables */
@@ -54,7 +54,7 @@ header#main-header h1
                 /* * Define box vars */
 .box 
 {
-                 /* TODO Scope Variables for Class Box & All its Child classes inside it*/
+                            /* ^ Scope Variables for Class Box & All its Child classes inside it*/
 
   --box-bg-color: #ddd;
   --box-main-color: #06c;
@@ -81,7 +81,7 @@ header#main-header h1
 {
   /* --box-main-color: #555;
   color: var(--box-main-color); */
-                 /* ! If a variable is not defined before even as a scope variable like the upper commented code then, */
+                 /* & If a variable is not defined before even as a scope variable like the upper commented code then, */
                                  /* ? This is the Alternative Method */
   color: var(--box-p-color, #555);
 }

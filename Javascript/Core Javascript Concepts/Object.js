@@ -1,8 +1,8 @@
 // * Object Based Project
 // ? NOTE :- When we create Global Variables for input boxes, it refers only to first inputed value and not the next input value's by user.
 // ! So, this problem could be solved using two ways -
-// TODO:: First, we can make the class in which we could use "this" keyword to resolve the issue.
-// TODO:: Second, we can make the variable in the local scope and keep updating them.
+// ^ First, we can make the class in which we could use "this" keyword to resolve the issue.
+// & Second, we can make the variable in the local scope and keep updating them.
 
 const addMovieButton = document.getElementById("add-movie-btn");
 const searchButton = document.getElementById("search-btn");
@@ -36,7 +36,7 @@ const renderMovies = (filter = "") =>
     // for (const key in movie.info)
     // {
     //   if (key !== "title") 
-    //     text = text + `${key}: ${movie.info[key]}`;    // TODO:: <-- In this, movie.info[key] is using Dynamic Properties of Built-In Object.
+    //     text = text + `${key}: ${movie.info[key]}`; // ~ <-- In this, movie.info[key] is using Dynamic Properties of Built-In Object.
     // }
 
     // ! Using Object Destructuring and Spread Operator to implement theabove code -
@@ -49,13 +49,13 @@ const renderMovies = (filter = "") =>
     // console.log(movieTitle);
 
     let { getFormattedTitle } = movie;                    // ? Whereas, this function is called like this as by second method.
-    // getFormattedTitle = getFormattedTitle.bind(movie);     // ! <-- In this, bind prepares the function for future call.
-    let text = getFormattedTitle.call(movie) + ' - ';        // ! <-- Whereas, in this, apply/call immediately calls the function to work. 
+    // getFormattedTitle = getFormattedTitle.bind(movie);     // & <-- In this, bind prepares the function for future call.
+    let text = getFormattedTitle.call(movie) + ' - ';       // ^ <-- Whereas, in this, apply/call immediately calls the function to work. 
 
     for (const key in info)
     {
       if (key !== 'title' && key !== '_title') 
-        text = text + `${key}: ${info[key]}`;      // TODO:: <-- In this, info[key] is using Dynamic Properties of Built-In Object.
+        text = text + `${key}: ${info[key]}`;      // ~ <-- In this, info[key] is using Dynamic Properties of Built-In Object.
     }
 
     movieElement.textContent = text;
@@ -115,7 +115,7 @@ const addMovieHandler = () =>
     
     // ! This function could be write down in two ways in an Object - 
     // ? key_name: function () { }  - It is accessed using object_name.key_name()
-    // ? function_name() { } - It is accessed using directly without the reference of object.
+    // * function_name() { } - It is accessed using directly without the reference of object.
 
     getFormattedTitle()
     {

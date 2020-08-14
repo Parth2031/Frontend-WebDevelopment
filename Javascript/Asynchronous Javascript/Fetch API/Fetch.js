@@ -9,7 +9,7 @@ button_2.addEventListener("click", getJson);
 
 button_3.addEventListener("click", getExternal);
 
-// TODO:: Syntax of Fetch API -> fetch(url).then()....
+// ^ Syntax of Fetch API -> fetch(url).then()....
 
 // ! Get local text file data :-
 
@@ -17,7 +17,7 @@ function getText()
 {
   fetch("test.txt")
 
-  // ! Shotest format to write using Arrow function as this makes res.text() to return. 
+  // & Shotest format to write using Arrow function as this makes res.text() to return. 
     
     .then(res => res.text())
 
@@ -91,7 +91,7 @@ function getExternal()
     });
 }
 
-// TODO:: NOTE - Fetch can also take more arguments, except of url. 
+// ^ NOTE - Fetch can also take more arguments, except of url. 
 
 // ! Example of fetch API with more arguments ->>
 // * Other arguments work similar to .open() of AJAX.
