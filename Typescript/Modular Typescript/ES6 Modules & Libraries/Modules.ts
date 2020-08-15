@@ -10,7 +10,7 @@ console.log(area(20, 50));
 
 // // --------------------------------------------------------------------------------------------------------------------------------
 
-// TODO:: Working of a Third Party Library :-
+// * Working of a Third Party Library :-
 
 import "lodash";
 import _ from "lodash";

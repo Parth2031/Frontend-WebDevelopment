@@ -1,6 +1,6 @@
 "use strict";
 // TODO:: Examples of Typescript Namespace & Modules :-
-// ! Syntax for Importing a Namespace File :->
+// & Syntax for Importing a Namespace File :->
 /// <reference path="Circle.ts" />
 /// <reference path="Rectangle.ts" />
 // ! Importing Nested Namespace Files Syntax :->

@@ -30,7 +30,7 @@ console.log(Circle.PI);
 console.log(Circle.calculateCirumcumference(10));
 console.log(Rectangles_1.default(20, 50));
 // // --------------------------------------------------------------------------------------------------------------------------------
-// TODO:: Working of a Third Party Library :-
+// * Working of a Third Party Library :-
 require("lodash");
 const lodash_1 = __importDefault(require("lodash"));
 const customers = ['Max', 'Manuel', 'Anna'];
