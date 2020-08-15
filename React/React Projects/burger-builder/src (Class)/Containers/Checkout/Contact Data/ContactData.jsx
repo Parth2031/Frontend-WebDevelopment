@@ -115,7 +115,7 @@ class ContactData extends Component
     formIsValid: false
   }
 
-  // TODO:: Setting up the Data on Database (Firebase) and also Fetching it :- 
+  // ^Setting up the Data on Database (Firebase) and also Fetching it :- 
 
   orderHandler = (event) =>
   {

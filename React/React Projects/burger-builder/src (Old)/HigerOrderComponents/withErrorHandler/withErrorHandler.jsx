@@ -23,7 +23,8 @@ const withErrorHandler = (WrappedComponents,axios) =>
     //   });
     // }
 
-  // ! We used this Lifecycle Hook as we know that componentDidMount runs after rendering of Child Components and we want to run before it. 
+    // ! We used this Lifecycle Hook as we know that componentDidMount runs after rendering of Child Components and we want to run ....
+    // ? .... before it. 
 
     _tempcomponentWillMount()
     {
@@ -38,7 +39,8 @@ const withErrorHandler = (WrappedComponents,axios) =>
       });
     }
 
-  // ! We used this because in order to avoid unnecessary axios calls for multiple pages as this removes axios interceptors after Mounting is over.
+    // & We used this because in order to avoid unnecessary axios calls for multiple pages as this removes axios interceptors ....
+    // ~ .... after Mounting is over.
     // * It is a cleanup function.  
     
     componentWillUnmount()

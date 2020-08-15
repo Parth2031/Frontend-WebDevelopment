@@ -55,7 +55,7 @@ export class BurgerBuilder extends Component
 
   // // ---------------------------------------------------------------------------------------------------------------------------
 
-  // ! Below Code used to update the State which could be now done using React Redux for better State Management -
+  // & Below Code used to update the State which could be now done using React Redux for better State Management -
 
   // addIngredientHandler = (type) =>
   // {
@@ -102,7 +102,7 @@ export class BurgerBuilder extends Component
 
   // // ---------------------------------------------------------------------------------------------------------------------------
 
-  // ! updatePurchaseState is a Local UI State which is used only as a boolean value instead of setting a State ->
+  // & updatePurchaseState is a Local UI State which is used only as a boolean value instead of setting a State ->
 
   updatePurchaseState (ingredients)
   {
@@ -194,7 +194,7 @@ export class BurgerBuilder extends Component
   }
 }
 
-// TODO:: Setting Up React Redux Linking -->>
+// ^ Setting Up React Redux Linking -->>
 
 const mapStateToProps = (state) =>
 {

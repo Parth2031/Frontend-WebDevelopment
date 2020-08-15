@@ -113,7 +113,7 @@ const ContactData = (props) =>
   
   const [formIsValid, setFormIsValid] = useState(false);
 
-  // TODO:: Setting up the Data on Database (Firebase) and also Fetching it :- 
+  // ^ Setting up the Data on Database (Firebase) and also Fetching it :- 
 
   const orderHandler = (event) =>
   {
@@ -200,7 +200,7 @@ const ContactData = (props) =>
     );
 }
 
-// TODO:: Setting Up React Redux Linking -->>
+// ^ Setting Up React Redux Linking -->>
 
 const mapStateToProps = (state) =>
 {

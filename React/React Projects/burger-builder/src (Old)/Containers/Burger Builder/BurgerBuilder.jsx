@@ -33,7 +33,7 @@ export class BurgerBuilder extends Component
     //   meat: 0
     // },
 
-    // ! Fetched Ingredients from Database but now, it is handled in React Redux as they Global State ->>
+    // & Fetched Ingredients from Database but now, it is handled in React Redux as they Global State ->>
     // * Price is set in React Redux Store are set according to the Ingredients Type ->
     // ? Whereas, Purchasable State is converted to a Local UI State using a Boolean Function ->
 
@@ -52,7 +52,7 @@ export class BurgerBuilder extends Component
 
   // // ---------------------------------------------------------------------------------------------------------------------------
 
-  // ! Below Code used to update the State which could be now done using React Redux for better State Management -
+  // ~ Below Code used to update the State which could be now done using React Redux for better State Management -
 
   // addIngredientHandler = (type) =>
   // {
@@ -99,7 +99,7 @@ export class BurgerBuilder extends Component
 
   // // ---------------------------------------------------------------------------------------------------------------------------
 
-  // ! updatePurchaseState is a Local UI State which is used only as a boolean value instead of setting a State ->
+  // ~ updatePurchaseState is a Local UI State which is used only as a boolean value instead of setting a State ->
 
   updatePurchaseState (ingredients)
   {
@@ -191,7 +191,7 @@ export class BurgerBuilder extends Component
   }
 }
 
-// TODO:: Setting Up React Redux Linking -->>
+// ^ Setting Up React Redux Linking -->>
 
 const mapStateToProps = (state) =>
 {

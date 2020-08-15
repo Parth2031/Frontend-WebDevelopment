@@ -44,7 +44,7 @@ class Checkout extends Component
   }
 }
 
-// TODO:: Setting Up React Redux Linking -->>
+// ^ Setting Up React Redux Linking -->>
 
 const mapStateToProps = (state) =>
 {

@@ -8,7 +8,7 @@ import CartItem from '../Cart Item/CartItem';
 import { selectCartItems } from '../../Store/Selectors/cartSelectors';
 import { toggleCartHidden } from '../../Store/Actions/cartAction';
 
-// * NOTE :-
+// & NOTE :-
 // ? Returning dispatch property as a prop in that same component by mapStateToProp, which could be used similar to mapDispatchToProps.
 
 const CartDropdown = ({ cartItems, history, dispatch }) => 
