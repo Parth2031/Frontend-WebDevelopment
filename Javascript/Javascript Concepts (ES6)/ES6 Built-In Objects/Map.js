@@ -1,11 +1,11 @@
 // TODO:: Map object holds key-value pairs and remembers the original insertion order of the keys. 
-// TODO:: Any value(both objects and primitive values) may be used as either a key or a value.
+// ^ Any value(both objects and primitive values) may be used as either a key or a value.
 
 // ! Map Object Syntax :-
 
 const maps = new Map();
 
-// TODO:: Map Object Methods :-
+// ^ Map Object Methods :-
 
 // ? .clear() - It removes all key - value pairs from the Map object.
 // ? .delete(key) - Returns Map if an element in the Map object existed and has been removed, or false if the element does not exist.Map.has(key) will return false afterwards.
@@ -41,7 +41,7 @@ maps.set(key3, 'Value of key3');
 
 // ! ITERATING MAPS :-
 
-// ? Loop using for...of to get Keys and Values :-
+// & Loop using for...of to get Keys and Values :-
 
 // for(let [key, value] of maps) {
 //   console.log(`${key} = ${value}`);

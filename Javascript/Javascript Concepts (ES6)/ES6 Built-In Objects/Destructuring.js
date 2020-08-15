@@ -4,7 +4,7 @@
 ! IMPORTANT NOTE-- >>
 
 ? Rest Operator is worked on only Function's and not Array & Object's.
-? Whereas, Spread Operator is worked upon Array & Object's and not on Function's.
+& Whereas, Spread Operator is worked upon Array & Object's and not on Function's.
 */
 
 // * Basic Array Working -
@@ -14,9 +14,9 @@ let a, b;
 
 // console.log(a);
 
-// TODO:: Rest Pattern/Parameter allows us to represent an indefinite number of arguments as an array.
+// ^ Rest Pattern/Parameter allows us to represent an indefinite number of arguments as an array.
 
-// ! Rest Parameter/Pattern Syntax :-
+// ~ Rest Parameter/Pattern Syntax :-
 
 /* 
 ! NOTE ->>
@@ -25,18 +25,18 @@ let a, b;
 *                           It is used to split up array elements or object properties.
 
 ? const newArray = [...oldArray,1,2];  OR  ...oldArray ;
-? const newObject = {...oldObject,newProps: 5};   OR ...oldObject;
+& const newObject = {...oldObject,newProps: 5};   OR ...oldObject;
 
 * Rest Operator : It is used to merge a list of function arguments into an array.
 
-? function_name(a,b,...manyMoreArguments) / function_name(...rest)
-?              OR
-? array_name[a,b,...rest]; / array_name[...rest];
-?           OR
-? object_name{ a, b, ...rest}; / object_name[...rest];
+^ function_name(a,b,...manyMoreArguments) / function_name(...rest)
+^                 OR
+^ array_name[a,b,...rest]; / array_name[...rest];
+^                 OR
+^ object_name{ a, b, ...rest}; / object_name[...rest];
 */
 
-// ! Rest Parameter/Pattern Example :-
+// ~ Rest Parameter/Pattern Example :-
 
 [a, b, ...rest] = [100, 200, 300, 400, 500];
 // console.log(rest);
@@ -75,20 +75,20 @@ const person =
   }
 }
 
-// ! Old ES5 :
+// & Old ES5 :
 
 // const name = person.name,
 //       age = person.age,
 //       city = person.city;
 
-// ! New ES6 Destructuring :
+// ~ New ES6 Destructuring :
 
 const { name, age, city, sayHello } = person;
 
 // console.log(name, age, city);
 // sayHello();
 
-// ! In New ES6 Destructuring, we can also new Key Names to the Specified Object Key Names :
+// * In New ES6 Destructuring, we can also new Key Names to the Specified Object Key Names :
 
 const employee =
 {
@@ -99,7 +99,7 @@ const employee =
 const { userName: Name, age: Current_Age } = employee;              // ! <-- Here, we did it.
 console.log(Name, Current_Age);
 
-// ! Making a new Object with the properties of previous defined object :
+// ? Making a new Object with the properties of previous defined object :
 
 const anotherObjectAvoidedMethod =
 {
@@ -110,7 +110,7 @@ const anotherObjectAvoidedMethod =
 
 // console.log(anotherObjectAvoidedMethod);
 
-// ! Better Way of making a new Object from previous defined object;
+// & Better Way of making a new Object from previous defined object:
 
 const anotherObject = { name, age, city };
 console.log(anotherObject);

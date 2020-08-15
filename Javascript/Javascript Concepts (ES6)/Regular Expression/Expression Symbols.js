@@ -1,5 +1,5 @@
 // TODO:: Regular Expression is defined by /.../ where, "." describes pattern of characters means they are characters,strings,etc are present.
-// TODO:: Literal Charcters are also known as String.
+// ^ Literal Charcters are also known as String.
 
 // ! Regular Expresion (re) -
 let re;
@@ -65,16 +65,17 @@ re = /x(?=y)/;      // ? Match x only if followed by y
 re = /x(?!y)/;      // ? Match x only if NOT followed by y
 
 
-// TODO:: Examples:
+// ~ Examples:
 
-// ! String to match:
+// & String to match:
 
 // const str = 'Gray?';
 // const str = '3x3x3x';
 // const str = 'Hello, welcome to Hell';
 const str = 'dkjekdxydjekdj';
 
-// ! Log Results:
+// & Log Results:
+
 const result = re.exec(str);
 console.log(result);
 

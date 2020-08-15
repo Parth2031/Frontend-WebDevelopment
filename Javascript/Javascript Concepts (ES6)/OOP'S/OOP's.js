@@ -1,8 +1,8 @@
 // * Understanding OOP'S Concepts. 
 // ? NOTE :- When we create Global Variables for input boxes, it refers only to first inputed value and not the next input value's by user.
 // ! So, this problem could be solved using two ways -
-// TODO:: First, we can make the class in which we could use "this" keyword to resolve the issue.
-// TODO:: Second, we can make the variable in the local scope and keep updating them.
+// ^ First, we can make the class in which we could use "this" keyword to resolve the issue.
+// ^ Second, we can make the variable in the local scope and keep updating them.
 
 // ? -> This is ES6 Syntax:
 // ! Employees Class Constructor with "this" keyword Implementation and it's functionality :->
@@ -10,7 +10,7 @@
 
 class Employees
 {
-  // ! Category = "Default"; is an public class field.
+  // & Category = "Default"; is an public class field.
   // ? A field defines property for classes.
   // * Field's are fixed values in class.
 
@@ -18,7 +18,7 @@ class Employees
 
   constructor(name, age, dob)
   {
-    // ! Whereas, this.name = name; is an public class property. 
+    // ~ Whereas, this.name = name; is an public class property. 
     // * Whereas, Class Property are dynamic values in class.
 
     this.name = name;
@@ -39,7 +39,7 @@ const parth = new Employees('Parth', 20, '10-01-2000');
 // console.log(mrinal.age);
 // console.log(parth.calculateAge());
 
-// TODO:: "#variable_name" is a private member of the class and cannot be accessed directly in the global scope.
+// & "#variable_name" is a private member of the class and cannot be accessed directly in the global scope.
 // ! Example of private members in the class -
 
 class Rectangle
@@ -58,7 +58,7 @@ const shape = new Rectangle(20, 30);
 // console.log(shape);
 // console.log(shape.#height);
 
-// TODO =====================================================================================================================================
+// ^ ==================================================================================================================================
 
 // ! Alternative Way to Classes in ES7 :-
 
@@ -86,7 +86,7 @@ class Group
 const family = new Group("Parth",20,"31-01-2000");
 family.showName();
 
-// TODO =====================================================================================================================================
+// ^ ===================================================================================================================================
 
 // ! Prototype Explanation :->
 
@@ -95,8 +95,8 @@ family.showName();
 * Prototype is a chain of Objects. 
 ? Object.prototype                        {Main Prototype & Part of Constuctor.prototype and end to the chain of Prototypes}
 ? Function_name/Constructor_name.prototype           {Constructor prototype and it's accesed in _proto_}
-TODO:: hasOwnProperty() is part of Object.prototype built-in method.
-TODO:: Similarly, there are more built-in properties and methods in Object.prototype.
+^ hasOwnProperty() is part of Object.prototype built-in method.
+^ Similarly, there are more built-in properties and methods in Object.prototype.
 */
 
 // ! Person class constructor :-
@@ -116,14 +116,14 @@ class Person
     // }
   }
   
-  // ! Opposite Name is a Class Function/Method and not a Prototype Object Function :- 
+  // & Opposite Name is a Class Function/Method and not a Prototype Object Function :- 
 
   oppositeName = () =>
   {
     return `${this.lastName} ${this.firstName}`;
   }  
 
-  // ! Calculate age is a Prototype Object Function :
+  // ~ Calculate age is a Prototype Object Function :
   
   calculateAge()
   {
@@ -132,14 +132,14 @@ class Person
     return Math.abs(ageDate.getUTCFullYear() - 1970);
   }
   
-  // ! Get full name is a Prototype Object Function :
+  // ~ Get full name is a Prototype Object Function :
   
   getFullName()
   {
     return `${this.firstName} ${this.lastName}`;
   }
   
-  // ! Gets Married is a Prototype Object Function :
+  // ~ Gets Married is a Prototype Object Function :
   
   getsMaried(newLastName)
   {
@@ -156,7 +156,7 @@ class Person
   }
 }
 
-// TODO:: The extends keyword is used in class declarations or class expressions to create a class which is a child of another class.
+// ^ The extends keyword is used in class declarations or class expressions to create a class which is a child of another class.
 // ? Syntax of using extends keyword :- class ChildClass extends ParentClass { ... }
 // ! Example of extends keyword -
 
@@ -167,9 +167,9 @@ class NewPerson extends Person
     // * NOTE: In derived classes, super() must be called before you can use 'this'. 
     // ! Leaving this out will cause a reference error.
     // ? The super keyword is used to access and call functions on an object's parent.
-    // TODO:: Syntax of super keyword :-
-    // TODO: super([arguments]);                           // <-- Calls the parent constructor as to use "this" keyword.
-    // TODO: super.functionOnParent([arguments]);
+    // ^ Syntax of super keyword :-
+    // &  super([arguments]);                            // <-- Calls the parent constructor as to use "this" keyword.
+    // &  super.functionOnParent([arguments]);
 
     super(firstName, lastName, dob);
     super.getFullName(firstName,lastName);
@@ -207,9 +207,9 @@ const shyam = new NewPerson("Shyam", "Taparia", "May 24 2000","Male");
 
 // ? =====================================================================================================================================
 
-// TODO:: Object.create(Class_name.prototype) is used to create more variables with values outside the class (Global).  
+// ^ Object.create(Class_name.prototype) is used to create more variables with values outside the class (Global).  
 // * _proto_ has an alternative which is Object.getPrototypeOf(object_name); . It is a better way to access the Prototypes.
-// ! Object.setPrototypeOf(object_name,{......}); - It is basically used to add new Prototypes to a class.
+// & Object.setPrototypeOf(object_name,{......}); - It is basically used to add new Prototypes to a class.
 
 const personPrototypes =
 {
@@ -228,7 +228,7 @@ rohan.age = 30;
 // rohan.getsMarried('Thompson');
 // console.log(rohan.greeting());
 
-// TODO:: Alternative to above method for Object.create() :-
+// ^ Alternative to above method for Object.create() :-
 
 const shrey = Object.create ( personPrototypes,
 {
@@ -244,8 +244,8 @@ const shrey = Object.create ( personPrototypes,
 
 Object.setPrototypeOf(personPrototypes,
 {
-  // ! It is due to prototype chaining we are not using spread operator else if we needed to inherit any other object, we will have to use this. 
-  // ...Object.getPrototypeOf(personPrototypes),  
+  // ? It is due to prototype chaining we are not using spread operator else if we needed to inherit any other object, we will 
+  // & have to use this.  ...Object.getPrototypeOf(personPrototypes),  
   
   printRating: function () {
     // console.log(`Rating: ${this.rating}/5`);
@@ -255,7 +255,7 @@ Object.setPrototypeOf(personPrototypes,
 personPrototypes.printRating();
 // console.log(personPrototypes);
 
-// TODO ==================================================================================================================================
+// ^ =================================================================================================================================
 
 // ? Understanding the Prototypes Inheritance :-
 // * Constructor Function is different from class constructor.
@@ -268,7 +268,7 @@ function Children(firstName, lastName)
   this.lastName = lastName;
 }
 
-// ! Greeting:
+// ~ Greeting:
   
 Children.prototype.greeting = function ()
 {
@@ -278,11 +278,11 @@ Children.prototype.greeting = function ()
 const child = new Children('Utkarsh', 'Srivastava');
 // console.log(child.greeting());
 
-// ! Customer constructor function :->
+// ~ Customer constructor function :->
 
 function Customer (firstName, lastName, phone, membership)
 {
-  // TODO:: Class_name.call(arguments) is used to access the class values of any class defined before.
+  // ^ Class_name.call(arguments) is used to access the class values of any class defined before.
 
   Children.call(this, firstName, lastName);
   this.phone = phone;
@@ -310,7 +310,7 @@ Customer.prototype.greeting = function () {
 
 // console.log(customer1.greeting());
 
-// TODO ==================================================================================================================================
+// ^ ==================================================================================================================================
 
 // * In this, Understanding .bind() & "this" keyword method usage in a Class -->
 
@@ -323,15 +323,15 @@ class UserInputForm
     this.passwordInput = document.getElementById('password');
 
     // ! In this, we used .bind(this) as a method called from a constructor will get the event.target as "this" keyword reference
-    // ! and not the constructor/instantiated property as a reference. 
-    // ! Or, it wil starts to point global reference instead so .bind() holds to constructor property values.
+    // & and not the constructor/instantiated property as a reference. 
+    // & Or, it wil starts to point global reference instead so .bind() holds to constructor property values.
     
     this.form.addEventListener('submit', this.signupHandler.bind(this));
   }
 
   signupHandler(event)
   {  
-    // ! So, here "this" will start to point this.userNameInput and also this.enteredPasspord because of .bind(this).
+    // ^ So, here "this" will start to point this.userNameInput and also this.enteredPassword because of .bind(this).
 
     const enteredUserName = this.userNameInput.value;
     const enteredPassword = this.passwordInput.value;
@@ -344,7 +344,7 @@ class UserInputForm
 
 // ? Alternative to above Code :->
 // * Note:--> This should be ignored.
-// ! Constructor Function is in ES5 Syntax:
+// & Constructor Function is in ES5 Syntax:
 
 // ! Person constructor function :->
 
@@ -360,7 +360,7 @@ function People(firstName, lastName, dob)
   // }
 }
 
-// ! Calculate age :
+// ~ Calculate age :
 
 People.prototype.calculateAge = function ()
 {
@@ -369,13 +369,13 @@ People.prototype.calculateAge = function ()
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
-// ! Get full name :
+// ~ Get full name :
 
 People.prototype.getFullName = function () {
   return `${this.firstName} ${this.lastName}`;
 }
 
-// ! Gets Married :
+// ~ Gets Married :
 
 People.prototype.getsMaried = function (newLastName) {
   this.lastName = newLastName;
@@ -391,7 +391,7 @@ const rishabh = new Person('Rishabh', 'Sharma', 'March 20 1978');
 nitya.getsMaried('Sharma');
 // console.log(nitya.getFullName());
 
-// TODO:: hasOwnProperty() is part of Object.prototype built-in method.
+// ^ hasOwnProperty() is part of Object.prototype built-in method.
 // ? Similarly, there are more built-in properties and methods in Object.prototype.
 
 // console.log(nitya.hasOwnProperty('firstName'));

@@ -5,7 +5,7 @@
 // * It is majorly used by developers at developing stage of libraries,any project,etc and not accessible directly by user.
 
 const sym1 = Symbol();
-const sym2 = Symbol('NameofSymbol');             // ! <-- In this, Name of Symbol is used as for giving name to symbols.
+const sym2 = Symbol('NameofSymbol');             // & <-- In this, Name of Symbol is used as for giving name to symbols.
 
 // console.log(sym1);
 // console.log(typeof sym2);
@@ -21,13 +21,13 @@ const user =
 
 user[sym2] = 'p3';
 
-user.id = 'p2';                                      // ! <-- This should not be possible!
+user.id = 'p2';                                      // & <-- This should not be possible!
 
 // console.log(user[Symbol('sym2')]);
 console.log(Symbol('sym2') === Symbol('sym2'));
 console.log(user.toString());
 
-// TODO: Symbol Built-In Properties :-
+// ^ Symbol Built-In Properties :-
 
 /*
 ? Symbol.toStringTag : It is used to give name to String Tags.
@@ -73,13 +73,13 @@ myObj.key4 = 'Prop4';
 // console.log(myObj[KEY1]);
 // console.log(myObj[KEY2]);
 
-// ! NOTE : Symbols are not enumerable in for...in
+// * NOTE : Symbols are not enumerable in for...in
 
 // for(let i in myObj) {
 //   console.log(`${i}: ${myObj[i]}`);
 // }
 
-// ! NOTE : Symbols are ignored by JSON.stringify
+// * NOTE : Symbols are ignored by JSON.stringify
 
 // console.log(JSON.stringify({ key: 'prop' }));
 // console.log(JSON.stringify({[Symbol('sym1')]: 'prop'}));

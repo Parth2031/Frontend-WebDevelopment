@@ -1,12 +1,12 @@
 // TODO:: The Set object lets you store unique values of any type, whether primitive values or object references.
-// TODO:: Set objects are collections of values. You can iterate through the elements of a set in insertion order.
-// TODO:: A value in the Set may only occur once; it is unique in the Set's collection.
+// ^ Set objects are collections of values. You can iterate through the elements of a set in insertion order.
+// ^ A value in the Set may only occur once; it is unique in the Set's collection.
 
 // ! For..Of Loop Explanation :-
 
 /*
-  The for...of statement creates a loop iterating over iterable objects,
-  including: built -in String, Array, array - like objects(e.g., arguments or NodeList), TypedArray, Map, Set, and user - defined iterables.
+& The for...of statement creates a loop iterating over iterable objects,
+& including: built -in String, Array, array - like objects(e.g., arguments or NodeList), TypedArray, Map, Set, and user - defined iterables.
 */  
 
 // ! Set Object Methods :-
@@ -54,7 +54,7 @@ set1.add(100);
 
 // ! ITERATING THROUGH SETS -
 
-// TODO:: For..of Loop Syntax :-
+// ^ For..of Loop Syntax :-
 
 // ? for (variable of iterable) {
 // ?   statement.....

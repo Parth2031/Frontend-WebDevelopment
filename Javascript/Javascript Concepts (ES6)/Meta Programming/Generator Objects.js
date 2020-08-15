@@ -1,6 +1,6 @@
 // TODO:: Iterator is an built-in object which is used to iterate the arrayand even object value's.
 
-// ! Iterator Syntax :-
+// * Iterator Syntax :-
 
 // ? function function_nameIterator(argument_name)
 // ? {
@@ -37,11 +37,11 @@
 //   }
 // }
 
-// * Create an array of names :
+// & Create an array of names :
 
 // const namesArr = ['Jack', 'Jill', 'John'];
 
-// * Initialize iterator and pass in the names array :
+// & Initialize iterator and pass in the names array :
 
 // const names = nameIterator(namesArr);
 
@@ -50,10 +50,10 @@
 // console.log(names.next().value);
 // console.log(names.next().value);
 
-// TODO:: Generator is  also an built-in object which is also used to iterate the array and even object value's. 
-// TODO:: It is an alternative to Iterator. 
+// ^ Generator is  also an built-in object which is also used to iterate the array and even object value's. 
+// ^ It is an alternative to Iterator. 
 
-// ! Generator Syntax :-
+// * Generator Syntax :-
 
 // ? function* function_name()
 // ? {
@@ -64,9 +64,9 @@
 
 // ? const variable_name = function_name();                     // "Generator { }""
 
-// * .next() - It is used to return the next iterated value. { Returns a value yielded by the yield expression. }
-// * .return() - It returns the given value and finishes the generator.
-// * yield behaves similar to return statement but is used as it is a Generator Function and not a normal function.
+// ~ .next() - It is used to return the next iterated value. { Returns a value yielded by the yield expression. }
+// ~ .return() - It returns the given value and finishes the generator.
+// ~ yield behaves similar to return statement but is used as it is a Generator Function and not a normal function.
 
 // ! Generator Example :-
 
