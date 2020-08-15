@@ -1,8 +1,8 @@
-// * OOP'S Based Project
+// TODO:: OOP'S Based Project
 // ? NOTE :- When we create Global Variables for input boxes, it refers only to first inputed value and not the next input value's by user.
 // ! So, this problem could be solved using two ways -
-// TODO:: First, we can make the class in which we could use "this" keyword to resolve the issue.
-// TODO:: Second, we can make the variable in the local scope and keep updating them.
+// ^ First, we can make the class in which we could use "this" keyword to resolve the issue.
+// ^ Second, we can make the variable in the local scope and keep updating them.
 
 // * In this, we created Global Variables and used class with "this" keyword to update values.
 
@@ -195,7 +195,7 @@ form.addEventListener("submit", (event) =>
 
     uI.addBooksToList(book);
 
-    Store.addBooks(book);                                          // ! <--  Stored books to Local Storage
+    Store.addBooks(book);                                          // & <--  Stored books to Local Storage
 
     // ! Alternate method to crete columns :-
 
@@ -230,7 +230,7 @@ bookList.addEventListener("click", (event) =>
   uI.showAlert("Book Removed!", "success");
 
   console.log(event.target.parentElement.previousElementSibling.textContent);
-  Store.removeBook(event.target.parentElement.previousElementSibling.innerText);      // ! <-- Removed books from Local Storage
+  Store.removeBook(event.target.parentElement.previousElementSibling.innerText);      // & <-- Removed books from Local Storage
 
   event.preventDefault();
 });

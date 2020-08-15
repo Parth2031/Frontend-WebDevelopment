@@ -1,8 +1,8 @@
-// * Event Listener Based Project
+// TODO:: Event Listener Based Project
 // ? NOTE :- Event Listener's can have function as ananoymous or whole new function which is called by function name.
 // ! Anonymous Function should be used if there are called  multiple times and New Function will be better option.
 
-// TODO:: Applying Various Event Functionalities on Form & Card.
+// ^ Applying Various Event Functionalities on Form & Card.
 
 const form = document.querySelector("#task-form");
 const button = document.querySelector(".btn");
@@ -20,19 +20,19 @@ loadEventListeners();
 function loadEventListeners()
 {
   insertTask();
-  getTask();                          // ! Getting Values from Local Storage(LS) using DOM Event Loader.
+  getTask();                          // & Getting Values from Local Storage(LS) using DOM Event Loader.
   clearTask();
   // filterTask();
 }
 
-// TODO ====================================================================================================================================
+// ^ ====================================================================================================================================
 
 function insertTask()
 {
   // * Alternative --> button.addEventListener("click",function_name);
 
   // ! Inserting the task in the form by both ways :-
-  // TODO:: Note: We use "submit" event in the case when we are using "form" tag as it makes the button of the form to submit the applied functions.
+  // ? Note: We use "submit" event in the case when we are using "form" tag as it makes the button of the form to submit the applied functions.
 
   form.addEventListener("submit",(event) =>
   {
@@ -86,7 +86,7 @@ function storeTaskInLocalStorage(task)
   console.log(task); 
 }
 
-// TODO ====================================================================================================================================
+// ^ ====================================================================================================================================
 
 // ! DOM Load Event Listener :-
 
@@ -115,7 +115,7 @@ function getTask()
   })
 }
 
-// TODO ====================================================================================================================================
+// ^ ====================================================================================================================================
 
 function clearTask()
 {
@@ -180,7 +180,7 @@ function clearTask()
   // })  
 }
 
-// TODO ====================================================================================================================================
+// ^ ====================================================================================================================================
 
 // ! Removing Values from Local Storage :-
 
@@ -202,7 +202,7 @@ function removeTaskFromLocalStorage(taskItem)
   localStorage.setItem("Tasks",JSON.stringify(Tasks));
 }
 
-// TODO ====================================================================================================================================
+// ^ ====================================================================================================================================
 
 function filterTask()
 {

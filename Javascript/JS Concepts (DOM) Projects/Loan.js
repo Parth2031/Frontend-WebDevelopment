@@ -1,4 +1,4 @@
-// * Event Listener Based Project
+// TODO:: Event Listener Based Project
 
 const form = document.querySelector("#loan-form");
 const button = document.querySelector(".btn");
@@ -70,13 +70,13 @@ function showError(error)
   errorDiv.appendChild(document.createTextNode(error));
 
   // ! .insertBefore() --> It is used to insert any element before the next element.
-  //  TODO:: Syntax --> main_element.insertBefore(what element to insert,before which element to be inserted).
+  // * Syntax --> main_element.insertBefore(what element to insert,before which element to be inserted).
 
   card.insertBefore(errorDiv, heading);
 
   // ! Clear error after 3 seconds and in setTimeout, the time is in miliseconds.
   // ? So, 1 second = 1000 miliseconds.
-  // TODO:: Syntax of setTimeout --> setTimeout(function_name,time in miliseconds).
+  // * Syntax of setTimeout --> setTimeout(function_name,time in miliseconds).
 
   setTimeout(clearError, 3000);
 }

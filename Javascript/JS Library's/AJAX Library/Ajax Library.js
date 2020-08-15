@@ -10,12 +10,12 @@ class easyHTTP
   {
     this.http.open('GET', url, true);
     
-    // let self = this;                 // ! <-- It is used when we using normal functions as this pointer points towards the global object.
+    // let self = this;           // & <-- It is used when we using normal functions as this pointer points towards the global object.
 
     this.http.onload = () =>
     {
       if (self.http.status === 200) 
-        callback(null, this.http.responseText);                      // ! In this, this is replaced by self.   
+        callback(null, this.http.responseText);                      // ~ In this, this is replaced by self.   
 
       else 
         callback('Error: ' + this.http.status);

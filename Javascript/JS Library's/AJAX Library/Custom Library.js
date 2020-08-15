@@ -12,7 +12,7 @@ const http = new easyHTTP;
 
 // ! Get Single Post :-
 
-// TODO:: In order to get single post, we use the API Endpoints by simply in any url:{https://jsonplaceholder.typicode.com/posts}/number for single post. 
+// ^ In order to get single post, we use the API Endpoints by simply in any url:{https://jsonplaceholder.typicode.com/posts}/number for single post. 
 
 // http.get('https://jsonplaceholder.typicode.com/posts/1', function (err, post)
 // {
@@ -24,7 +24,8 @@ const http = new easyHTTP;
 
 // ! Create Data :-
 
-const data = {
+const data =
+{
   title: 'Custom Post',
   body: 'This is a custom post'
 };

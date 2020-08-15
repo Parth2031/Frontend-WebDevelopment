@@ -1,4 +1,4 @@
-// * Event Listener Based Project
+// TODO:: Event Listener Based Project
 
 const minNum = document.querySelector(".min-num");
 const maxNum = document.querySelector(".max-num");

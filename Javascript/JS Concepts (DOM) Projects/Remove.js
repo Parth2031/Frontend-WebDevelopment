@@ -1,4 +1,4 @@
-// * Basic Javscript Element Based Project
+// TODO:: Basic Javscript Element Based Project
 
 const body = document.querySelector("body");
 
@@ -44,7 +44,7 @@ button.addEventListener("click",(event) =>
     create_append();
 })
 
-// TODO:: Keypress event and all other keyboard events require "keycode" values to be equal to in order to be accessible. 
+// ^ Keypress event and all other keyboard events require "keycode" values to be equal to in order to be accessible. 
 
 input.addEventListener("keypress", function(event)
 {

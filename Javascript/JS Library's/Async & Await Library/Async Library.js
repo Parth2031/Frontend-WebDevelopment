@@ -24,7 +24,8 @@ class EasyHTTP
 
   async post(url, data)
   {
-    const response = await fetch(url, {
+    const response = await fetch(url,
+    {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
@@ -40,7 +41,8 @@ class EasyHTTP
 
   async put(url, data)
   {
-    const response = await fetch(url, {
+    const response = await fetch(url,
+    {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json'

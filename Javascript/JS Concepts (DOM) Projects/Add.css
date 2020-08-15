@@ -1,29 +1,35 @@
+
 .todo
 {
   color: gold;
   font-size: 3rem;
   font-weight: 400;
 }
+
 #list
 {
   color: darkblue; 
   font-size: 1.2rem;
 }
+
 #inp
 {
   width: 15vw;
 }
+
 #inp::placeholder
 {
   font-weight: 600;
   color: rgb(218, 11, 11);
 }
+
 .butt
 {
   margin-left: 1em;  
   border-radius: 10px;
   background-color: aqua;  
 }
+
 #remove
 {
   margin-top: 1rem;
@@ -32,6 +38,7 @@
   border-radius: 1em;
   background-color: rgb(9, 168, 9);
 }
+
 body
 {
   background-color: grey;  

@@ -4,10 +4,10 @@
 // * It is based on Promise Built-In Object.
 // ! It is used to make code easier with additional advantages as it has Built-In Methods for Http Request.
 /*
-  * Axios Property -
+  & Axios Property -
   ?                  variable_name.data;
 
-  * Axios Methods -
+  & Axios Methods -
   ?                 axios.get(url);
   ?                 axios.post(url);
   ?                 axios.put(url);
@@ -20,7 +20,7 @@ const form = document.querySelector('#new-post form');
 const fetchButton = document.querySelector('#available-posts button');
 const postList = document.querySelector('ul');
 
-// * NOTE - In Form Data, we had sendHttpRequest() Function to fetch the response from the API.
+// ^ NOTE - In Form Data, we had sendHttpRequest() Function to fetch the response from the API.
 
 async function fetchPosts()
 {
@@ -30,8 +30,8 @@ async function fetchPosts()
 
     // const responseData = await sendHttpRequest('GET', 'https://jsonplaceholder.typicode.com/posts');
 
-    // TODO:: Whereas, in Axios Library, we don't need to write any function for data fetching by AJAX & Fetch API. 
-    // ! Axios Library is better as it find's error automatically rather than us have to find using try and catch. 
+    // ~ Whereas, in Axios Library, we don't need to write any function for data fetching by AJAX & Fetch API. 
+    // ? Axios Library is better as it find's error automatically rather than us have to find using try and catch. 
     // * Axios Library also helps to avoid adding of "Headers" like "Content-Type" in the API.
 
     const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
@@ -68,7 +68,7 @@ async function createPost(title, content)
   fd.append('body', content);
   fd.append('userId', userId);
 
-  // ! Axios Library also detects which which type of response is send to the API nd automatically sets itself according to it.  
+  // & Axios Library also detects which which type of response is send to the API nd automatically sets itself according to it.  
 
   const response = await axios.post('https://jsonplaceholder.typicode.com/posts', post);
   // const response = await axios.post('https://jsonplaceholder.typicode.com/posts', fd);
