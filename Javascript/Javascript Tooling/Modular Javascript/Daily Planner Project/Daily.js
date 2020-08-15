@@ -20,7 +20,7 @@ class App
     finishedProjectsList.setSwitchHandlerFunction(activeProjectsList.addProject.bind(activeProjectsList));
   }
 
-  // ! In this function, we are Dynamically Loading Script using Event Listener when we want and not automatically is script loaded.
+  // & In this function, we are Dynamically Loading Script using Event Listener when we want and not automatically is script loaded.
 
   static loadScript()
   {

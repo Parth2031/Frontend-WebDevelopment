@@ -1,5 +1,5 @@
-// TODO:: "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
-// TODO:: "export" keyword Syntax -> export "infront of item to be exported"
+// ^ "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
+// ^ "export" keyword Syntax -> export "infront of item to be exported"
 
 import { DOMHelper } from '../Utility/DOMHelper.js';
 // import { InfoIcon } from './InfoIcon.js';
@@ -65,7 +65,7 @@ export class ProjectItem
   
     item.addEventListener('dragstart', event =>
     {
-      // ! dataTranfer is part of the Data Attributes Functionality Property and it has it's own methods as well in JS.
+      // & dataTranfer is part of the Data Attributes Functionality Property and it has it's own methods as well in JS.
 
       event.dataTransfer.setData('text/plain', this.id);
       event.dataTransfer.effectAllowed = 'move';

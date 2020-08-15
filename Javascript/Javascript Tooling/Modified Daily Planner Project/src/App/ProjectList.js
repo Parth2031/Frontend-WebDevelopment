@@ -1,4 +1,4 @@
-// TODO:: "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
+// ^ "import" keyword Syntax -> import {name of function,class,etc which is to be imported} from 'path of file';
 
 import { ProjectItem as ProItem } from './ProjectItem';
 import {DOMHelper} from '../Utility/DOMHelper'
@@ -9,7 +9,7 @@ import {DOMHelper} from '../Utility/DOMHelper'
 
 // import * as DOMH from '../Utility/DOMHelper';
 
-// ! This example of ProjectItem is used to show that we cannot access this variable outside this file.
+// & This example of ProjectItem is used to show that we cannot access this variable outside this file.
 // const ProjectItem = 'abc';
 
 // console.log(DEFAULT_VALUE);
@@ -35,7 +35,7 @@ export class ProjectList
   
     const list = document.querySelector(`#${this.type}-projects ul`);
 
-    // TODO:: In this, we are using Drag & Drop API as Events in Event Listeners.
+    // * In this, we are using Drag & Drop API as Events in Event Listeners.
 
     list.addEventListener('dragenter', event =>
     {
@@ -85,7 +85,7 @@ export class ProjectList
     // ! In this, DOMHelper becomes a object when imported from other file so we point towards it to access it's function.
     DOMHelper.moveElement(project.id, `#${this.type}-projects ul`);
   
-    // TODO: It is used when we are selecting at all imports from a file to which we have given a name,"DOMHelp" which also works as object. 
+    // ^ It is used when we are selecting at all imports from a file to which we have given a name,"DOMHelp" which also works as object. 
     // DOMHelp.moveElement(project.id, `#${this.type}-projects ul`);
 
     project.update(this.switchProject.bind(this), this.type);

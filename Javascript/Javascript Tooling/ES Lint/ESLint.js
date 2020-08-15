@@ -7,7 +7,7 @@
 * It holds some set of rules that make the code in a very unique format and consistent.
 */
 
-// TODO:: npm Commands (Terminal Commands) in order to install eslint :-
+// ^ npm Commands (Terminal Commands) in order to install eslint :-
 
 /*
 ! npm (Terminal Commands) -
@@ -16,18 +16,18 @@
 ? npm install --save-dev eslint : It is used to install eslint dependencies so to use them.
 */
 
-// TODO:: Creating ESlint Configuration File :-
+// ^ Creating ESlint Configuration File :-
 
 /*
 ! Creating ESLint Configuration File to optimize code -
 ? In order to configure it's setting's, we use  ->>
 
 * node_modules/.bin/eslint --init 
-!             OR
+~             OR
 ? CTRL+SHIFT+P and choose ESLint Configurations.
 */
 
-// TODO:: package.json Parts to be added are :-
+// ^ package.json Parts to be added are :-
 
 /*
 ! Package.json file -

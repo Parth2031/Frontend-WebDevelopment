@@ -8,7 +8,7 @@
 // * This function is used as an example if a different function/class is exported without "default" keyword. 
 export function doSomething() { };
 
-// TODO:: "default" keyword is used only in "export" and is used when we want send one module per file.
+// ^ "default" keyword is used only in "export" and is used when we want send one module per file.
 // ? NOTE - When we use "default" keyword, we don't require name of any class/function/variable,etc.
 
 export default class

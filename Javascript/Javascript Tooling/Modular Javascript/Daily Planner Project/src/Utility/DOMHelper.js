@@ -7,7 +7,7 @@ export class DOMHelper
     // ! Node.cloneNode(true) - It returns a duplicate of the node on which this method was called.
     const clonedElement = element.cloneNode(true);
 
-    // ! ChildNode.replaceWith() - This method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects.
+    // ^ ChildNode.replaceWith() - This method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects.
     element.replaceWith(clonedElement);
 
     return clonedElement;
@@ -20,8 +20,8 @@ export class DOMHelper
   
     destinationElement.append(element);
 
-    // ! The Element interface's scrollIntoView() method scrolls the element's parent container such that the element ....
-    // ! .... on which scrollIntoView() is called is visible to the user.
+    // & The Element interface's scrollIntoView() method scrolls the element's parent container such that the element ....
+    // & .... on which scrollIntoView() is called is visible to the user.
     element.scrollIntoView({ behavior: 'smooth' });
   }
 }
