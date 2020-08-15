@@ -1,5 +1,5 @@
 // TODO:: Understanding Redux Work Flow using Node JS :-
-// * In Order to execute Redux using Node, we use Terminal Command: node filename.js
+// ~ In Order to execute Redux using Node, we use Terminal Command: node filename.js
 
 const redux = require('redux');
 const createStore = redux.createStore;
@@ -12,7 +12,7 @@ const intialState = {
 
 const rootreducer = (state = intialState, action) =>
 {
-  // * We can never mutate the State or change it's originality.
+  // & We can never mutate the State or change it's originality.
 
   if (action.type === 'INC_COUNTER')
   {
@@ -39,7 +39,7 @@ const store = createStore(rootreducer);
 console.log(store.getState());
 
 // ! Subscription -
-// * It runs everytime whenever the Action is dispatched and mutates/updates the Store. 
+// & It runs everytime whenever the Action is dispatched and mutates/updates the Store. 
 
 store.subscribe( () => {
   console.log("Subscription:", store.getState());

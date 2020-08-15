@@ -2,8 +2,8 @@
 
 /*
 ! Explanation of React -
-? React is a Javascript Library for building user interface. User Interface are Components which are Custom HTML Elements.
-* It contains almost all the Third Party Libraries which coulod make the program more optimized and efficient.
+~ React is a Javascript Library for building user interface. User Interface are Components which are Custom HTML Elements.
+^ It contains almost all the Third Party Libraries which coulod make the program more optimized and efficient.
 ? It is based on One way Data Flow.
 */
 
@@ -17,7 +17,7 @@
 ? Basic React {Based on Class & importing of Component}. 
 ? React Hooks {Based on Functional Programming}.
 
-* NOTE on React Hooks -->>
+& NOTE on React Hooks -->>
 
 ? It doesn't support "state" keyword and so React Hook Methods like useState() are it's alternative.
 ? In React Hooks, Non-Selected State Part is not merged as it only replaces/rewrites the old State whereas, .....
@@ -62,7 +62,7 @@
     return (
       <div className="App">
         Any jsx files tags or normal html tags ...
-      ? Similarly, To Basic React ...        
+      * Similarly, To Basic React ...        
       </div>
     );
   }
@@ -73,25 +73,25 @@
 // TODO:: Some of the Buit-In React.methods() :-
 
 /*
-! Blue is for Class Based React & Green is for React Hooks ->
+& Yellow is for Class Based React & Green is for React Hooks ->
 
 ? React.createElement() : It means creating Elements in React but it's alternative is JSX Code which is wrapped in a single container.
 ?                         As only a single React.createElement is possible in a Component return statement. 
 
 ? React.createContext() : It is used to avoid the extra redundancy of sending some props from file A to C by avoiding passing from file C.
-* It is also a Global State Manager but has a limitation that it can only be used for low frequencies means that a part of web page that 
-* .... is not used for quite often. So, it is avoided for Global State Manangement of bigger projects.  
-! It has its own two components ->> Provider and Consumer where,
-* Provider is must as it is used to put the value to State of that component. <variable_name.Provider> 
-* Consumer is used to have a Child Component as a value where if Provider doesn't set a value then .createContext Default value 
-*     .... will be considered.   
+^ It is also a Global State Manager but has a limitation that it can only be used for low frequencies means that a part of web page that 
+^ .... is not used for quite often. So, it is avoided for Global State Manangement of bigger projects.  
+~ It has its own two components ->> Provider and Consumer where,
+^ Provider is must as it is used to put the value to State of that component. <variable_name.Provider> 
+^ Consumer is used to have a Child Component as a value where if Provider doesn't set a value then .createContext Default value 
+^     .... will be considered.   
 
 ? React.createRefs() : It is used for using Special Properties(prop) like key is "ref" property which is used to pass reference of any
 ?                      element in JSX Code to point towards it.
 
-* React.memo() : It is used only in React Hook as it is basically used for optimization aswith every changes in useEffect()
-*                works but when we use this, it limits it down to not render everything. 
-?     Syntax =>  export default React.memo(name of functional component)
+^ React.memo() : It is used only in React Hook as it is basically used for optimization aswith every changes in useEffect()
+^                works but when we use this, it limits it down to not render everything. 
+*     Syntax =>  export default React.memo(name of functional component)
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
@@ -102,22 +102,22 @@
 ! These are all Required to imported similar to { Component } -
 
 ? useState(current_State, updated_Current_State) : It is used for both defining and setting the state.
-* NOTE :- useState() can be a object,array,etc whereas Class Based State was always "object".
+& NOTE :- useState() can be a object,array,etc whereas Class Based State was always "object".
 
 ? useEffect(function, [dependencies]) : It is majorly used for http request as it works for both mounting & also at updating state.
 *     Syntax => useEffect ( () => { used for http request ... }, []);   
                 Array is needed to implement dependencies as if it is present/remains, then it will work only one time .....
                 ..... like componentDidMount() else it will run like a componentDidUpdate(). 
 
-* NOTE:- It can also return a function which you have [] as dependencies, the effect only runs once, the cleanup function ....
-*        .... runs when the component gets unmounted. 
-! It can be an alternative to componentDidMount() & componentDidUpdate() Lifecycle Hook Method of Class Based React ....                
-! .... as it works only when the entire Component is Re-Rendered and then it runs so the Http Request is not lost after refreshing.
+& NOTE:- It can also return a function which you have [] as dependencies, the effect only runs once, the cleanup function ....
+&        .... runs when the component gets unmounted. 
+~ It can be an alternative to componentDidMount() & componentDidUpdate() Lifecycle Hook Method of Class Based React ....                
+~ .... as it works only when the entire Component is Re-Rendered and then it runs so the Http Request is not lost after refreshing.
 
 ? useReducer : It is  an Alternative to React Redux & useState() for handling Multiple Interconnected/Global State's. 
 *    Syntax => const reducer = () => { ..... };
 *              const[state, dispatch] = useReducer(reducer, intialState);
-! When using useReducer(), React will re-render the components whenever your reducer returns a new state.
+~ When using useReducer(), React will re-render the components whenever your reducer returns a new state.
 
 ? useRefs() : It is used for refs property alternative to React.createRefs() in Hooks.                
 ? useContext() : It is used as similarly to React.createContext(). 
@@ -127,8 +127,8 @@
 
 ? useCallback(function, [dependencies]) : It works similar to shouldComponentUpdate() Lifecycle Hook of Class Based React.
 *            Syntax => useCallback( () => { .... } , []);
-! It will return a memorized version of the callback that only changes if one of the dependencies has changed.
-! So, basically it prevents the creation of extra functions.
+~ It will return a memorized version of the callback that only changes if one of the dependencies has changed.
+~ So, basically it prevents the creation of extra functions.
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
@@ -141,8 +141,8 @@
 ? React Routing means Multi Pages feeling in a Single Page Application(SPA) where Multi Pages are rendered
 ?               through Routing by Javascript and not Multiple HTML Files.
 
-* NOTE : To install React Router, we use Third Party Library -> npm install --save react-router react-router-dom
-*           where, "react-router-dom" Library is more important as most of the Components are part of it and not react-router.
+& NOTE : To install React Router, we use Third Party Library -> npm install --save react-router react-router-dom
+&           where, "react-router-dom" Library is more important as most of the Components are part of it and not react-router.
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
@@ -151,7 +151,7 @@
 
 /*
 ? State Management is usually Complex. So, we use React Redux to solve this problem.
-* We have two Libraries :->> Redux (It is the library which is used for any Framework) & React Redux Library (Only for React).
+^ We have two Libraries :->> Redux (It is the library which is used for any Framework) & React Redux Library (Only for React).
 
 ! Understanding React Redux -
 
@@ -159,9 +159,9 @@
 ? to a whole other non-linked Component tends to be difficult as is dony by "Query Paramenters" but it is not a good way.
 ? So, we use React Redux which is a Third Party Library for setting a Global State Management which can be easy to manange.
 
-* NOTE :- To install Redux & React Redux, we use Third Party Library's -> npm install --save redux
-*                                                                         npm install --save react-redux
-*         To get Asynchronous Functionality in React Redux, "" ""      -> npm install --save redux-thunk
+& NOTE :- To install Redux & React Redux, we use Third Party Library's -> npm install --save redux
+&                                                                         npm install --save react-redux
+&         To get Asynchronous Functionality in React Redux, "" ""      -> npm install --save redux-thunk
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
@@ -176,7 +176,7 @@
 
 ? Stateful/Container/Smart Components : They can be reusable also but need the logic to be same for reusable place.
 
-* Difference between Types of Components ->>
+~ Difference between Types of Components ->>
 
 ? The literal difference is that one has state, and the other doesn’t. That means the stateful components are keeping track of changing data,
 ? while stateless components print out what is given to them via props, or they always render the same thing.
@@ -221,9 +221,9 @@
 // TODO:: Understanding Class Based React LifeCycle Hooks :-
 
 /*
-! NOTE - It is based on Class Based Components and not Supported by Funtional Components {React Hooks}.
+& NOTE - It is based on Class Based Components and not Supported by Funtional Components {React Hooks}.
 
-* Types of LifeCycle Hooks Methods -->
+~ Types of LifeCycle Hooks Methods -->
 
 ! Mounting Methods ->
                      A component mounts when it is created and first inserted into the DOM i.e when it is rendered for the first time.
@@ -238,8 +238,8 @@
                       Sometimes the underlying props could change and the component has to be re-rendered.
  
 ? shouldComponentUpdate(nextProps,nextState) : If it returns false, then componentDidUpdate will not be invoked.
-* NOTE -->                                 It is also used for Optimization and it restricts Update when not needed used for checking conditions.
-* It has an Alternative where instead of importing and extending { Component }, we can simply Import & Extend {PureComponents} works Similaryly.
+& NOTE --> It is also used for Optimization and it restricts Update when not needed used for checking conditions.
+& It has an Alternative where instead of importing and extending { Component }, we can simply Import & Extend {PureComponents} works Similarly.
 
 ? render() 
 ? componentDidUpdate(prevProps, prevState,snpashot) : 
@@ -269,10 +269,10 @@
 ! Two Types of Styling -
 
 ? Inline Styling : In this, we could use Dynamic Style and use Style to particular portions of a file.
-* NOTE -->          But it has it's limitations that we cannot use pseudo classes/media queries and many dynamic functionalities.
+& NOTE -->          But it has it's limitations that we cannot use pseudo classes/media queries and many dynamic functionalities.
 
 ? Global (App.css) Styling : In this, we can put Dynamic Style's but a little difficult to do.
-* NOTE -->          But here, if we apply style then it put Styles Globally, so it has it's limitation like this.
+& NOTE -->          But here, if we apply style then it put Styles Globally, so it has it's limitation like this.
 */
 
 // TODO:: Making Inline Style without Limitations and Effective :-
@@ -281,14 +281,14 @@
 ! There are three ways to do that -
 
 ? Radium - A Third Party Library
-* Download File -> npm install --save radium
+~ Download File -> npm install --save radium
 
 ? Styled-Components - Another Third Party Library
-* Download File -> npm install --save styled-component
+~ Download File -> npm install --save styled-component
 
 ? CSS Modules - Built-In Setup (Similar to JS Modules)
-* NOTE -> In this, we only convert the .css files into .module.css files and import them to .jsx/.js files with a name through   
-*         which we can access them like props and it gives each class a different name which makes every class to have different name.
+& NOTE -> In this, we only convert the .css files into .module.css files and import them to .jsx/.js files with a name through   
+&         which we can access them like props and it gives each class a different name which makes every class to have different name.
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
@@ -299,8 +299,8 @@
 ! Explanation of React Files  - 
 
 ? React Components can be created by two ways -> 
-* 1st way : Using App.js file as the Main File but is used to create small projects as it could create confusion.
-* 2nd way : Creating .jsx files as it works like Modular Javascript for handling multiple files using import and export keywords.
+~ 1st way : Using App.js file as the Main File but is used to create small projects as it could create confusion.
+~ 2nd way : Creating .jsx files as it works like Modular Javascript for handling multiple files using import and export keywords.
 
 ! NOTE on JSX (Javascript Extension) Files ->>
 
@@ -309,8 +309,8 @@
 
 ! Difference between props(.jsx) and state(App.js) -
 
-* It is that props are passed from a parent component, but state is managed by the component itself.
-* A component cannot change its props, but it can change its state.
+? It is that props are passed from a parent component, but state is managed by the component itself.
+? A component cannot change its props, but it can change its state.
 */
 
 // // ----------------------------------------------------------------------------------------------------------------------------
@@ -323,7 +323,7 @@
 ? npm install create-react-app -g : It is to globally install the Create React App Library which holds all React Dependencies.
 ? create-react-app anyfolder_name : It is to create a folder containing the React App Dependencies in that folder.
 
-* Navigate to the created reaact app folder_name -> cd folder_name/
+& Navigate to the created reaact app folder_name -> cd folder_name/
 ? npm run start : It is to run the Development Server.
 ? npm run build : It is a create a production build.
 */

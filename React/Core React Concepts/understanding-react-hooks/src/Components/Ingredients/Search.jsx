@@ -18,8 +18,8 @@ const Search = React.memo( (props) =>
 
   const inputRef = useRef(); 
 
-  // ! We can also useEffect() for Cleaning Up function by returning something, as Http Request tends to use re-render after every 
-  // ! keystroke acting as updating state so to avoid this, we used Cleaning Up technique.
+  // * We can also useEffect() for Cleaning Up function by returning something, as Http Request tends to use re-render after every 
+  // * keystroke acting as updating state so to avoid this, we used Cleaning Up technique.
 
   useEffect( () =>
   {

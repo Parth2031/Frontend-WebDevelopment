@@ -19,7 +19,7 @@ class App extends Component
   ?   </div >
   ? );
 
-  ! NOTE :- basename is used to set the base directory from where we want to start loading.
+  & NOTE :- basename is used to set the base directory from where we want to start loading.
   * By default, It is set as basename="/" in BrowserRouter
   */
 

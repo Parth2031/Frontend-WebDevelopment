@@ -1,5 +1,5 @@
 // TODO:: In this, App.js is the main file where, we create our own Components{Custom HTML Elements}.
-// * NOTE :- Alternative for Creating Components is creating .jsx files and importing it in Main File.
+// & NOTE :- Alternative for Creating Components is creating .jsx files and importing it in Main File.
 
 // ? This import is used for  React Hooks Working ->>
 // import React,{ useState } from 'react';
@@ -79,18 +79,18 @@ import Cockpit from './Components/Cockpit/Cockpit';
 //    /*
 //    TODO:: Some NOTES on the Return Statement Portion -->>  
    
-//    ? onClick is the property here,to use Event Listener and calling a method without () at end will only send a reference. .....
-//    ?  .... And not immediately running the event as soon as file loads. 
+// ? onClick is the property here,to use Event Listener and calling a method without () at end will only send a reference. .....
+// ?  .... And not immediately running the event as soon as file loads. 
 
 //    * There are two ways of Dynamic Object Name Reference ->>
   
-//    ? 1st way : <button onClick={this.switchNameHandler.bind(this, "Parth")} style={inlineStyle}>Switch Name</button>
-//    ? 2nd way : <button onClick={() => this.switchNameHandler("Parth")}>Switch Name</button>
+// ? 1st way : <button onClick={this.switchNameHandler.bind(this, "Parth")} style={inlineStyle}>Switch Name</button>
+// ? 2nd way : <button onClick={() => this.switchNameHandler("Parth")}>Switch Name</button>
 
 //    * 2nd way can be inefficient sometimes according to React Working.
   
-//    ! Note -> It is the way to call a .jsx file in the Main File, if we don't want any thing inside it, else we could do the normal way also.
-//    ?         Example -> <Person/> 
+// ! Note -> It is the way to call a .jsx file in the Main File, if we don't want any thing inside it, else we could do the normal way also.
+// ?         Example -> <Person/> 
 //    */
 
 //     return (
@@ -155,7 +155,7 @@ class App extends Component
     console.log('[App.js] componentDidMount');
   }
 
-  // * Note -> By default, shouldUpdateComponent() returns true.
+  // & Note -> By default, shouldUpdateComponent() returns true.
    
   shouldComponentUpdate(nextProps, nextState)
   {
@@ -186,7 +186,7 @@ class App extends Component
     }); 
   }
 
-  // ! NOTE -> In this, we updated the function using reference concepts to update value for all input text box.
+  // & NOTE -> In this, we updated the function using reference concepts to update value for all input text box.
 
   nameChangedHandler = (event, id) =>
   {
@@ -200,8 +200,8 @@ class App extends Component
 
     // this.setState({ persons: people }); 
 
-    // ! Using this method, when setting a state based on previous state and rather depending on this.state as it sometimes .....
-    // ! .... work unexpectedly. Majorly for numeric values as setState merges multiple setState into one so to avoid it, we use this.
+    // ? Using this method, when setting a state based on previous state and rather depending on this.state as it sometimes .....
+    // ? .... work unexpectedly. Majorly for numeric values as setState merges multiple setState into one so to avoid it, we use this.
     // * setState works on asynchronous code so it shows the unexpected behaviour so using this method, it converts into synchronous code.
 
     this.setState( (prevState, prevProps) =>
@@ -235,11 +235,11 @@ class App extends Component
   {
     let persons = null;
     
-    // ! It is used to access the classes from CSS Modules ->
+    // * It is used to access the classes from CSS Modules ->
     // ? It is now converted to a whole New Component for Dynamic Styling ->>
     // let buttonClass = '';
 
-    // ! NOTE -->> It shows as an Alternative Way to Ternary Opertor and can use the Conditions :-
+    // & NOTE -->> It shows as an Alternative Way to Ternary Opertor and can use the Conditions :-
 
     // if (this.state.showPersons) 
     // {
@@ -265,7 +265,7 @@ class App extends Component
     //             click={() => this.deletePersonHandler(index)}
     //             name={person.name}
     //             age={person.age}
-    //             key={person.id}            // ! <-- Key Property is used to Uniquely Identify Objects Value by using some sort of ID.
+    //             key={person.id}          // ! <-- Key Property is used to Uniquely Identify Objects Value by using some sort of ID.
     //             changed={(event) => this.nameChangedHandler(event,person.id)} />   
     //         })
     //       }
@@ -321,25 +321,25 @@ class App extends Component
     // }
 
     /*
-     TODO:: Some NOTES on return statement -->>
+     ^ Some NOTES on return statement -->>
 
      * Below Syntax shows that it looks like HTML but it is actually in Javascript so, we use Curly Braces as we could put Conditions 
-     ! NOTE-> But we cannot use if else statements in return statement but only ternary opertor on some condition.
+     & NOTE-> But we cannot use if else statements in return statement but only ternary opertor on some condition.
      ?  { Condition ? JSX Code : null } 
 
-     * NOTE -> 
+     & NOTE -> 
      ? In CSS Modules, Instead of calling .css file like this -> "App", we call it like .jsx file with accessing their class like like props.
 
-     ! NOTE -->
+     & NOTE -->
      * Cockpit Component is used to Reduce the render() function processing as it takes more time and less efficient.
      ? this.props : It is used when we use class based components and importing from index.js as a prop name and value.  
 
-     TODO:: NOTES oustide for return statement -->>
+     ^ NOTES oustide for return statement -->>
 
      ! Alternative Method to the Above Case :-> 
-     * NOTE -> It is by using If Else.. Statements outside the Return Statement but Inside render(). 
-     ? In order to access them, Syntax --> {function_name/array_name} in the Return Statement.
-     *                          Example ->> {persons}
+     & NOTE -> It is by using If Else.. Statements outside the Return Statement but Inside render(). 
+     * In order to access them, Syntax --> {function_name/array_name} in the Return Statement.
+     ?                          Example ->> {persons}
     */
 
     return (
@@ -377,9 +377,9 @@ export default App;
 // TODO:: React Hooks Working :-
 
 /*
-! In Newer Version of React, it is based on Functional Programming so, we use here React Hooks.
-* NOTE -->> In React Hooks, the otherState is not merged as it only replaces the old State whereas,
-*              in Class Based React, it is merged and not replaced.
+* In Newer Version of React, it is based on Functional Programming so, we use here React Hooks.
+& NOTE -->> In React Hooks, the otherState is not merged as it only replaces the old State whereas,
+&              in Class Based React, it is merged and not replaced.
 
 ? useState(in this, we can change string,object,array,etc) is Defined Method of React Hooks.
 */

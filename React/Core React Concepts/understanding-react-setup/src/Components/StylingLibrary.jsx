@@ -1,6 +1,6 @@
 // TODO:: Understanding Working of Third Party Libraries -->
 
-// TODO:: Radium Library Working :-
+// ^ Radium Library Working :-
 
 import React from 'react';
 import Radium, { StyleRoot } from 'radium';            // ! <-- Third Party Library which solves inline Styling Limitations.
@@ -24,7 +24,7 @@ const stylingLibrary = (props) =>
     padding: '8px',
     cursor: 'pointer',
 
-    // ! We use colons('') as it is not a valid Javascript Syntax and we can use all pseudo classes by Radium Library ->
+    // ~ We use colons('') as it is not a valid Javascript Syntax and we can use all pseudo classes by Radium Library ->
 
     ':hover': {
       backgroundColor: 'yellow',
@@ -46,12 +46,12 @@ const stylingLibrary = (props) =>
   );
 }
 
-// ! Radium(App) is a Higher Order Component which gives Components some extra added functionalities -->
+// & Radium(App) is a Higher Order Component which gives Components some extra added functionalities -->
 export default Radium(stylingLibrary);
 
 // // ------------------------------------------------------------------------------------------------------------------------------------
 
-// TODO:: Styled Component Library Working :-
+// ^ Styled Component Library Working :-
 
 import React from 'react';
 import styled from 'styled-components';

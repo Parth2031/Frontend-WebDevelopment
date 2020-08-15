@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios';
 
 // ? Setting up the Default Set Up for all the Files as we are currently only fetching the data from a Single API.
-// * NOTE -> But for Multiple API accessing, we create a new file as axios.js in which we use instance method. 
+// & NOTE -> But for Multiple API accessing, we create a new file as axios.js in which we use instance method. 
 
 axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
 axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';

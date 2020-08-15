@@ -6,13 +6,13 @@ import classes from './Person.module.css';
 import Auxiliary from '../../../HigerOrderComponents/Auxiliary';
 import withClass from '../../../HigerOrderComponents/withClass';
 
-// ! It is a Thord Party Library which is used to set the Prop Types by Developer - 
+// * It is a Thord Party Library which is used to set the Prop Types by Developer - 
 import PropTypes from 'prop-types';
 
 class Person extends Component
 {
-  // TODO:: In this, we are using another Special Property(prop) like key is refs which is used for passing reference to any specific element.
-  // ! There are two ways to do it -> using React.createRef() or passing a ref with a function. Better is the 1st way.
+  // ^ In this, we are using another Special Property(prop) like key is refs which is used for passing reference to any specific element.
+  // & There are two ways to do it -> using React.createRef() or passing a ref with a function. Better is the 1st way.
 
   constructor(props) 
   {
@@ -22,7 +22,7 @@ class Person extends Component
 
   componentDidMount()
   {
-    // ! Not such a better way as it is for Older Version of React :
+    // ~ Not such a better way as it is for Older Version of React :
     // this.inputElement.focus();
 
     this.inputElementRefs.current.focus();
@@ -52,7 +52,7 @@ class Person extends Component
         <p>{this.props.children}</p>
         <input
           key="1"
-          // ! Not such a better way as it for Older Version of React :
+          // ~ Not such a better way as it for Older Version of React :
           // refs={(inputEl) => {this.inputElement = inputEl}}
           
           ref={this.inputElementRefs}
@@ -75,6 +75,6 @@ Person.propTypes =
   changed: PropTypes.func
 };
 
-// ! Implementing withClass Higher Order Component -
+// & Implementing withClass Higher Order Component -
 
 export default withClass(Person,classes.Person);

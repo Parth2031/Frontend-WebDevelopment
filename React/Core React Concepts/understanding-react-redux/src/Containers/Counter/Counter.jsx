@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// ! connect() is a Function that returns a Higher Order Component  which connects React Components to Redux Store.
+// & connect() is a Function that returns a Higher Order Component  which connects React Components to Redux Store.
 import { connect } from 'react-redux';
 
 import CounterControl from '../../Components/Counter Control/CounterControl';
@@ -36,9 +36,9 @@ class Counter extends Component
   // ? So, Now changing from "() => this.counterChangedHandler('inc')" to, we are accessing "this.props.property_functionname".
   // ? Similarly, for all other functions.
 
-  // TODO:: Note on mapStateToProps & mapDispatchToProps ->
-  // * When, we don't pass mapDispatchToProps then mapStateToProps returns dispatch property to itself component as a prop.
-  // ? Which can be used similar to mapDispatchToProp style in that Component.
+  // ^ Note on mapStateToProps & mapDispatchToProps ->
+  // & When, we don't pass mapDispatchToProps then mapStateToProps returns dispatch property to itself component as a prop.
+  // ~ Which can be used similar to mapDispatchToProp style in that Component.
 
   render()
   {
@@ -63,7 +63,7 @@ class Counter extends Component
 
 // ! Defining connect() Parameters which are used to Dispatch Actions - 
 
-// * State is recieved from the React Redux bu Reducer Component in mapStateToProps() :
+// ? State is recieved from the React Redux bu Reducer Component in mapStateToProps() :
 
 const mapStateToProps = (state) =>
 {
@@ -87,6 +87,6 @@ const mapDispatchToProps = (dispatch) =>
   };
 };
 
-// ! connect(parameters in a set order) is a function that returns a Higher Order Component.
+// & connect(parameters in a set order) is a function that returns a Higher Order Component.
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter); 

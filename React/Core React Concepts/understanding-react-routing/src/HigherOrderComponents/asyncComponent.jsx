@@ -1,5 +1,5 @@
-// TODO:: This Higher Order Component is known as Lazy Loading/Code Splitting as it only Downloads the files/links that are 
-// TODO::                                         opened and rest are not downloaded.  
+// ^ This Higher Order Component is known as Lazy Loading/Code Splitting as it only Downloads the files/links that are 
+// ^                                         opened and rest are not downloaded.  
 
 import React, { Component } from 'react';
 

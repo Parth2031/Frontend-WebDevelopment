@@ -1,4 +1,4 @@
-// TODO:: Settind Up Reducer of Redux Library :-
+// TODO:: Setting Up Reducer of Redux Library :-
 
 import * as actionTypes from '../Actions/actionTypes';
 import { updateObject } from '../Utility';

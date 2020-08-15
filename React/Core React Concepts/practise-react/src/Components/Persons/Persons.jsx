@@ -16,12 +16,14 @@ class Persons extends Component
   //   console.log('[Persons.js] componentWillReceiveProps', props);
   // }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps, nextState)
+  {
     console.log('[Persons.js] shouldComponentUpdate');
     return true;
   }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
+  getSnapshotBeforeUpdate(prevProps, prevState)
+  {
     console.log('[Persons.js] getSnapshotBeforeUpdate');
     return { message: 'Snapshot!' };
   }
@@ -30,7 +32,8 @@ class Persons extends Component
 
   // }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
+  componentDidUpdate(prevProps, prevState, snapshot)
+  {
     console.log('[Persons.js] componentDidUpdate');
     console.log(snapshot);
   }
@@ -45,7 +48,8 @@ class Persons extends Component
   {
     console.log('[Persons.js] rendering...');
   
-    return this.props.persons.map((person, index) => {
+    return this.props.persons.map( (person, index) =>
+    {
       return (
         <Person
           click={() => this.props.clicked(index)}

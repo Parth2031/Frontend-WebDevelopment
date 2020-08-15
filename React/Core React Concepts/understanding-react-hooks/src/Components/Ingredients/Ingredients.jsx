@@ -1,12 +1,12 @@
 // TODO:: Some Important Notes Regarding useReducer, useEffect() & useCallback() functionality :-
 
-// ! useReducer() : It is an alternative to useState() & React Redux for Handling Multiple interconnected/Global State's.
+// & useReducer() : It is an alternative to useState() & React Redux for Handling Multiple interconnected/Global State's.
 
 // ? useEffect(function, [dependencies]) : It means that useEffect will re-render when dependencies are present or else it won't. 
 // * Since, with dependencies, it works like a componentDidMount() but without dependencies, it works like componentDidUpdate().
 
 // ! useCallback(function, [dependencies]) : It works like shouldComponetWillUpdate() So, when we use it not gets re-created everytime
-// * but gets updated only when the Specified Component is updated. 
+// ~ but gets updated only when the Specified Component is updated. 
 
 import React, { useReducer, useEffect, useCallback, useMemo } from 'react';
 
@@ -110,7 +110,7 @@ const Ingredients = () =>
   
   }, [sendRequest]);
 
-  // ! React batches State Updates :  Multiple set State are executed as one time together if called within a same function -->
+  // & React batches State Updates :  Multiple set State are executed as one time together if called within a same function -->
 
   // const clearError = useCallback( () =>
   // {
