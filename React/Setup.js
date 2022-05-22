@@ -3,7 +3,7 @@
 /*
 ! Explanation of React -
 ~ React is a Javascript Library for building user interface. User Interface are Components which are Custom HTML Elements.
-^ It contains almost all the Third Party Libraries which coulod make the program more optimized and efficient.
+^ It contains almost all the Third Party Libraries which could make the program more optimized and efficient.
 ? It is based on One way Data Flow.
 */
 
